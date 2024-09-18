@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600&display=swap');
+/* Reseta o estilo padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  
+  
+  /* Navbar (menu de navegação) */
+  .navbar {
+    font-family:'Teko', sans-serif;
+    display: flex;
+    justify-content: space-evenly; /* Distribui os itens igualmente pela navbar */
+    align-items: center;
+    padding: 0px;
+    background-color: black; /* Fundo preto para a navbar */
+    position: fixed; /* Fixa a navbar no topo */
+    top: 0;
+    left: 0;
+    right: 0; /* Garante que a navbar ocupe toda a largura */
+    z-index: 10;
+    height: 80px; /* Altura da navbar */
+    padding-right: 30px; /* Adiciona espaçamento à direita */
+}
+
+.navbar .logo img {
+    width: 150px; /* Tamanho do logo */
+}
+
+.navbar .menu {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Espaçamento entre os itens do menu */
+}
+
+.navbar .menu li {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o texto dos itens */
+    border: 2px solid #DAA520; /* Borda dourada ao redor dos itens da nav bar */
+    border-radius: 5px; /* Borda arredondada */
+    padding: 2px 20px; /* Espaço interno ao redor do texto */
+}
+
+
+  .navbar .menu li a {
+    text-decoration: none;
+    color: #fff; /* Cor branca para os links */
+    font-size: 22px; /* Aumenta o tamanho da fonte dos itens da nav bar */
+    font-weight: bold;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center; /* Alinha verticalmente o texto e a seta */
+  }
+  
+  .navbar .menu li a:hover {
+    color: #DAA520; /* Cor dourada ao passar o mouse (hover) */
+  }
+  
+  /* Estilização do dropdown */
+  .dropdown {
+    position: relative; /* Necessário para o dropdown funcionar corretamente */
+  }
+  
+  .dropdown-toggle {
+    text-decoration: none;
+    color: #fff; /* Cor branca para o texto do botão */
+    font-size: 22px; /* Tamanho da fonte do botão */
+    font-weight: bold;
+    background: none; /* Remove fundo padrão do link */
+    border: none; /* Remove a borda padrão do botão */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    display: flex;
+    align-items: center; /* Alinha verticalmente o texto e a seta */
+  }
+  
+  .dropdown-toggle i {
+    margin-left: 8px; /* Adiciona um espaço entre o texto e a seta */
+    transform: translateY(1px);
+  }
+  .dropdown-toggle i:hover{
+    color: #DAA520;
+  }
+
+  .dropdown-menu {
+    display: none; /* Oculta o menu por padrão */
+    position: absolute; /* Posiciona o menu em relação ao item pai */
+    top: 100%; /* Posiciona o menu logo abaixo do botão */
+    left: 0;
+    background-color: #201D1D; /* Cor de fundo do menu */
+    border-radius: 10px; /* Borda arredondada para o menu */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para o menu */
+    z-index: 1000; /* Garante que o menu fique acima dos outros elementos */
+  }
+  
+  .dropdown-menu .dropdown-item {
+    display: block; /* Faz com que os itens do menu ocupem a largura total */
+    color: #000000; /* Cor preta para o texto dos itens do menu */
+    padding: 10px 20px; /* Espaço interno dos itens do menu */
+    text-decoration: none; /* Remove sublinhado dos itens */
+    font-size: 18px; /* Tamanho da fonte dos itens do menu */
+    border: 2px solid #DAA520; /* Borda dourada ao redor dos itens do menu */
+    border-radius: 10px; /* Borda arredondada para os itens */
+    margin-bottom: 5px; /* Espaço entre os itens */
+  }
+  
+  .dropdown-menu .dropdown-item:hover {
+    background-color: #383838; /* Cor de fundo dos itens do menu ao passar o mouse */
+    color: #000000; /* Cor do texto dos itens do menu ao passar o mouse */
+  }
+  
+  /* Exibe o dropdown ao passar o mouse */
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+ 
+  /* Seção de Início */
+  .section {
+    display: flex;
+    flex-direction: row; /* Alinha o texto e a imagem horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Alinha o conteúdo horizontalmente */
+    min-height: 100vh; /* Mantém a altura da seção */
+    padding: 0 50px;
+    text-align: center; /* Centraliza o texto dentro do contêiner */
+  }
+  #inicio {
+    margin-top: 80px; /* Adiciona margem superior para evitar que o conteúdo fique atrás da navbar */
+    background-image: url('imagens/Fundo.jpeg'); /* Imagem de fundo */
+    background-size: cover; /* Cobre toda a área da tela */
+    background-position: center; /* Centraliza a imagem de fundo */
+  }
+ 
+  .main-content {
+    max-width: 600px;
+    margin: 0 auto; /* Centraliza o conteúdo dentro do contêiner principal */
+    z-index: 1; /* Garante que o texto fique sobre a imagem */
+  }
+  
+  /*Bespoke BarberShop*/
+  .title {
+    font-family: 'Yellowtail';
+    font-size: 60px;
+    color: #DAA520; /* Cor dourada para o título */
+  }
+  
+  /*Divisória*/
+  .divider {
+    width: 100%; /* Aumenta a largura para cobrir tudo */
+    height: 3px; /* Aumenta a altura da linha */
+    background-color: #DAA520; /* Cor dourada para a linha */
+    margin: 20px 0;
+  }
+  
+  .subtitle {
+    font-family: 'Arapey', serif;
+    font-size: 30px; /* Aumenta o tamanho da fonte do subtítulo */
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .description {
+    font-size: 24px; /* Aumenta o tamanho da fonte da descrição */
+    line-height: 1.6;
+    color: #fff;
+    margin-bottom: 60px; /* Aumenta a margem inferior para criar um espaço maior entre o texto e o botão */
+  }
+  
+  .image-container {
+    max-width: 370px;
+    margin-left: 50px; /* Move a imagem para a direita */
+    margin-bottom: 50px;
+}
+
+.image-wrapper {
+    padding: 15px;
+    border-radius: 20px; /* Arredonda o container */
+    border: 5px solid #DAA520; /* Adiciona uma borda dourada */
+}
+
+.barbershop-image {
+    width: 100%;
+    display: block;
+    border-radius: 15px; /* Arredonda a imagem para coincidir com o container */
+}
+
+  
+  /* Botão de contato */
+  .contact-button {
+    padding: 20px 40px;
+    font-size: 40px;
+    font-family: 'Teko', sans-serif; /* Aplica a fonte 'Teko' ao botão */
+    color: #DAA520; /* Cor dourada para o texto do botão */
+    background-color: #201D1D; /* Fundo escuro para o botão */
+    text-transform: uppercase; /* Transforma o texto em caixa alta */
+    text-decoration: none;
+    border-radius: 10px; /* Aumenta o arredondamento das bordas do botão */
+    border: 2px solid #DAA520; /* Borda dourada para o botão */
+    margin-top: 30px; /* Aumenta o espaço entre o texto e o botão */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold;
+  }
+  
+  .contact-button:hover {
+    background-color: #3A2D2D; /* Cor de fundo levemente mais clara ao passar o mouse */
+    color: #DAA520; /* Cor dourada do texto ao passar o mouse */
+  }
+  

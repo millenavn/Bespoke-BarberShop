@@ -1,0 +1,141 @@
+/* Estilos gerais */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Teko', sans-serif;
+    background-color: black;
+    background-image: url(cadeiras-vintage-na-barbearia_155003-10150.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #FFFFFF;
+    position: relative;
+    height: 100vh;
+}
+
+/* CONTATE-NOS */
+.contato-nos {
+    position: absolute;
+    top: 50px; /* Ajustado para ficar logo acima da linha */
+    left: 900px;
+    font-family: "Arapey", serif;
+  font-weight: 400;
+  font-style: normal;
+    font-size: 70px;
+    color: #FFFFFF;
+}
+
+.linha10 {
+    position: absolute;
+    top: 180px; /* Ajustado para dar um espaço em relação ao título */
+    left: 840px;
+    width: 520px;
+    border: 4px solid #DAA520;
+}
+
+/* Descrição abaixo de CONTATE-NOS */
+.descricao {
+    position: absolute;
+    top: 200px; /* Alinhado logo abaixo da linha */
+    left: 870px;
+    width: 450px;
+    font-size: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+/* Formulário de Contato */
+.formulario-container {
+    position: absolute;
+    left: 100px;
+    top: 50px;
+    width: 500px; /* Diminuí a largura */
+    height: 670px; /* Aumentei a altura */
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 4px solid #DAA520;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario label {
+    font-size: 35px;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    color: #FFFFFF;
+}
+
+.formulario input, .formulario textarea {
+    background-color: #323232;
+    color: #FFF;
+    border: none;
+    padding: 8px;
+    font-size: 22px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.formulario input::placeholder, .formulario textarea::placeholder {
+    color: #aaa;
+}
+
+.enviar {
+    margin-top: 20px;
+    width: 40%;
+    height: 60px;
+    background-color: black;
+    color: #FFFFFF;
+    border-color: #DAA520;
+    font-family: "Teko", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 35px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.enviar:hover {
+    background-color: gray;
+}
+
+/* NOSSOS CONTATOS */
+.nossoscontatos {
+    position: absolute;
+    top: 390px; /* Ajustado para ficar logo acima da linha */
+    left: 900px;
+    font-family: "Arapey", serif;
+  font-weight: 200;
+  font-style: normal;
+    font-size: 50px;
+    color: #FFFFFF;
+}
+
+.linha {
+    position: absolute;
+    top: 490px; /* Ajustado para dar um espaço em relação ao título */
+    left: 840px;
+    width: 500px;
+    border: 4px solid #DAA520;
+}
+
+/* Contatos */
+.contatos {
+    position: absolute;
+    top: 550px; /* Alinhado logo abaixo da linha */
+    left: 850px;
+    font-size: 30px;
+    color: #FFFFFF;
+    line-height: 1.5;
+}
+
+.contatos span {
+    display: block;
+    margin-bottom: 10px; /* Espaço entre os elementos de contato */
+}

@@ -1,0 +1,143 @@
+/* Sobre Nós */
+
+  .sobre{
+    display: flex;
+    height: 130vh;
+    background-color: black;
+    background-image: url(Imagens/image\ 1.png);
+    background-position: center top;
+  background-repeat: no-repeat;
+background-size: cover; 
+}
+
+  /* Vector 3 (Box) */
+  .vector-3-box {
+    position: absolute;
+    width: 660px;
+    height: 440px;
+    left: 70px;
+    top: 100px;
+    border: 5px solid #DAA520;
+    border-radius: 20px;
+
+  }
+  
+  /* Image 2 */
+  .image-2 {
+margin-left: 86px;
+margin-top: 115px;
+  }
+  
+  /* Vector 3 (Line) */
+  .vector-3-line {
+    position: absolute;
+    width: 610px;
+    height: 0px;
+    left: 802px;
+    top: 190px;
+    border: 5px solid #DAA520;
+  }
+  
+  /* NÓS SOMOS BESPOKE */
+  .nos-somos-bespoke {
+    position: absolute;
+    width: 580px;
+    height: 38px;
+    left: 820px;
+    top: 126px;
+    font-family: "Arapey", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-style: normal;
+    font-size: 60px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #FFFFFF;
+  }
+  
+  /* Descrição */
+  .descricao {
+    position: absolute;
+    width: 642px;
+    height: 360px;
+    left: 800px;
+    top: 259px;
+    font-family: "Archivo Narrow", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    line-height: 25px;
+    letter-spacing: 0.5px;
+    text-align: left;
+    color: #FFFFFF;
+  }
+  
+  /* Estamos te esperando! */
+  .aguardamos {
+    position: absolute;
+    width: 613px;
+    height: 16px;
+    left: 413px;
+    top: 650px;
+    font-family: "Yellowtail", cursive;
+  font-weight: 400;
+  font-style: normal;
+    font-size: 80px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #DAA520;
+  }
+  
+  
+
+  .botao{
+    top: 790px;
+    width: 330px;
+    height: 50px;
+    margin-top: 900x;
+    margin-left: 370px;
+   padding-top: 5px;
+   padding-bottom: 5px;
+    padding-left: 48px;
+    background: transparent;
+    color: #DAA520;
+    border: solid 3px  #DAA520;
+    border-radius: 20px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.botao span{
+  font-family: "Teko", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 660;
+font-size: 35px;
+position: relative;
+font-family: "Teko", sans-serif;
+font-optical-sizing: auto;
+font-style: normal;
+font-weight: 660;
+}
+
+.botao::before{
+ content: '';
+background-color: #000000 ;
+width: 0;
+height: 0;
+position: absolute;
+border-radius: 50%;
+top: var(--eixoY);
+left: var(--eixoX);
+transform: translate(-50%, -50%);
+transition: width .5s, height .5s;
+}
+
+.botao:hover::before{
+    width: 1000px;
+    height: 1000px;
+}

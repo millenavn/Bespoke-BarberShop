@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&display=swap'); /* Fonte Arapey*/
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&display=swap');  /* Fonte Archivo Naroow*/
+
+* {  /* É para náo precisar rolar para baixo */
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+.space-section {
+    position: relative;
+    height: 100vh; /* Para ocupar a página toda */
+    background-image: url('Imagens/image\ 3.png'); /* Imagem de fundo */
+    background-size: cover; /* Para cobrir tudo */
+    background-position: center; /* Centraliza a imagem */
+}
+
+.overlay {
+    position: absolute; /* Coloca a camada sobre a imagem de fundo */
+    top: 0; /* Distancia do topo */
+    left: 0; /* Distancia da esquerda */
+    right: 0; /* Distancia da direita */
+    bottom: 0; /* Distancia do fundo */
+    display: flex; /* Utiliza flexbox para alinhar os itens dentro do contêiner */
+    justify-content: space-between; /* Espaça os itens com espaço entre eles (texto e imagem) */
+    align-items: center; /* Alinha os itens ao centro verticalmente */
+    padding: 50px; /* Adiciona espaçamento interno de 50px ao redor do contêiner */
+}
+
+.content {
+    max-width: 50%; /* Largura máxima do texto em relaçäo a tela */
+    padding-right: 30px; /* Espaço à direita entre o texto e a imagem */
+}
+
+.content h1 {
+    font-family: 'Arapey', sans-serif; /* Fonte */
+    font-size: 60px; /* Tamanho da fonte */
+    color: #FFFFFF; /* Cor do texto */
+    border-bottom: 4px solid #DAA520; /* Linha abaixo do texto */
+    padding-bottom: 30px; /* Espaçamento entre o texto e a linha */
+    width: auto; /* Ajusta a largura para caber o conteúdo */
+    white-space: nowrap; /* Impede a quebra de linha do texto */
+    position: relative; /*  Precisa para as propriedades left e top */
+    left: 50px; /* Distancia da esquerda */
+    top: -40px; /* Distancia do topo */
+}
+
+
+.content p {
+    font-family: "Archivo Narrow", sans-serif; /* Fonte */
+    font-size: 25px; /* Tamanho da fonte */
+    line-height: 1.6; /* Espaçamento entre linhas de texto */
+    margin-bottom: 20px; /* Espaçamento entre os parágrafos */
+    color: #FFFFFF; /* Cor do texto */
+    position: relative; /* Precisa para as propriedades left e top */
+    left: 50px; /* Distancia da esquerda */
+    top: -5px; /* Distancia do topo */
+}
+
+.composite-image {
+    max-width: 35%; /* Largura máxima da imagem*/
+    display: flex; /* Usa flexbox para alinhar a imagem */
+}
+
+.composite-image img {
+    width: 100%; /* Faz a imagem ocupar 100% da largura do contêiner */
+}

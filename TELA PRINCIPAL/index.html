@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia</title>
+    <link rel="stylesheet" href="style.css"> 
+    <!--Links das fontes utilizadas-->
+    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arapey&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@55&display=swap" rel="stylesheet">
+</head>
+<body>
+     <!--Navigation Bar-->
+    <header class="navbar">
+        <div class="logo">
+            <img src="imagens/Logo.jpeg" alt="Logo da Barbearia"> <!-- Logo -->
+        </div>
+        <ul class="menu">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre Nós</a></li>
+            <li><a href="#espaco">Espaço</a></li>
+            <li class="dropdown"> <!-- Dropdown -->
+                <a href="#" id="dropdownMenuButton" class="dropdown-toggle">Serviços <i class="arrow-down">&#9662;</i></a>
+                <div id="dropdownMenu" class="dropdown-menu">
+                    <a class="dropdown-item" href="#cabelo">Cabelo</a>
+                    <a class="dropdown-item" href="#barba">Barba</a>
+                    <a class="dropdown-item" href="#inspiracoes">Inspirações</a>
+                </div>
+            </li>
+            <li><a href="#localizacao">Localização</a></li>
+            <li><a href="#franqueado">Seja um Franqueado</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </header>
+
+     <!--Tela de Início-->
+    <section class="section" id="inicio">
+        <div class="main-content">
+            <h1 class="title">Bespoke BarberShop</h1>
+            <p class="subtitle">A barbearia pensada para o seu conforto.</p>
+            <div class="divider"></div>
+            <p class="description">
+                Com profissionais, equipamentos, produtos e ambiente que<br>
+                fornecem todo o necessário para uma excelente experiência<br>
+                juntos!
+            </p>
+            <a href="#contato" class="contact-button">Entre em contato conosco</a>
+        </div>
+
+        <div class="image-container">
+            <div class="image-wrapper">
+            <img class="barbershop-image" src="imagens/barbeiro.jpeg" alt="Barbearia"> <!-- foto do barbeiro trabalhando -->
+        </div>
+    </div>
+    </section>
+  <script src="script.js"></script> 
+</body>
+</html>
