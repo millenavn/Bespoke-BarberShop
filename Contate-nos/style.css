@@ -16,18 +16,17 @@ body {
 /* CONTATE-NOS */
 .contato-nos {
     position: absolute;
-    top: 50px; /* Ajustado para ficar logo acima da linha */
+    top: 50px;
     left: 900px;
     font-family: "Arapey", serif;
-  font-weight: 400;
-  font-style: normal;
+    font-weight: 400;
     font-size: 70px;
     color: #FFFFFF;
 }
 
 .linha10 {
     position: absolute;
-    top: 180px; /* Ajustado para dar um espaço em relação ao título */
+    top: 180px;
     left: 840px;
     width: 520px;
     border: 4px solid #DAA520;
@@ -36,7 +35,7 @@ body {
 /* Descrição abaixo de CONTATE-NOS */
 .descricao {
     position: absolute;
-    top: 200px; /* Alinhado logo abaixo da linha */
+    top: 200px;
     left: 870px;
     width: 450px;
     font-size: 35px;
@@ -50,8 +49,8 @@ body {
     position: absolute;
     left: 100px;
     top: 50px;
-    width: 500px; /* Diminuí a largura */
-    height: 670px; /* Aumentei a altura */
+    width: 500px;
+    height: 670px;
     background-color: rgba(0, 0, 0, 0.8);
     border: 4px solid #DAA520;
     border-radius: 20px;
@@ -80,10 +79,6 @@ body {
     margin-bottom: 10px;
 }
 
-.formulario input::placeholder, .formulario textarea::placeholder {
-    color: #aaa;
-}
-
 .enviar {
     margin-top: 20px;
     width: 40%;
@@ -92,9 +87,7 @@ body {
     color: #FFFFFF;
     border-color: #DAA520;
     font-family: "Teko", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 500;
-    font-style: normal;
     font-size: 35px;
     border-radius: 30px;
     cursor: pointer;
@@ -108,18 +101,17 @@ body {
 /* NOSSOS CONTATOS */
 .nossoscontatos {
     position: absolute;
-    top: 390px; /* Ajustado para ficar logo acima da linha */
+    top: 390px;
     left: 900px;
     font-family: "Arapey", serif;
-  font-weight: 200;
-  font-style: normal;
+    font-weight: 200;
     font-size: 50px;
     color: #FFFFFF;
 }
 
 .linha {
     position: absolute;
-    top: 490px; /* Ajustado para dar um espaço em relação ao título */
+    top: 490px;
     left: 840px;
     width: 500px;
     border: 4px solid #DAA520;
@@ -128,7 +120,7 @@ body {
 /* Contatos */
 .contatos {
     position: absolute;
-    top: 550px; /* Alinhado logo abaixo da linha */
+    top: 550px;
     left: 850px;
     font-size: 30px;
     color: #FFFFFF;
@@ -137,5 +129,158 @@ body {
 
 .contatos span {
     display: block;
-    margin-bottom: 10px; /* Espaço entre os elementos de contato */
+    margin-bottom: 10px;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 1200px) {
+    .contato-nos {
+        left: 700px;
+        font-size: 60px;
+    }
+
+    .linha10 {
+        left: 650px;
+        width: 450px;
+    }
+
+    .descricao {
+        left: 670px;
+        width: 400px;
+        font-size: 30px;
+    }
+
+    .formulario-container {
+        left: 50px;
+        width: 450px;
+    }
+
+    .nossoscontatos {
+        left: 700px;
+        font-size: 45px;
+    }
+
+    .linha {
+        left: 650px;
+        width: 450px;
+    }
+
+    .contatos {
+        left: 670px;
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 992px) {
+    .contato-nos {
+        left: 400px;
+        font-size: 50px;
+    }
+
+    .linha10 {
+        left: 350px;
+        width: 400px;
+    }
+
+    .descricao {
+        left: 370px;
+        width: 350px;
+        font-size: 25px;
+    }
+
+    .formulario-container {
+        left: 30px;
+        width: 400px;
+    }
+
+    .nossoscontatos {
+        left: 400px;
+        font-size: 40px;
+    }
+
+    .linha {
+        left: 350px;
+        width: 400px;
+    }
+
+    .contatos {
+        left: 370px;
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contato-nos {
+        left: 200px;
+        font-size: 40px;
+    }
+
+    .linha10 {
+        left: 150px;
+        width: 300px;
+    }
+
+    .descricao {
+        left: 170px;
+        width: 280px;
+        font-size: 20px;
+    }
+
+    .formulario-container {
+        left: 10px;
+        width: 350px;
+    }
+
+    .nossoscontatos {
+        left: 200px;
+        font-size: 35px;
+    }
+
+    .linha {
+        left: 150px;
+        width: 300px;
+    }
+
+    .contatos {
+        left: 170px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .contato-nos {
+        left: 100px;
+        font-size: 30px;
+    }
+
+    .linha10 {
+        left: 80px;
+        width: 250px;
+    }
+
+    .descricao {
+        left: 90px;
+        width: 230px;
+        font-size: 18px;
+    }
+
+    .formulario-container {
+        left: 5px;
+        width: 300px;
+    }
+
+    .nossoscontatos {
+        left: 100px;
+        font-size: 30px;
+    }
+
+    .linha {
+        left: 80px;
+        width: 250px;
+    }
+
+    .contatos {
+        left: 90px;
+        font-size: 18px;
+    }
 }
