@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&display=swap'); /* Fonte Arapey*/
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&display=swap');  /* Fonte Archivo Naroow*/
+@import url('https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&display=swap'); /* Fonte Arapey */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&display=swap'); /* Fonte Archivo Narrow */
 
-* {  /* É para náo precisar rolar para baixo */
+* {  /* É para não precisar rolar para baixo */
     margin: 0;
     padding: 0; 
     box-sizing: border-box;
@@ -10,7 +10,7 @@
 .space-section {
     position: relative;
     height: 100vh; /* Para ocupar a página toda */
-    background-image: url('Imagens/image\ 3.png'); /* Imagem de fundo */
+    background-image: url('Imagens/image 3.png'); /* Imagem de fundo */
     background-size: cover; /* Para cobrir tudo */
     background-position: center; /* Centraliza a imagem */
 }
@@ -28,7 +28,7 @@
 }
 
 .content {
-    max-width: 50%; /* Largura máxima do texto em relaçäo a tela */
+    max-width: 50%; /* Largura máxima do texto em relação a tela */
     padding-right: 30px; /* Espaço à direita entre o texto e a imagem */
 }
 
@@ -40,11 +40,10 @@
     padding-bottom: 30px; /* Espaçamento entre o texto e a linha */
     width: auto; /* Ajusta a largura para caber o conteúdo */
     white-space: nowrap; /* Impede a quebra de linha do texto */
-    position: relative; /*  Precisa para as propriedades left e top */
+    position: relative; /* Precisa para as propriedades left e top */
     left: 50px; /* Distancia da esquerda */
     top: -40px; /* Distancia do topo */
 }
-
 
 .content p {
     font-family: "Archivo Narrow", sans-serif; /* Fonte */
@@ -58,10 +57,77 @@
 }
 
 .composite-image {
-    max-width: 35%; /* Largura máxima da imagem*/
+    max-width: 35%; /* Largura máxima da imagem */
     display: flex; /* Usa flexbox para alinhar a imagem */
 }
 
 .composite-image img {
     width: 100%; /* Faz a imagem ocupar 100% da largura do contêiner */
+}
+
+/* Media Queries para responsividade */
+
+/* Ajustes para telas menores que 1024px */
+@media (max-width: 1024px) {
+    .content {
+        max-width: 60%; /* Aumenta a largura do texto */
+    }
+
+    .content h1 {
+        font-size: 50px; /* Diminui o tamanho da fonte do título */
+        left: 30px; /* Ajusta a posição */
+        top: -30px; /* Ajusta a posição */
+    }
+
+    .content p {
+        font-size: 20px; /* Diminui o tamanho da fonte do parágrafo */
+        left: 30px; /* Ajusta a posição */
+        top: 0; /* Ajusta a posição */
+    }
+
+    .composite-image {
+        max-width: 40%; /* Aumenta a largura máxima da imagem */
+    }
+}
+
+/* Ajustes para telas menores que 768px */
+@media (max-width: 768px) {
+    .overlay {
+        flex-direction: column; /* Alinha os itens verticalmente */
+        padding: 20px; /* Reduz o espaçamento interno */
+    }
+
+    .content {
+        max-width: 100%; /* A largura do texto ocupa 100% */
+        padding-right: 0; /* Remove o padding à direita */
+        margin-bottom: 20px; /* Espaço abaixo do texto */
+    }
+
+    .content h1 {
+        font-size: 40px; /* Diminui o tamanho da fonte do título */
+        left: 0; /* Ajusta a posição */
+        top: 0; /* Ajusta a posição */
+        text-align: center; /* Centraliza o título */
+    }
+
+    .content p {
+        font-size: 18px; /* Diminui o tamanho da fonte do parágrafo */
+        left: 0; /* Ajusta a posição */
+        top: 0; /* Ajusta a posição */
+    }
+
+    .composite-image {
+        max-width: 100%; /* A imagem ocupa 100% da largura */
+    }
+}
+
+/* Ajustes para telas menores que 480px */
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 30px; /* Diminui ainda mais o tamanho do título */
+    }
+
+    .content p {
+        font-size: 16px; /* Diminui ainda mais o tamanho do parágrafo */
+    }
 }
