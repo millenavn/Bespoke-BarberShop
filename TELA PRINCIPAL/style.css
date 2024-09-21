@@ -261,3 +261,68 @@
         padding: 15px 30px; /* Ajusta o padding do botão */
     }
 }
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+  .navbar .menu {
+      flex-direction: column; /* Empilha os itens do menu */
+      gap: 15px; /* Espaçamento reduzido */
+      position: absolute; /* Posiciona o menu na tela */
+      top: 80px; /* Abaixo da navbar */
+      left: 0;
+      right: 0;
+      background-color: black; /* Fundo preto para o menu em tela pequena */
+      display: none; /* Inicialmente oculto */
+  }
+
+  .navbar:hover .menu {
+      display: flex; /* Mostra o menu ao passar o mouse */
+  }
+
+  .section {
+      flex-direction: column; /* Empilha o texto e a imagem verticalmente */
+      padding: 20px; /* Menos padding */
+  }
+
+  .image-container {
+      max-width: 100%; /* Ajusta a imagem para 100% da largura */
+      margin-left: 0; /* Remove margem */
+  }
+
+  .title {
+      font-size: 40px; /* Diminui o tamanho do título */
+  }
+
+  .subtitle {
+      font-size: 24px; /* Diminui o tamanho do subtítulo */
+  }
+
+  .description {
+      font-size: 20px; /* Diminui o tamanho da descrição */
+  }
+
+  .contact-button {
+      font-size: 30px; /* Diminui o tamanho do botão */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar .menu li {
+      font-size: 18px; /* Diminui o tamanho da fonte para telas muito pequenas */
+  }
+
+  .contact-button {
+      padding: 15px 30px; /* Ajusta o padding do botão */
+  }
+
+  .title {
+      font-size: 30px; /* Diminui ainda mais o tamanho do título */
+  }
+
+  .subtitle {
+      font-size: 20px; /* Diminui ainda mais o tamanho do subtítulo */
+  }
+
+  .description {
+      font-size: 18px; /* Diminui ainda mais o tamanho da descrição */
+  }
+}
