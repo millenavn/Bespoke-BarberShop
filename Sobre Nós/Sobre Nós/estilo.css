@@ -1,6 +1,6 @@
 /* Sobre Nós */
 
-  .sobre{
+  body{
     display: flex;
     height: 130vh;
     background-color: black;
