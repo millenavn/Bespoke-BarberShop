@@ -1,61 +1,83 @@
+@font-face {
+    font-family: sitara-sans;
+    src: url(Sitara-Regular.ttf);
+}
+
+
 /* Estilos gerais */
 body {
     margin: 0;
     padding: 0;
     font-family: 'Teko', sans-serif;
     background-color: black;
-    background-image: url(cadeiras-vintage-na-barbearia_155003-10150.jpg);
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Classe para a imagem de fundo */
+.fundo {
+    background-image: url(poltrona.png);
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
-    color: #FFFFFF;
-    position: relative;
     min-height: 100vh;
-    overflow-x: hidden; /* Para evitar o overflow horizontal */
+    display: flex;
+    flex-direction: column;
 }
 
 /* CONTATE-NOS */
 .contato-nos {
     position: absolute;
-    top: 5vh;
-    left: 60vw;
+    top: 50px;
+    left: 900px;
     font-family: "Arapey", serif;
     font-weight: 400;
-    font-size: 4vw;
+    font-style: normal;
+    font-size: 70px;
     color: #FFFFFF;
 }
 
 .linha10 {
     position: absolute;
-    top: 18vh;
-    left: 58vw;
-    width: 30vw;
-    border: 0.4vw solid #DAA520;
+    top: 180px;
+    left: 840px;
+    width: 520px;
+    border: 4px solid #DAA520;
 }
 
 /* Descrição abaixo de CONTATE-NOS */
 .descricao {
     position: absolute;
-    top: 22vh;
-    left: 60vw;
-    width: 28vw;
-    font-size: 2vw;
-    line-height: 1.5;
+    top: 200px;
+    left: 870px;
+    width: 450px;
+    font-size: 35px;
+    line-height: 35px;
     text-align: center;
     color: #FFFFFF;
 }
 
 /* Formulário de Contato */
 .formulario-container {
-    position: absolute;
-    left: 10vw;
-    top: 5vh;
-    width: 30vw;
-    height: auto;
-    background-color: rgba(0, 0, 0, 0.8);
-    border: 0.4vw solid #DAA520;
-    border-radius: 2vw;
-    padding: 2vw;
+    position: relative;
+    left: 100px;
+    top: 50px;
+    width: 500px;
+    height: 670px;
+    margin-bottom: 100px;
+    background-color: black;
+    border: 4px solid #DAA520;
+    border-radius: 20px;
+    padding: 20px;
 }
 
 .formulario {
@@ -64,9 +86,9 @@ body {
 }
 
 .formulario label {
-    font-size: 2vw;
-    margin-top: 1vw;
-    margin-bottom: 1vw;
+    font-size: 35px;
+    margin-top: 10px;
+    margin-bottom: 8px;
     color: #FFFFFF;
 }
 
@@ -74,28 +96,32 @@ body {
     background-color: #323232;
     color: #FFF;
     border: none;
-    padding: 1vw;
-    font-size: 1.5vw;
-    border-radius: 0.5vw;
-    margin-bottom: 1vw;
+    padding: 8px;
+    font-size: 22px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.formulario input::placeholder, .formulario textarea::placeholder {
+    color: #aaa;
 }
 
 .enviar {
-    margin-top: 10px; /* Ajuste o valor de 20px para 10px ou outro valor desejado */
+    margin-top: 20px;
     width: 40%;
     height: 60px;
     background-color: black;
     color: #FFFFFF;
     border-color: #DAA520;
     font-family: "Teko", sans-serif;
+    font-optical-sizing: auto;
     font-weight: 500;
+    font-style: normal;
     font-size: 35px;
     border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-
-
 
 .enviar:hover {
     background-color: gray;
@@ -104,103 +130,147 @@ body {
 /* NOSSOS CONTATOS */
 .nossoscontatos {
     position: absolute;
-    top: 40vh;
-    left: 60vw;
+    top: 390px;
+    left: 900px;
     font-family: "Arapey", serif;
     font-weight: 200;
-    font-size: 3vw;
+    font-style: normal;
+    font-size: 50px;
     color: #FFFFFF;
 }
 
 .linha {
     position: absolute;
-    top: 50vh;
-    left: 58vw;
-    width: 30vw;
-    border: 0.4vw solid #DAA520;
+    top: 490px;
+    left: 840px;
+    width: 500px;
+    border: 4px solid #DAA520;
 }
 
-/* Contatos */
 .contatos {
     position: absolute;
-    top: 55vh;
-    left: 60vw;
-    font-size: 2vw;
+    top: 550px;
+    left: 850px;
+    font-size: 30px;
     color: #FFFFFF;
     line-height: 1.5;
 }
 
 .contatos span {
     display: block;
-    margin-bottom: 1vw;
+    margin-bottom: 10px;
 }
 
-/* Responsividade para desktops */
-@media (max-width: 1200px) {
-    .contato-nos {
-        left: 50vw;
-        font-size: 3vw;
-    }
-
-    .linha10, .linha {
-        left: 48vw;
-        width: 35vw;
-    }
-
-    .descricao, .nossoscontatos, .contatos {
-        left: 50vw;
-        width: 35vw;
-        font-size: 2.5vw;
-    }
-
-    .formulario-container {
-        left: 5vw;
-        width: 35vw;
-    }
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 50px; /* Aumenta o padding para expandir a altura */
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: auto; /* Aumenta a margem superior para dar mais espaço abaixo do formulário */
+    height: auto; /* Permite que o conteúdo expanda o footer conforme necessário */
+    display: flex;
+    flex-direction: column;
 }
 
-@media (max-width: 992px) {
-    .contato-nos {
-        left: 40vw;
-        font-size: 2.5vw;
-    }
-
-    .linha10, .linha {
-        left: 38vw;
-        width: 40vw;
-    }
-
-    .descricao, .nossoscontatos, .contatos {
-        left: 40vw;
-        width: 40vw;
-        font-size: 2vw;
-    }
-
-    .formulario-container {
-        left: 5vw;
-        width: 40vw;
-    }
+.footer-bottom {
+    display: flex;
+    justify-content: center; /* Ajusta os elementos no centro */
+    align-items: center;
+    margin-top: 20px;
 }
 
+.footer-bottom .logo {
+    margin-right: 50px; /* Espaçamento entre a imagem e o texto */
+    height: 140px; /* Ajuste o tamanho da imagem, se necessário */
+}
+
+.frame-27 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30px; /* Espaçamento entre o conteúdo do footer */
+}
+
+.frame-4, .atendimento, .redes-sociais {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px 20px;
+    font-size: 25px;
+    font-family: sitara-sans;
+}
+
+h2 {
+    font-family: "Tauri", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-size: 29px;
+
+}
+
+.mapa-link, .social-link {
+    display: block;
+    margin: 5px 0;
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+    line-height: 30px;
+    font-family: sitara-sans;
+}
+
+.mapa-link:hover, .social-link:hover {
+    text-decoration: underline;
+}
+
+.voltar-ao-topo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 25px;
+    margin-bottom: 340px;
+}
+
+.voltar-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.voltar-link:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom .copyright {
+    font-size: 1.4rem;
+    font-family: sitara-sans;
+    text-align: left; /* Alinha o texto à esquerda */
+    margin-right: 200px;
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
-    .contato-nos {
-        left: 30vw;
-        font-size: 2vw;
+    .frame-27 {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .linha10, .linha {
-        left: 28vw;
-        width: 45vw;
+    .contato-nos, .nossoscontatos {
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 50px;
     }
 
-    .descricao, .nossoscontatos, .contatos {
-        left: 30vw;
-        width: 45vw;
-        font-size: 1.5vw;
+    .descricao {
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 30px;
+        width: 80%;
     }
 
     .formulario-container {
-        left: 5vw;
-        width: 45vw;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
     }
 }
