@@ -792,8 +792,8 @@
 
 /*Nossas Unidades*/
 #localizacao {
+  overflow-x: hidden;
   font-family: 'Archivo Narrow', sans-serif;
-  width: 100vw;
   height: 100vh;
   background-image: url('Fundo.png'); /* Imagem de fundo */
   background-size: cover;
