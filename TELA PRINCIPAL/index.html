@@ -93,7 +93,8 @@
         </div>
     </section>
     <!--Tela Serviços-->
-    <div class="section" id="servicos">
+
+    <section class="section" id="servicos">
         <h2>Nossos Serviços</h2>
     
         <div class="container">
@@ -116,7 +117,62 @@
         <div class="servico inspiracoes">
             <img src="Imagens serviços/Frame 34.png" alt="Inspirações">
         </div>
+    </section>
+    <section class="section" id="localizacao">
+    <div class="localizacao"></div>
+        <div class="nossas-unidades">
+            NOSSAS UNIDADES
+        </div>
+
+        <div class="unidades-container">
+            <!-- Unidade 1 -->
+            <div class="unidade bloco">
+                <div class="informacoes">
+                    <div class="titulo">Vila Carrão</div>
+                    <div class="endereco">R. João Vieira Prioste, 785</div>
+                    <div class="telefone">Tel 11 2850-8794</div>
+                    <div class="horarios">
+                        <div class="hora">Segunda à Sexta 9h às 20h</div>
+                        <div class="hora">Sábado das 10h às 19h</div>
+                    </div>
+                </div>
+                <img src="imagens unidades/Vila Carrão.png" alt="Vila Carrão" class="imagem">
+            </div>
+
+            <!-- Unidade 2 -->
+            <div class="unidade bloco">
+                <div class="informacoes">
+                    <div class="titulo">Vila Matilde</div>
+                    <div class="endereco">R. José Mascarenhas, 861</div>
+                    <div class="telefone">Tel 11 7630-2714</div>
+                    <div class="horarios">
+                        <div class="hora">Segunda à Sexta 9h às 20h</div>
+                        <div class="hora">Sábado das 10h às 19h</div>
+                    </div>
+                </div>
+                <img src="imagens unidades/Vila Matilde.png" alt="Vila Matilde" class="imagem">
+            </div>
+        </div>
     </div>
-  <script src="script.js"></script> 
+</section>
+
+    <!-- Adicionando o script JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const unidades = document.querySelectorAll('.unidade');
+
+            unidades.forEach(unidade => {
+                unidade.addEventListener('mouseover', function () {
+                    unidade.style.transform = 'scale(1.05)';
+                    unidade.style.transition = 'transform 0.3s ease';
+                });
+
+                unidade.addEventListener('mouseout', function () {
+                    unidade.style.transform = 'scale(1)';
+                });
+            });
+        });
+    </script>
+ 
 </body>
 </html>
