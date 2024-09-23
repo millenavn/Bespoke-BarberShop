@@ -1,0 +1,71 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Impede rolagem horizontal */
+    overflow-y: hidden; /* Impede rolagem vertical */
+}
+
+/* Seção geral da barba */
+.barba {
+    margin: 0 auto;
+    background-image: url('WhatsApp\ Image\ 2024-09-16\ at\ 17.06.12.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor preta semi-transparente */
+    background-blend-mode: darken; /* Mistura a imagem com a cor preta */
+}
+
+/* Container para os blocos de serviço */
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.voltar {
+    position: absolute;
+    left: 40px;
+    width: 5%;
+    height: auto;
+    top: 550px;
+}
+
+/* Bloco de Máquina e Navalha */
+.navalha {
+    position: absolute;
+    top: -20px;
+    right: 157px;
+    width: 450px;
+    height: 350px;
+}
+
+.maquina {
+    position: absolute;
+    top: -20px;
+    left: 157px;
+    width: 450px;
+    height: 350px;
+}
+
+/* Bloco de Pigmentação */
+.pigmentacao {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1050px;
+    height: 400px;
+    top: 220px;
+}
+
+/* Estilização das imagens dentro dos blocos de serviço */
+.servico img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
