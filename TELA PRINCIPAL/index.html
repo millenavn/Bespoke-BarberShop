@@ -112,6 +112,24 @@
                 </div>
             </a>
         </div>
+         <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const servicos = document.querySelectorAll('.servico');
+        
+            servicos.forEach(servico => {
+                if (!servico.classList.contains('inspiracoes')) {
+                    // Efeito de aumento para os blocos de Cabelo e Barba
+                    servico.addEventListener('mouseover', function () {
+                        servico.style.transform = 'scale(1.05)';
+                    });
+
+                    servico.addEventListener('mouseout', function () {
+                        servico.style.transform = 'scale(1)';
+                    });
+                }
+            });
+        });
+    </script>
     
         <!-- Bloco de Inspirações com imagem -->
         <div class="servico inspiracoes">
