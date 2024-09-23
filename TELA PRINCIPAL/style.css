@@ -751,6 +751,30 @@
   object-fit: contain;
 }
 
+/* Estilização das imagens dentro dos blocos de serviço */
+.servico img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.servico {
+    transition: transform 0.3s ease;
+}
+
+.servico.inspiracoes {
+    position: relative;
+    overflow: hidden;
+}
+
+.servico.inspiracoes img {
+    transition: filter 0.3s ease;
+}
+
+.servico.inspiracoes:hover img {
+    filter: brightness(1.2);
+}
+
 /* MEDIA QUERIES - Responsividade */
 
 /* Para telas de até 1024px (tablets) */
