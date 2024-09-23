@@ -29,7 +29,7 @@ body {
   position: absolute;
   width: 660px;
   height: 440px;
-  left: 70px;
+  left: 30px;
   top: 100px;
   border: 5px solid #DAA520;
   border-radius: 20px;
@@ -47,11 +47,11 @@ body {
 /* Vector 3 (Line) */
 .vector-3-line {
   position: absolute;
-  width: 610px;
+  width: 580px;
   height: 0px;
-  left: 802px;
+  left: 740px;
   top: 190px;
-  border: 5px solid #DAA520;
+  border: 3px solid #DAA520;
 }
 
 /* NÓS SOMOS BESPOKE */
@@ -59,7 +59,7 @@ body {
   position: absolute;
   width: 580px;
   height: 38px;
-  left: 820px;
+  left: 745px;
   top: 126px;
   font-family: "Arapey", serif;
   font-weight: 400;
@@ -73,9 +73,9 @@ body {
 /* Descrição */
 .descricao {
   position: absolute;
-  width: 642px;
+  width: 580px;
   height: 360px;
-  left: 800px;
+  left: 750px;
   top: 259px;
   font-family: "Archivo Narrow", sans-serif;
   font-weight: 400;
@@ -91,7 +91,7 @@ body {
   position: absolute;
   width: 613px;
   height: 16px;
-  left: 413px;
+  left: 350px;
   top: 650px;
   font-family: "Yellowtail", cursive;
   font-weight: 400;
@@ -104,7 +104,7 @@ body {
 
 /* Botão */
 .botao {
-  top: 790px;
+  top: 700px;
   width: 200px;
   height: 120px;
   margin-top: 900px;
