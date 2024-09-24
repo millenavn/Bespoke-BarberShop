@@ -372,20 +372,30 @@
   color: #FFFFFF;
 }
 
+/* Vector 3 (Line) */
+.vector-3-line {
+  position: absolute;
+  width: 580px;
+  height: 0px;
+  left: 740px;
+  top: 150px;
+  border: 3px solid #DAA520;
+}
+
 /* Descrição */
 .descricao {
   position: absolute;
   width: 580px;
   height: 360px;
-  top: 209px;
+  top: 180px;
   left: 750px; 
   font-family: "Archivo Narrow", sans-serif;
   font-weight: 400;
   line-height: 25px;
   letter-spacing: 0.5px;
-  text-align: center;
+  text-align: left;
   color: #FFFFFF;
-  font-size: 14px; 
+  font-size: 30px; 
 }
 
 /* Estamos te esperando! */
@@ -1171,7 +1181,7 @@
         width: 400px; /* Ajuste de largura */
     }
 
-    .descricao {
+    .descricao1 {
         font-size: 36px; /* Ajuste de tamanho da fonte */
         width: 100%; /* Ajuste a largura */
     }
@@ -1213,7 +1223,7 @@
         width: 500px; /* Ajuste de largura */
     }
 
-    .descricao {
+    .descricao1 {
         font-size: 48px; /* Manter tamanho da fonte */
         width: 100%; /* Ajuste a largura */
     }
@@ -1279,7 +1289,7 @@
 }
 
 /* Descrição abaixo de CONTATE-NOS */
-.descricao {
+.descricao2 {
   position: absolute;
   top: 150px;
   left: 750px;
