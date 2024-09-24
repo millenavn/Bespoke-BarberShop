@@ -1137,6 +1137,7 @@
     margin-bottom: 8px;  /* Reduzi o espaçamento inferior */
     margin-left: 10px;
     margin-right: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .form-input {
@@ -1155,6 +1156,7 @@
 .form-textarea {
     resize: none;
     height: 80px;  /* Diminuir altura da área de texto */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .submit-btn {
@@ -1374,6 +1376,7 @@
   font-size: 22px;
   border-radius: 5px;
   margin-bottom: 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .formulario input::placeholder, .formulario textarea::placeholder {
