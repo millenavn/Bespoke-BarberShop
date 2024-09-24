@@ -41,6 +41,20 @@
         </div>
     </a>
     </div>
+    <script>
+        const servicos = document.querySelectorAll('.servico');
+    
+        servicos.forEach(servico => {
+            servico.addEventListener('mouseenter', () => {
+                servico.style.transform = 'scale(1.1)';
+                servico.style.transition = 'transform 0.3s ease';
+            });
+    
+            servico.addEventListener('mouseleave', () => {
+                servico.style.transform = 'scale(1)';
+            });
+        });
+    </script>
 </body>
 
 </html>
