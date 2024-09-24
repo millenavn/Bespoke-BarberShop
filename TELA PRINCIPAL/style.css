@@ -752,11 +752,15 @@
 /* Bloco de Inspirações */
 .inspiracoes {
   position: absolute;
-  left: 550px;
-  transform: translateX(-50%);
+  left: 25px;
   width: 1050px;
-  height: 400px;
-  top: 90px;
+  height: 250px;
+  top: -20px;
+  transition: transform 0.3s ease;
+}
+
+.inspiracoes:hover {
+  transform: scale(1.05);
 }
 
 /* Estilização das imagens dentro dos blocos de serviço */
