@@ -351,7 +351,7 @@
   width: 660px;
   height: auto; /* Ajuste automático baseado no conteúdo */
   left: 30px;
-  top: 100px;
+  top: 50px;
   border: 5px solid #DAA520;
   border-radius: 20px;
   display: flex;
@@ -364,7 +364,7 @@
   width: 580px;
   height: auto; /* Ajuste automático */
   left: 745px;
-  top: 76px;
+  top: 50px;
   font-family: "Arapey", serif;
   font-size: 60px;
   line-height: 1.2;
@@ -377,15 +377,15 @@
   position: absolute;
   width: 580px;
   height: 360px;
-  left: 750px;
   top: 209px;
+  left: 750px; 
   font-family: "Archivo Narrow", sans-serif;
   font-weight: 400;
-  font-size: 30px;
   line-height: 25px;
   letter-spacing: 0.5px;
-  text-align: left;
+  text-align: center;
   color: #FFFFFF;
+  font-size: 14px; 
 }
 
 /* Estamos te esperando! */
@@ -394,7 +394,7 @@
   width: 613px;
   height: 16px;
   right: 300px;
-  top: 280px;
+  top: 250px;
   font-family: "Yellowtail", cursive;
   font-weight: 400;
   font-size: 80px;
@@ -406,7 +406,7 @@
 
 /* Botão */
 .botao {
-  top: 270px;
+  top: 250px;
   margin-top: 900px;
   left: 500px;
   padding: 25px 10px;
@@ -720,7 +720,7 @@
 /* Bloco de Cabelo e Barba */
 .barba {
   position: absolute;
-  top: 10px;
+  top: -80px;
   right: 60px;
   width: 450px;
   height: 350px;
@@ -728,7 +728,7 @@
 
 .cabelo {
   position: absolute;
-  top: 10px;
+  top: -80px;
   left: 100px;
   width: 450px;
   height: 350px;
@@ -741,7 +741,7 @@
   transform: translateX(-50%);
   width: 1050px;
   height: 400px;
-  top: 70px;
+  top: 90px;
 }
 
 /* Estilização das imagens dentro dos blocos de serviço */
