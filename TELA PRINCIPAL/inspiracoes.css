@@ -1,0 +1,59 @@
+/* Estilos para html e body */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Seção principal com o fundo */
+.inspiracoes {
+    background-image: url('Imagens/fundo-inspiracoes.png'); /* Caminho da imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    height: 100vh; /* Faz com que o fundo ocupe a altura total da viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Necessário para o posicionamento dos elementos internos */
+}
+
+/* Estilo para o container principal */
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto; /* Centraliza o container horizontalmente */
+}
+
+/* Texto ou imagem à esquerda */
+.left-text {
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    z-index: 10;
+}
+
+/* Botão de voltar */
+.voltar {
+    position: absolute;
+    top: 550px; /* Ajuste conforme necessário */
+    left: 40px; /* Ajuste conforme necessário */
+    width: 5%; /* Ajuste o tamanho conforme a necessidade */
+}
+
+.voltar img {
+    width: 100%; /* Garante que a imagem use toda a largura da div */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .voltar {
+        width: 10%; /* Aumenta o botão de voltar em telas pequenas */
+        top: 500px; /* Ajuste de posicionamento */
+    }
+}
