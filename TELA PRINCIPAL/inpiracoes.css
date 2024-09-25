@@ -1,0 +1,22 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Impede rolagem horizontal */
+    overflow-y: hidden; /* Impede rolagem vertical */
+}
+
+.inspiracoes {
+    margin: 0 auto;
+    background-image: url('Inspirações1.1.png');
+    background-color: rgba(0, 0, 0, 0.781); /* Cor preta semi-transparente */
+    background-blend-mode: darken; /* Mistura a imagem com a cor preta */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
