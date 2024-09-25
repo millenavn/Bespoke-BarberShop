@@ -5,8 +5,9 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
-  
+  body{
+    background-color: #000;
+  }
   
   
   /* Navbar (menu de navegação) */
@@ -118,7 +119,35 @@
   
  
   /* Seção de Início */
+  .section.visible {
+    filter: blur(0px);
+    opacity: 1;
+}
+
+/* Animação dos elementos que vêm da esquerda */
+.from-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Animação dos elementos que vêm da direita */
+.from-right {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Quando os elementos ficam visíveis */
+.section.visible .from-left,
+.section.visible .from-right {
+    opacity: 1;
+    transform: translateX(0);
+}
   .section {
+    filter: blur(15px);
+    opacity: 0;
+    transition: opacity 2s ease-out, transform 2s ease-out;
     padding-top: 80px;
     overflow-x: hidden; /* Impede rolagem horizontal */
     position: relative;
@@ -351,7 +380,7 @@
   width: 660px;
   height: auto; /* Ajuste automático baseado no conteúdo */
   left: 30px;
-  top: 50px;
+  top: 30px;
   border: 5px solid #DAA520;
   border-radius: 20px;
   display: flex;
@@ -366,28 +395,28 @@
   left: 745px;
   top: 50px;
   font-family: "Arapey", serif;
-  font-size: 60px;
+  font-size: 50px;
   line-height: 1.2;
-  text-align: center;
+  text-align: left;
   color: #FFFFFF;
 }
 
 /* Vector 3 (Line) */
 .vector-3-line {
   position: absolute;
-  width: 580px;
+  width: 480px;
   height: 0px;
   left: 740px;
-  top: 150px;
+  top: 130px;
   border: 3px solid #DAA520;
 }
 
 /* Descrição */
 .descricao {
   position: absolute;
-  width: 580px;
-  height: 360px;
-  top: 180px;
+  width: 480px;
+  height: 320px;
+  top: 150px;
   left: 750px; 
   font-family: "Archivo Narrow", sans-serif;
   font-weight: 400;
@@ -395,7 +424,7 @@
   letter-spacing: 0.5px;
   text-align: left;
   color: #FFFFFF;
-  font-size: 30px; 
+  font-size: 25px; 
 }
 
 /* Estamos te esperando! */
@@ -404,7 +433,7 @@
   width: 613px;
   height: 16px;
   right: 300px;
-  top: 250px;
+  top: 230px;
   font-family: "Yellowtail", cursive;
   font-weight: 400;
   font-size: 80px;
@@ -416,6 +445,7 @@
 
 /* Botão */
 .botao {
+  text-decoration: none;
   position: fixed;  
   bottom: 20px;     
   right: 20px;      
@@ -735,18 +765,18 @@
 /* Bloco de Cabelo e Barba */
 .barba {
   position: absolute;
-  top: -80px;
+  top: -70px;
   right: 60px;
   width: 450px;
-  height: 350px;
+  height: 310px;
 }
 
 .cabelo {
   position: absolute;
-  top: -80px;
+  top: -70px;
   left: 100px;
   width: 450px;
-  height: 350px;
+  height: 310px;
 }
 
 /* Bloco de Inspirações */
@@ -755,7 +785,7 @@
   left: 25px;
   width: 1050px;
   height: 250px;
-  top: -20px;
+  top: 0px;
   transition: transform 0.3s ease;
 }
 
@@ -1074,7 +1104,7 @@
     width: 450px;
     margin-right: 160px;
     margin-top: 50px;
-    height: auto;  /* Remover altura fixa, deixando flexível */
+    height: 770px;  /* Remover altura fixa, deixando flexível */
 }
 
 /* Espaçamento entre os elementos do formulário */
@@ -1108,6 +1138,7 @@
     margin-bottom: 8px;  /* Reduzi o espaçamento inferior */
     margin-left: 10px;
     margin-right: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .form-input {
@@ -1126,6 +1157,7 @@
 .form-textarea {
     resize: none;
     height: 80px;  /* Diminuir altura da área de texto */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .submit-btn {
@@ -1307,6 +1339,7 @@
   line-height: 35px;
   text-align: center;
   color: #FFFFFF;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 /* Formulário de Contato */
@@ -1344,6 +1377,7 @@
   font-size: 22px;
   border-radius: 5px;
   margin-bottom: 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .formulario input::placeholder, .formulario textarea::placeholder {

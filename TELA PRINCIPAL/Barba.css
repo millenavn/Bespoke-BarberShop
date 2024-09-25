@@ -17,6 +17,7 @@ html, body {
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.5); /* Cor preta semi-transparente */
     background-blend-mode: darken; /* Mistura a imagem com a cor preta */
+
 }
 
 /* Container para os blocos de serviço */
@@ -34,6 +35,7 @@ html, body {
     width: 5%;
     height: auto;
     top: 550px;
+    z-index: 0;
 }
 
 /* Bloco de Máquina e Navalha */
@@ -55,12 +57,14 @@ html, body {
 
 /* Bloco de Pigmentação */
 .pigmentacao {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 1050px;
+    position: relative;
+
+    margin-right: auto;
+    margin-left:  auto;
+    width: 1000px;
     height: 400px;
     top: 220px;
+    z-index: 1;
 }
 
 /* Estilização das imagens dentro dos blocos de serviço */

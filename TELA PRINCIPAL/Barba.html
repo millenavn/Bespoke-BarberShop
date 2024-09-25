@@ -30,6 +30,24 @@
         </a>
         </div>
     </div>
+    <script>
+        // Seleciona todos os elementos com a classe 'servico'
+        const servicos = document.querySelectorAll('.servico');
+    
+        servicos.forEach(servico => {
+            // Adiciona o evento de mouseover
+            servico.addEventListener('mouseover', () => {
+                servico.style.scale = "1.1"// Aumenta o tamanho
+                servico.style.transition = 'scale 0.3s ease'; // Transição suave
+            });
+    
+            // Adiciona o evento de mouseout
+            servico.addEventListener('mouseout', () => {
+                servico.style.scale= "1"; // Retorna ao tamanho original
+
+            });
+        });
+    </script>
 </body>
 </html>
 
