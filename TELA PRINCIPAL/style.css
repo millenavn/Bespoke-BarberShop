@@ -1440,14 +1440,14 @@
   margin-bottom: 10px;
 }
 
-/*Footer*/
+/* Footer */
 .footer {
   background-color: #000;
   color: #fff;
-  padding: 40px 50px; /* Aumenta o padding para expandir a altura */
+  padding: 20px 30px; /* Diminuído o padding para reduzir a altura */
   box-sizing: border-box;
   text-align: center;
-  margin-top: auto; /* Aumenta a margem superior para dar mais espaço abaixo do formulário */
+  margin-top: auto; /* Mantém a margem superior para dar espaço abaixo do formulário */
   height: auto; /* Permite que o conteúdo expanda o footer conforme necessário */
   display: flex;
   flex-direction: column;
@@ -1457,63 +1457,59 @@
   display: flex;
   justify-content: center; /* Ajusta os elementos no centro */
   align-items: center;
-  margin-top: 20px;
+  margin-top: 10px; /* Diminuído para reduzir a altura */
 }
 
 .footer-bottom .logo {
-  margin-right: 50px; /* Espaçamento entre a imagem e o texto */
-  height: 140px; /* Ajuste o tamanho da imagem, se necessário */
+  margin-right: 20px; /* Diminuído o espaçamento entre a imagem e o texto */
+  height: 100px; /* Ajuste o tamanho da imagem, se necessário */
 }
 
 .frame-27 {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: 30px; /* Espaçamento entre o conteúdo do footer */
+  margin-bottom: 15px; /* Diminuído o espaçamento entre o conteúdo do footer */
 }
 
 .frame-4, .atendimento, .redes-sociais {
   text-align: center;
   flex: 1;
-  min-width: 200px;
-  margin: 10px 20px;
-  font-size: 25px;
+  min-width: 150px; /* Ajustado para permitir um layout mais compacto */
+  margin: 10px 20px; /* Mantido o margin-left original */
+  font-size: 20px; /* Diminuído o tamanho da fonte */
   font-family: sitara-sans;
 }
 
 h2 {
   font-family: "Tauri", sans-serif;
-font-weight: 200;
-font-style: normal;
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  font-size: 29px;
-
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.5rem; /* Diminuído o tamanho da fonte */
+  margin-bottom: 5px; /* Diminuído o margin */
 }
 
 .mapa-link, .social-link {
   text-align: left;
-  margin-left: 10px;
+  margin-left: 140px; /* Mantido o margin-left */
+  padding-top: 10px;
   display: block;
-  margin: 5px 0;
   text-decoration: none;
   color: #fff;
-  font-size: 25px;
-  line-height: 30px;
-  font-family: sitara-sans;
-  margin-left: 100px;
+  font-size: 20px; /* Diminuído o tamanho da fonte */
+  line-height: 25px; /* Diminuído o line-height */
+  /* O margin-left adicional de 100px foi removido para manter a estrutura */
 }
 
 .social-link2 {
   text-align: left;
-  margin-left: 10px;
+  margin-left: 10px; /* Mantido o margin-left */
   display: block;
-  margin: 5px 0;
+  margin: 3px 0; /* Diminuído o margin */
   text-decoration: none;
   color: #fff;
-  font-size: 25px;
-  line-height: 30px;
-  font-family: sitara-sans;
+  font-size: 20px; /* Diminuído o tamanho da fonte */
+  line-height: 25px; /* Diminuído o line-height */
 }
 
 .mapa-link:hover, .social-link:hover {
@@ -1524,8 +1520,8 @@ font-style: normal;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  font-size: 25px;
-  margin-bottom: 340px;
+  font-size: 20px; /* Diminuído o tamanho da fonte */
+  margin-bottom: 200px; /* Diminuído o margin */
 }
 
 .voltar-link {
@@ -1538,10 +1534,10 @@ font-style: normal;
 }
 
 .footer-bottom .copyright {
-  font-size: 1.4rem;
+  font-size: 1rem; /* Diminuído o tamanho da fonte */
   font-family: sitara-sans;
   text-align: left; /* Alinha o texto à esquerda */
-  margin-right: 200px;
+  margin-right: 100px; /* Mantido o margin */
 }
 
 /* Responsividade */
