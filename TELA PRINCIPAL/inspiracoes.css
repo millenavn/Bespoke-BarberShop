@@ -32,7 +32,7 @@ html, body {
 /* Texto ou imagem à esquerda */
 .left-text {
     position: absolute;
-    top: 80px; /* Ajustado para descer mais para baixo */
+    top: 40px; /* Ajustado para descer mais para baixo */
     left: 0px;
     z-index: 10;
 }
@@ -45,6 +45,8 @@ html, body {
     overflow: hidden; /* Esconde o excesso */
     margin-left: 250px; /* Ajuste conforme necessário */
     margin-top: -300px; /* Ajuste conforme necessário */
+    top: 120px;
+    left: 190px;
 }
 
 .carousel-images {  
@@ -57,6 +59,9 @@ html, body {
     width: 100%;  
     height: 100%;  
     object-fit: cover;  
+    border-radius: 5%;
+    border-color: #FFD700;
+    border-style: solid;
   }  
     
   .carousel-images.active {  
@@ -74,7 +79,7 @@ html, body {
 /* Botão de voltar */
 .voltar {
     position: absolute;
-    top: 650px; /* Ajustado para descer mais para baixo */
+    top: 550px; /* Ajustado para descer mais para baixo */
     left: 40px; /* Ajuste conforme necessário */
 }
 
