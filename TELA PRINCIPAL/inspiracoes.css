@@ -9,7 +9,7 @@ html, body {
 
 /* Seção principal com o fundo */
 .inspiracoes {
-    background-image: url('imagens carrossel/fundo-inspiracoes.png'); /* Caminho da imagem de fundo */
+    background-image: url('fundo-inspiracoes.png'); /* Caminho da imagem de fundo */
     background-size: cover; /* Faz a imagem cobrir toda a área */
     background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Evita a repetição da imagem */
