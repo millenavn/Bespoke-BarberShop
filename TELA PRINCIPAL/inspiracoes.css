@@ -32,7 +32,7 @@ html, body {
 /* Texto ou imagem à esquerda */
 .left-text {
     position: absolute;
-    top: 40px;
+    top: 80px; /* Ajustado para descer mais para baixo */
     left: 0px;
     z-index: 10;
 }
@@ -40,7 +40,7 @@ html, body {
 /* Botão de voltar */
 .voltar {
     position: absolute;
-    top: 550px; /* Ajuste conforme necessário */
+    top: 650px; /* Ajustado para descer mais para baixo */
     left: 40px; /* Ajuste conforme necessário */
     width: 5%; /* Ajuste o tamanho conforme a necessidade */
 }
@@ -54,6 +54,7 @@ html, body {
 @media (max-width: 768px) {
     .voltar {
         width: 10%; /* Aumenta o botão de voltar em telas pequenas */
-        top: 500px; /* Ajuste de posicionamento */
+        top: 600px; /* Ajuste de posicionamento */
     }
 }
+
