@@ -1,22 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inspirações</title>
-    <link rel="stylesheet" href="inspiracoes.css"> <!-- Ligação ao arquivo CSS -->
-</head>
-<body>
-    <div class="inspiracoes"> <!-- Seção principal com o fundo -->
-        <div class="container">
-            <div class="left-text">
-                <img src="Frame 61.png" alt="Texto à esquerda"> <!-- Caminho para a imagem dentro do projeto -->
-            </div>
-        </div>
-
-        <a href="index.html" class="voltar"> <!-- Botão de voltar -->
-            <img src="Imagens cabelo/seta.png" alt="Voltar">
-        </a>
-    </div>
-</body>
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+   <meta charset="UTF-8">  
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+   <title>Inspirações</title>  
+   <link rel="stylesheet" href="inspiracoes.css"> <!-- Ligação ao arquivo CSS -->  
+</head>  
+<body>  
+   <div class="inspiracoes"> <!-- Seção principal com o fundo -->  
+      <div class="container">  
+        <div class="left-text">  
+           <img src="Frame 61.png" alt="Texto à esquerda"> <!-- Caminho para a imagem dentro do projeto -->  
+        </div>  
+  
+        <div class="carousel">  
+           <div class="carousel-images">  
+              <img src="imagens carrossel/imagem 1 carrossel.png" alt="Imagem 1">  
+              <img src="imagens carrossel/imagem 2 carrossel.png" alt="Imagem 2">  
+              <img src="imagens carrossel/imagem 3 carrossel.png" alt="Imagem 3">  
+              <img src="imagens carrossel/imagem 4 carrossel.png" alt="Imagem 4">  
+              <img src="imagens carrossel/imagem 5 carrosel.png" alt="Imagem 5">  
+              <img src="imagens carrossel/imagem 6 carrosel.png" alt="Imagem 6">  
+              <img src="imagens carrossel/imagem 7 carrossel.png" alt="Imagem 7">  
+              <img src="imagens carrossel/imagem 8 carrossel.png" alt="Imagem 8">  
+              <img src="imagens carrossel/imagem 9 carrossel.png" alt="Imagem 9">  
+           </div>  
+        </div>  
+      </div>  
+  
+      <a href="index.html" class="voltar"> <!-- Botão de voltar -->  
+        <img src="Imagens cabelo/seta.png" alt="Voltar">  
+      </a>  
+   </div>  
+  
+   <script>  
+      const carouselImages = document.querySelector('.carousel-images');  
+      let isDown = false;  
+      let startX;  
+      let scrollLeft;  
+  
+      carouselImages.addEventListener('mousedown', (e) => {  
+        isDown = true;  
+        carouselImages.classList.add('active');  
+        startX = e.pageX - carouselImages.offsetLeft;  
+        scrollLeft = carouselImages.scrollLeft;  
+      });  
+  
+      carouselImages.addEventListener('mouseup', () => {  
+        isDown = false;  
+        carouselImages.classList.remove('active');  
+      });  
+  
+      carouselImages.addEventListener('mousemove', (e) => {  
+        if (!isDown) return; // Se não estiver pressionado, não faça nada  
+        e.preventDefault();  
+        const x = e.pageX - carouselImages.offsetLeft;  
+        const walk = (x - startX) * 2; // Mude o número para aumentar ou diminuir a velocidade de rolagem  
+        carouselImages.scrollLeft = scrollLeft - walk;  
+      });  
+  
+      // Adicionei essa parte para cancelar o evento de dragstart  
+      carouselImages.addEventListener('dragstart', (e) => {  
+        e.preventDefault();  
+      });  
+   </script>  
+</body>  
 </html>
