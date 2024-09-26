@@ -9,7 +9,7 @@ html, body {
 
 /* Seção principal com o fundo */
 .inspiracoes {
-    background-image: url('Imagens/fundo-inspiracoes.png'); /* Caminho da imagem de fundo */
+    background-image: url('imagens carrossel/fundo-inspiracoes.png'); /* Caminho da imagem de fundo */
     background-size: cover; /* Faz a imagem cobrir toda a área */
     background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Evita a repetição da imagem */
@@ -37,12 +37,45 @@ html, body {
     z-index: 10;
 }
 
+/* Estilos do carrossel */
+.carousel {
+    position: relative;
+    width: 783px; /* Largura do carrossel */
+    height: 454px; /* Altura do carrossel */
+    overflow: hidden; /* Esconde o excesso */
+    margin-left: 250px; /* Ajuste conforme necessário */
+    margin-top: -300px; /* Ajuste conforme necessário */
+}
+
+.carousel-images {  
+    display: flex;  
+    flex-wrap: nowrap;  
+    overflow-x: hidden;  
+  }  
+    
+  .carousel-images img {  
+    width: 100%;  
+    height: 100%;  
+    object-fit: cover;  
+  }  
+    
+  .carousel-images.active {  
+    cursor: grabbing;  
+  }  
+    
+  .carousel-images img:not(.active) {  
+    transform: scale(0.9);  
+  }  
+    
+  .carousel-images.active {  
+    cursor: grabbing;  
+  }
+
 /* Botão de voltar */
 .voltar {
     position: absolute;
     top: 650px; /* Ajustado para descer mais para baixo */
     left: 40px; /* Ajuste conforme necessário */
-    width: 5%; /* Ajuste o tamanho conforme a necessidade */
 }
 
 .voltar img {
