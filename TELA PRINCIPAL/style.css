@@ -23,7 +23,7 @@
     left: 0;
     right: 0; /* Garante que a navbar ocupe toda a largura */
     z-index: 10;
-    height: 80px; /* Altura da navbar */
+    height: 15%; /* Altura da navbar */
     padding-right: 30px; /* Adiciona espaçamento à direita */
 }
 

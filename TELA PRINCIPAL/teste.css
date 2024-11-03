@@ -1,0 +1,686 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600&display=swap');
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+}
+
+.head1 {
+    background-color: black;
+    padding: 0;
+}
+
+main{
+    padding: 0;
+}
+
+nav{
+    align-items: center;
+    display: flex;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-left: 2%;
+    flex-wrap: wrap;
+}
+
+nav img.logo{
+    width: 10%;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o texto dos itens */
+    border: 2px solid #DAA520; /* Borda dourada ao redor dos itens da nav bar */
+    border-radius: 5px; /* Borda arredondada */
+    padding: 5px 25px; /* Espaço interno ao redor do texto */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff; /* Cor branca para os links */
+    font-size: 17px; /* Aumenta o tamanho da fonte dos itens da nav bar */
+    font-weight: bold;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center; /* Alinha verticalmente o texto e a seta */
+}
+
+nav ul li a:hover {
+    color: #DAA520;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle{
+    text-decoration: none;
+    color: #fff; /* Cor branca para o texto do botão */
+    font-size: 17px; /* Tamanho da fonte do botão */
+    font-weight: bold;
+    background: none; /* Remove fundo padrão do link */
+    border: none; /* Remove a borda padrão do botão */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-toggle i {
+    margin-left: 8px; /* Adiciona um espaço entre o texto e a seta */
+    transform: translateY(1px);
+}
+  .dropdown-toggle i:hover{
+    color: #DAA520;
+}
+
+  .dropdown-menu {
+    display: none; /* Oculta o menu por padrão */
+    position: absolute; /* Posiciona o menu em relação ao item pai */
+    top: 100%; /* Posiciona o menu logo abaixo do botão */
+    left: 0;
+    background-color: #ffffff00; /* Cor de fundo do menu */
+    border-radius: 5px; /* Borda arredondada para o menu */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para o menu */
+    z-index: 1000; /* Garante que o menu fique acima dos outros elementos */
+    
+}
+  
+  .dropdown-menu .dropdown-item {
+    display: block; /* Faz com que os itens do menu ocupem a largura total */
+    color: #fff; /* Cor preta para o texto dos itens do menu */
+    padding: 5px 25px; /* Espaço interno dos itens do menu */
+    text-decoration: none; /* Remove sublinhado dos itens */
+    font-size: 17px; /* Tamanho da fonte dos itens do menu */
+    border: 2px solid #DAA520; /* Borda dourada ao redor dos itens do menu */
+    border-radius: 5px; /* Borda arredondada para os itens */
+    margin-bottom: 2px; /* Espaço entre os itens */
+    background-color: #000000;
+}
+  
+  .dropdown-menu .dropdown-item:hover {
+    color: #DAA520;
+}
+  
+  /* Exibe o dropdown ao passar o mouse */
+  .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+nav ul li:hover .dropdown {
+    display: block;
+    
+}
+
+.dropdown li a {
+    padding: 10px;
+    color: gold;
+}
+
+.section.visible {
+    filter: blur(0px);
+    opacity: 1;
+}
+
+.section {
+    height: 100vh; /* Cada seção ocupa 100% da altura da tela */
+    justify-content: center; /* Centraliza horizontalmente */
+    border-bottom: 1px solid #ccc;
+    filter: blur(15px);
+    opacity: 0;
+    transition: opacity 2s ease-out, transform 2s ease-out;
+    padding-top: 0;
+    overflow-x: hidden; /* Impede rolagem horizontal */
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row; /* Alinha o texto e a imagem horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Alinha o conteúdo horizontalmente */
+    min-height: 100vh; /* Mantém a altura da seção */
+    padding: 0 0;
+    text-align: center; /* Centraliza o texto dentro do contêiner */
+    margin: 0 0;
+}
+
+#inicio{
+    height: 100vh;
+    width: 100%;
+    background-image: url('imagens/Fundo.jpeg'); /* Imagem de fundo */
+    background-size: cover; 
+    background-position: top; 
+}
+
+.main-content {
+    max-width: 600px;
+    margin: 0; /* Centraliza o conteúdo dentro do contêiner principal */
+    z-index: 1; /* Garante que o texto fique sobre a imagem */
+}
+
+.title {
+    font-family: 'Yellowtail';
+    font-size: 60px;
+    color: #DAA520; /* Cor dourada para o título */
+    margin: 0;
+    text-align: center;
+    padding-top: 10%;
+}
+
+.divider {
+    width: 50%; 
+    height: 3px; 
+    background-color: #DAA520; 
+    margin: 20px auto;
+    
+  }
+
+  .subtitle {
+    font-family: 'Arapey', serif;
+    font-size: 30px; /* Aumenta o tamanho da fonte do subtítulo */
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+    
+  }
+  
+  .description {
+    font-family: 'Arapey', serif;
+    font-size: 24px; 
+    line-height: 1.6;
+    color: #fff;
+    margin-bottom: 60px;
+    text-align: center; 
+  }
+
+hr{
+    background-color: #DAA520;
+    width: 100%;
+    height: 5px;
+    margin: 0px auto;
+}
+
+#sobre {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; 
+    background-image: url(Imagens/image\ 1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden; 
+    z-index: 1; 
+}
+
+.vector-3-box {
+    padding: 15px;
+    position: relative;
+    width: 630px;
+    height: auto; 
+    left: 660px;
+    top: 50px;
+    border: 5px solid #DAA520;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nos-somos-bespoke {
+    position: absolute;
+    width: 580px;
+    height: auto; 
+    left: 100px;
+    top: 50px;
+    font-family: "Arapey", serif;
+    font-size: 50px;
+    line-height: 1.2;
+    text-align: left;
+    color: #FFFFFF;
+  }
+  
+  /* Vector 3 (Line) */
+  .vector-3-line {
+    position: absolute;
+    width: 480px;
+    height: 0px;
+    left: 100px;
+    top: 130px;
+    border: 3px solid #DAA520;
+  }
+  
+  /* Descrição */
+  .descricao {
+    position: absolute;
+    width: 480px;
+    height: 320px;
+    top: 150px;
+    left: 100px; 
+    font-family: "Archivo Narrow", sans-serif;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0.5px;
+    text-align: left;
+    color: #FFFFFF;
+    font-size: 25px; 
+  }
+  
+  /* Estamos te esperando! */
+  .aguardamos {
+    position: relative;
+    width: 613px;
+    height: 16px;
+    right: -410px;
+    top: 100px;
+    font-family: "Yellowtail", cursive;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #DAA520;
+  }
+  
+  /* Botão */
+  .botao {
+    text-decoration: none;
+    position: fixed;  
+    bottom: 20px;     
+    right: 20px;      
+    padding: 15px 25px;
+    background-color: #000000;  
+    color: #daa520;      
+    font-size: 16px;  
+    border: none;     
+    border-style: outset;
+    border-radius: 10px; 
+    cursor: pointer;  
+    z-index: 1000;     
+    transition: transform 0.3s ease;
+    border-color: #DAA520;
+  }
+  
+  .botao:hover {
+    transform: scale(1.05); /* Efeito ao passar o mouse */
+  }
+  
+  .botao span {
+    font-family: "Teko", sans-serif;
+    font-size: 30px;
+    position: sticky;
+    font-weight: 600;
+  }
+  
+  .botao:hover {
+    background: #4b4b4b;
+    color: #daa520;
+  }
+
+  #espaco {
+    position: relative;
+    height: 100vh; 
+    background-image: url('Imagens/image 3.png');
+    background-size: cover;
+    background-position: center; 
+  }
+
+  .overlay {
+    position: absolute; /* Coloca a camada sobre a imagem de fundo */
+    top: 0; /* Distancia do topo */
+    left: 0; /* Distancia da esquerda */
+    right: 0; /* Distancia da direita */
+    bottom: 0; /* Distancia do fundo */
+    display: flex; /* Utiliza flexbox para alinhar os itens dentro do contêiner */
+    justify-content: space-between; /* Espaça os itens com espaço entre eles (texto e imagem) */
+    align-items: center; /* Alinha os itens ao centro verticalmente */
+    padding: 50px; /* Adiciona espaçamento interno de 50px ao redor do contêiner */
+  }
+  
+  .content {
+    max-width: 50%; /* Largura máxima do texto em relação a tela */
+    padding-right: 30px; /* Espaço à direita entre o texto e a imagem */
+  }
+  
+  .content h1 {
+    font-family: "Arapey", serif;
+    font-size: 50px; 
+    color: #FFFFFF;  
+    padding-bottom: 30px; 
+    width: auto; 
+    white-space: nowrap; 
+    position: relative; 
+    left: 50px; 
+    top: -40px; 
+    line-height: 1.2;
+    height: auto;
+    
+  }
+  
+  .divider2 {
+    position: relative;
+    width: 90%; 
+    height: 4px; 
+    background-color: #DAA520; 
+    margin: 10px auto;
+    left: 20px;
+    top: -80px;
+  }
+  
+  .content p {
+    font-family: "Archivo Narrow", sans-serif; /* Fonte */
+    font-size: 25px; /* Tamanho da fonte */ 
+    margin-bottom: 20px; /* Espaçamento entre os parágrafos */
+    color: #FFFFFF; /* Cor do texto */
+    position: relative; /* Precisa para as propriedades left e top */
+    left: 50px; /* Distancia da esquerda */
+    top: -50px; /* Distancia do topo */
+  }
+  
+  .composite-image {
+    max-width: 35%; /* Largura máxima da imagem */
+    display: flex; /* Usa flexbox para alinhar a imagem */
+  }
+  
+  .composite-image img {
+    width: 100%; /* Faz a imagem ocupar 100% da largura do contêiner */
+  }
+
+  #servicos {
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 20px;
+    background-image: url('WhatsApp\ Image\ 2024-09-21\ at\ 20.05.33.jpeg');
+    background-color: rgba(0, 0, 0, 0.5); /* Cor preta semi-transparente */
+    background-blend-mode: darken; /* Mistura a imagem com a cor preta */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  #servicos h2 {
+    font-family: 'Arapey';
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 30px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  /* Container para os blocos de serviço */
+  .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 1200px;
+    flex-wrap: wrap;
+  }
+  
+  /* Blocos de serviço */
+  .servico {
+    width: 30%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Bloco de Cabelo e Barba */
+  .barba {
+    position: relative;
+    left: 75px;
+    width: 1050px;
+    height: 180px;
+    transition: transform 0.3s ease;
+  }
+
+  .barba:hover{
+    transform: scale(1.05);
+  }
+  
+  .cabelo {
+    position: relative;
+    left: 75px;
+    width: 1050px;
+    height: 180px;
+    transition: transform 0.3s ease;
+  }
+  
+  .cabelo:hover{
+    transform: scale(1.05);
+  }
+  
+  /* Bloco de Inspirações */
+  .inspiracoes {
+    position: relative;
+    
+    width: 1050px;
+    height: 180px;
+    top: 0px;
+    transition: transform 0.3s ease;
+  }
+  
+  .inspiracoes:hover{
+    transform: scale(1.05);
+  }
+
+  /* Estilização das imagens dentro dos blocos de serviço */
+  .servico img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  /* Estilização das imagens dentro dos blocos de serviço */
+  .servico img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+  }
+  
+  .servico {
+      transition: transform 0.3s ease;
+  }
+  
+  .servico.inspiracoes {
+      position: relative;
+      overflow: hidden;
+  }
+  
+  .servico.inspiracoes img {
+      transition: filter 0.3s ease;
+  }
+
+  .servico.cabelo img {
+    transition: filter 0.3s ease;
+}
+  
+.servico.barba img {
+    transition: filter 0.3s ease;
+}
+
+  .servico.inspiracoes:hover img {
+      filter: brightness(1.2);
+  }
+  
+  .servico.cabelo:hover img {
+    filter: brightness(1.2);
+}
+
+.servico.barba:hover img {
+    filter: brightness(1.2);
+}
+  
+  /* MEDIA QUERIES - Responsividade */
+  
+  /* Para telas de até 1024px (tablets) */
+  @media screen and (max-width: 1024px) {
+    .barba, .cabelo {
+        width: 80%;
+    }
+    .inspiracoes {
+        width: 90%;
+    }
+  }
+  
+  /* Para telas de até 768px (smartphones grandes e tablets em modo retrato) */
+  @media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .barba, .cabelo {
+        width: 90%;
+    }
+    .inspiracoes {
+        width: 95%;
+    }
+  }
+  
+  /* Para telas de até 480px (smartphones menores) */
+  @media screen and (max-width: 480px) {
+    .barba, .cabelo {
+        width: 100%;
+    }
+    .inspiracoes {
+        width: 100%;
+    }
+    .servicos h2 {
+        font-size: 35px;
+    }
+  }
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    color: gold;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    .dropdown {
+        position: relative;
+    }
+}
+/* Estilos para as páginas de serviços individuais */
+
+.body1{
+  background-image: url(imagens/Fundo.png);
+}
+
+.service-page {
+  font-family: "Teko", sans-serif;
+  max-width: 800px;
+  margin: 0 auto; /* Centraliza o conteúdo da página */
+  padding: 40px 20px; /* Espaçamento ao redor do conteúdo */
+  text-align: center;
+  background-color: rgb(44, 44, 44);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para destaque */
+  border-radius: 8px;
+}
+
+.head2 {
+  color: #DAA520; /* Título dourado */
+  font-size: 25px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-family: "Arapey", serif;
+  text-align: center;
+}
+
+.service-page h2 {
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+.service-page p {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.service-page ul {
+  text-align: left;
+  margin: 20px auto;
+  max-width: 600px;
+  padding: 0 20px;
+  list-style: none;
+}
+
+.service-page li {
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Estilo para o botão de voltar */
+.back-button {
+  font-family: "Teko", sans-serif;
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #000; /* Fundo preto */
+  border: 2px solid #DAA520; /* Borda dourada */
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: 30px;
+}
+
+.back-button:hover {
+  background-color: #DAA520; /* Altera cor ao passar o mouse */
+  color: #000;
+}
+
+/* Ajustes para telas pequenas */
+@media (max-width: 768px) {
+  .service-page {
+      padding: 20px;
+  }
+  
+  .service-page h1 {
+      font-size: 28px;
+  }
+
+  .service-page h2 {
+      font-size: 22px;
+  }
+
+  .service-page p, .service-page li {
+      font-size: 16px;
+  }
+
+  .back-button {
+      padding: 10px 20px;
+      font-size: 15px;
+  }
+}
