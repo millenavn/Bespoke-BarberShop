@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arapey&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@55&display=swap" rel="stylesheet">
+    <title>Carrossel de Inspirações</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600&display=swap');
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(imagens/image\ 1.png);
+        }
+
+        h1{
+            font-family: "Teko", sans-serif;
+            font-size: 40px;
+            color: #DAA520;
+            position: relative;
+        }
+
+        hr{
+            background-color: #DAA520;
+            color: #DAA520;
+            height: 3px;
+            border-style: outset;
+            border: #DAA520;
+            width: 50%;
+        }
+
+        p{
+            color: white;
+            font-family: "Teko", sans-serif;
+        }
+
+        .description1 {
+            text-align: center;
+            font-size: 1.5rem;
+            margin: 20px;
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden; /* Oculta elementos que saem da área visível */
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease; /* Animação suave ao mudar de slide */
+        }
+
+        .carousel-item {
+            min-width: 100%; /* Cada item ocupa 100% da largura do contêiner */
+            box-sizing: border-box; /* Inclui padding e border na largura total */
+            height: 430px; /* Ajusta a altura do carrossel */
+            display: flex; /* Adiciona flexbox para centralizar a imagem */
+            align-items: center; /* Centraliza verticalmente */
+            justify-content: center; /* Centraliza horizontalmente */
+            overflow: hidden; /* Oculta o que excede a altura do item */
+        }
+
+        .carousel img {
+            width: 30%; /* Imagens ocupam 100% da largura do item */
+            height: auto; /* Mantém a proporção */
+            border-style: outset;
+            border-color: #DAA520;
+            border-radius: 5%;
+        }
+
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgb(0, 0, 0);
+            cursor: pointer;
+            font-size: 2rem;
+            padding: 10px;
+            z-index: 1000; /* Garante que os botões fiquem acima dos itens */
+            color: #DAA520;
+            border-radius: 10%;
+            border-color: #DAA520;
+            border-style: outset;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .back-button {
+            font-family: "Teko", sans-serif;
+            display: inline-block;
+            padding: 12px 30px;
+            font-size: 20px;
+            color: #fff;
+            background-color: #000; /* Fundo preto */
+            border: 2px solid #DAA520; /* Borda dourada */
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            margin-top: 30px;
+            width: 200px;
+            top: 5px;
+            left: 10px;
+            position: absolute;
+        }
+
+        .back-button:hover {
+            background-color: #DAA520; /* Altera cor ao passar o mouse */
+            color: #000;
+            transform: scale(1.05);
+            transition: ease 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="description1">
+        <h1>Inspirações para você</h1>
+        <hr>
+        <p>Explore os mais diversos cortes já realizados por nossos profissionais</p>
+    </div>
+
+    <button onclick="window.location.href='teste.html'" class="back-button">Voltar à Página Inicial</button>
+    
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-item"><img src="imagens carrossel/imagens carrossel/imagem 1 carrossel.png" alt="Inspiração 1"></div>
+            <div class="carousel-item"><img src="imagens carrossel/imagens carrossel/imagem 2 carrossel.png" alt="Inspiração 2"></div>
+            <div class="carousel-item"><img src="imagens carrossel/imagens carrossel/imagem 3 carrossel.png" alt="Inspiração 3"></div>
+            <div class="carousel-item"><img src="imagens carrossel/imagens carrossel/imagem 4 carrossel.png" alt="Inspiração 4"></div>
+            <div class="carousel-item"><img src="imagens carrossel/imagens carrossel/imagem 5 carrosel.png" alt="Inspiração 5"></div>
+            <div class="carousel-item"><img src="imagens carrossel/imagens carrossel/imagem 6 carrosel.png" alt="Inspiração 6"></div>
+            <div class="carousel-item"><img src="imagens carrossel/imagens carrossel/imagem 7 carrossel.png" alt="Inspiração 7"></div>
+            <div class="carousel-item"><img src="imagens carrossel/imagens carrossel/imagem 8 carrossel.png" alt="Inspiração 8"></div>
+            <div class="carousel-item"><img src="imagens carrossel/imagens carrossel/imagem 9 carrossel.png" alt="Inspiração 9"></div>
+        </div>
+        <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+
+        function moveSlide(direction) {
+            const slides = document.querySelectorAll('.carousel-item');
+            const totalSlides = slides.length;
+
+            // Atualiza o índice atual do slide
+            currentSlide += direction;
+
+            // Reseta o índice se ultrapassar o número total de slides
+            if (currentSlide >= totalSlides) {
+                currentSlide = 0;
+            } else if (currentSlide < 0) {
+                currentSlide = totalSlides - 1;
+            }
+
+            // Move o carrossel
+            const carousel = document.querySelector('.carousel');
+            carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+    </script>
+</body>
+</html>

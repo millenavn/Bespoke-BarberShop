@@ -7,9 +7,15 @@ body {
     color: black;
 }
 
+hr{
+  border: #DAA520;
+}
+
 .head1 {
     background-color: black;
     padding: 0;
+    position: fixed;
+    z-index: 10000;
 }
 
 main{
@@ -26,7 +32,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 5px;
+    gap: 10px;
     margin-left: 2%;
     flex-wrap: wrap;
 }
@@ -149,14 +155,18 @@ nav ul li:hover .dropdown {
     padding: 0 0;
     text-align: center; /* Centraliza o texto dentro do contêiner */
     margin: 0 0;
+    min-width: 100%;
 }
 
 #inicio{
+  overflow-x: visible;
     height: 100vh;
     width: 100%;
     background-image: url('imagens/Fundo.jpeg'); /* Imagem de fundo */
     background-size: cover; 
-    background-position: top; 
+    background-position: center;
+    min-width: 100%; 
+    min-height: 100%;
 }
 
 .main-content {
@@ -343,22 +353,21 @@ hr{
     padding: 50px; /* Adiciona espaçamento interno de 50px ao redor do contêiner */
   }
   
-  .content {
+  .content1 {
     max-width: 50%; /* Largura máxima do texto em relação a tela */
     padding-right: 30px; /* Espaço à direita entre o texto e a imagem */
   }
   
-  .content h1 {
+  .content1 h1 {
     font-family: "Arapey", serif;
     font-size: 50px; 
     color: #FFFFFF;  
     padding-bottom: 30px; 
     width: auto; 
-    white-space: nowrap; 
+    white-space: wrap; 
     position: relative; 
     left: 50px; 
     top: -40px; 
-    line-height: 1.2;
     height: auto;
     
   }
@@ -373,10 +382,10 @@ hr{
     top: -80px;
   }
   
-  .content p {
+  .content1 p {
     font-family: "Archivo Narrow", sans-serif; /* Fonte */
-    font-size: 25px; /* Tamanho da fonte */ 
-    margin-bottom: 20px; /* Espaçamento entre os parágrafos */
+    font-size: 20px; /* Tamanho da fonte */ 
+    margin-bottom: 10px; /* Espaçamento entre os parágrafos */
     color: #FFFFFF; /* Cor do texto */
     position: relative; /* Precisa para as propriedades left e top */
     left: 50px; /* Distancia da esquerda */
@@ -429,6 +438,8 @@ hr{
     width: 100%;
     max-width: 1200px;
     flex-wrap: wrap;
+    position: relative;
+    justify-items: center;
   }
   
   /* Blocos de serviço */
@@ -443,7 +454,6 @@ hr{
   /* Bloco de Cabelo e Barba */
   .barba {
     position: relative;
-    left: 75px;
     width: 1050px;
     height: 180px;
     transition: transform 0.3s ease;
@@ -455,7 +465,6 @@ hr{
   
   .cabelo {
     position: relative;
-    left: 75px;
     width: 1050px;
     height: 180px;
     transition: transform 0.3s ease;
@@ -565,12 +574,178 @@ hr{
     }
   }
 
-footer {
+  #localizacao {
+    overflow-x: hidden;
+  font-family: 'Archivo Narrow', sans-serif;
+  height: 100vh;
+  background-image: url('Fundo.png'); /* Imagem de fundo */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  }
+  
+  .nossas-unidades {
+    font-family: 'Arapey', serif;
+    font-size: 70px;
+    color: white;
     text-align: center;
-    padding: 20px;
+    margin-bottom: 50px;
+  }
+  
+  .unidades-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Espaçamento entre os blocos */
+    flex-wrap: nowrap; /* Garante que os blocos não quebrem em várias linhas */
+  }
+  
+  .unidade {
     background-color: black;
-    color: gold;
-}
+    border-radius: 20px;
+    border: 5px solid #DAA520;
+    width: 700px; /* Largura padrão */
+    height: 500px; /* Mantém a altura original */
+    color: white;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha o conteúdo à esquerda */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave */
+  }
+  
+  .unidade:hover {
+    background-color: #252525; /* Cor de fundo ao passar o mouse */
+  }
+  
+  .informacoes {
+    font-family: 'Teko', sans-serif; /* Aplica a fonte Teko a todo o texto dentro do bloco */
+    color: white; /* Mantém a cor do texto */
+    text-align: left; /* Alinha o texto à esquerda */
+    width: 100%; /* Para que o título ocupe toda a largura */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .titulo {
+    font-family: 'Teko', sans-serif;
+    font-size: 70px; /* Tamanho ajustado para 70px */
+    color: #DAA520;
+    margin: 20px 0 10px 0; /* Espaçamento acima e abaixo */
+    text-align: center; /* Centraliza o título */
+  }
+  
+  /* Adicione a regra específica para Vila Carrão e Vila Matilde */
+  .titulo.vila-carrao, .titulo.vila-matilde {
+    font-size: 70px; /* Tamanho da fonte para Vila Carrão e Vila Matilde */
+  }
+  
+  .endereco, .telefone, .hora {
+    font-family: 'Teko', sans-serif; /* Aplica a fonte Teko */
+    font-size: 40px; /* Tamanho ajustado */
+    text-align: left; /* Alinhado à esquerda */
+    margin-bottom: 10px;
+    width: 100%; /* Para garantir que ocupem toda a largura */
+  }
+  
+  .telefone {
+    font-weight: 600; /* Semibold */
+  }
+  
+  .imagem {
+    width: 300px;
+    height: 194px;
+    border-radius: 20px;
+    border: 5px solid #DAA520;
+    position: absolute;
+    bottom: 20px;
+    right: 20px; /* Ajuste da posição */
+  }
+  
+  /* Media Queries para responsividade */
+  
+  @media (max-width: 1366px) {
+    .unidade {
+        width: 500px; /* Ajusta a largura dos blocos */
+        height: 400px; /* Ajusta a altura para melhor visualização */
+    }
+  
+    .nossas-unidades {
+        font-size: 60px; /* Diminui o tamanho da fonte do título principal */
+        margin-bottom: 30px;
+    }
+  
+    .titulo {
+        font-size: 50px; /* Ajusta o tamanho da fonte do título */
+    }
+  
+    .endereco, .telefone, .hora {
+        font-size: 30px; /* Reduz o tamanho da fonte */
+    }
+  
+    .imagem {
+        width: 250px;
+        height: 162px; /* Ajusta o tamanho da imagem */
+    }
+  }
+  
+  /* Ajustes para telas menores que 768px */
+  @media (max-width: 768px) {
+    .nossas-unidades {
+        font-size: 50px; /* Diminui ainda mais o título */
+        margin-bottom: 20px;
+    }
+  
+    .unidade {
+        width: 100%; /* Ajusta para ocupar a largura total */
+        margin-bottom: 20px; /* Espaçamento entre os blocos */
+    }
+  
+    .titulo {
+        font-size: 40px; /* Ajusta o tamanho da fonte do título */
+    }
+  
+    .endereco, .telefone, .hora {
+        font-size: 25px; /* Reduz o tamanho da fonte */
+    }
+  
+    .imagem {
+        width: 200px;
+        height: 130px; /* Reduz o tamanho da imagem */
+    }
+  }
+  
+  /* Ajustes para telas menores que 480px */
+  @media (max-width: 480px) {
+    .nossas-unidades {
+        font-size: 40px; /* Diminui ainda mais o título */
+        margin-bottom: 20px;
+    }
+  
+    .unidade {
+        width: 100%; /* Ajusta para ocupar a largura total */
+        padding: 10px; /* Reduz o padding */
+    }
+  
+    .titulo {
+        font-size: 30px; /* Diminui o tamanho do título */
+    }
+  
+    .endereco, .telefone, .hora {
+        font-size: 20px; /* Ajusta o tamanho da fonte */
+    }
+  
+    .imagem {
+        width: 150px;
+        height: 100px; /* Reduz ainda mais a imagem */
+    }
+  }  
+
+
 
 @media (max-width: 768px) {
     nav ul {
@@ -591,6 +766,361 @@ footer {
   background-image: url(imagens/Fundo.png);
 }
 
+.content2{
+  margin: 0;
+}
+
+.linha{
+  background-color: #DAA520;
+  height: 3px;
+  width: 50%;
+  border: #DAA520;
+  position: absolute;
+  top: 230px;
+  left: 340px;
+}
+
+#franqueado {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-image: url(imagens/image\ 1.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.franqueado-container {
+  max-width: 400px;
+  width: 100%;
+  background-color: #000000;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-style: outset;
+  border-color: #DAA520;
+  border-width: 3px;
+}
+
+.franqueado-container h2 {
+  font-family: "Teko", sans-serif;
+  color: #DAA520;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.franqueado-container p {
+  font-family: "Teko", sans-serif;
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+/* Estilo para o formulário */
+.franqueado-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.franqueado-form label {
+  font-family: "Teko", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #DAA520;
+  text-align: left;
+}
+
+.franqueado-form input,
+.franqueado-form textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.franqueado-form input:focus,
+.franqueado-form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Estilo para o botão de envio */
+.franqueado-form button {
+  padding: 12px;
+  background-color: #007bff;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.franqueado-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para a seção de contato */
+#contato {
+  overflow-x: hidden;
+  background-image: url(fundo-inspiracoes.png);
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.contato-container {
+  max-width: 400px;
+  width: 100%;
+  background-color: #000000;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-color: #DAA520;
+  border-style: outset;
+  border-width: 3px;
+  max-height: 600px;
+  height: 600px;
+  
+}
+
+.contato-container h2 {
+  font-family: "Teko", sans-serif;;
+  color: #DAA520;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.contato-container p {
+  font-family: "Teko", sans-serif;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+/* Estilo para o formulário */
+.contato-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contato-form label {
+  font-family: "Teko", sans-serif;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #DAA520;
+  text-align: left;
+}
+
+.contato-form input,
+.contato-form textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contato-form input:focus,
+.contato-form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Estilo para o botão de envio */
+.contato-form button {
+  padding: 12px;
+  background-color: #007bff;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contato-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para as redes sociais */
+.redes-sociais {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+}
+
+.redes-sociais p {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.social-icon {
+  margin: 0 10px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+
+.social-icon img {
+  width: 90%;
+  height: 90%;
+  transition: transform 0.3s;
+}
+
+.social-icon img:hover {
+  transform: scale(1.1);
+}
+
+/* Estilo base para a seção de agendamento */
+#agendamento {
+  background-image: url(imagens/Fundo.jpeg);
+  margin: 0;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.agendamento-container {
+  max-width: 400px;
+  width: 100%;
+  background-color: #000000;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-color: #DAA520;
+  border-style: outset;
+  border-width: 3px;
+
+}
+
+.agendamento-container h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #DAA520;
+  font-family: "Teko", serif;
+  font-size: 40px;
+}
+
+.agendamento-container p{
+  font-family: "Teko", serif;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+}
+
+.agendamento-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 50%;
+}
+
+.agendamento-container form label {
+  font-size: 20px;
+  color: #DAA520;
+  font-family: "Teko", serif;
+}
+
+.agendamento-container form input,
+.agendamento-container form select,
+.agendamento-container form button {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.agendamento-container form button {
+  background-color: #000000;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-color: #DAA520;
+  border-style: outset;
+  border-width: 3px;
+}
+
+.agendamento-container form button:hover {
+  background-color: #DAA520;
+  color: #000;
+  transition: ease-in-out 0.3s;
+}
+
+/* Media Query para tablets */
+@media screen and (max-width: 768px) {
+  .agendamento-container {
+      padding: 20px;
+  }
+
+  .agendamento-container form label {
+      font-size: 14px;
+  }
+
+  .agendamento-container form input,
+  .agendamento-container form select,
+  .agendamento-container form button {
+      font-size: 14px;
+      padding: 10px;
+  }
+}
+
+/* Media Query para dispositivos móveis */
+@media screen and (max-width: 480px) {
+  .agendamento-section {
+      padding: 20px;
+  }
+
+  .agendamento-container {
+      padding: 15px;
+  }
+
+  .agendamento-container h2 {
+      font-size: 20px;
+  }
+
+  .agendamento-container form label {
+      font-size: 13px;
+  }
+
+  .agendamento-container form input,
+  .agendamento-container form select,
+  .agendamento-container form button {
+      font-size: 13px;
+      padding: 8px;
+  }
+
+  .agendamento-container form button {
+      padding: 10px;
+  }
+}
+
 .service-page {
   font-family: "Teko", sans-serif;
   max-width: 800px;
@@ -600,40 +1130,53 @@ footer {
   background-color: rgb(44, 44, 44);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para destaque */
   border-radius: 8px;
+  border-color: #DAA520;
+  border-style: outset;
 }
 
 .head2 {
-  color: #DAA520; /* Título dourado */
+  color: #ffffff; 
   font-size: 25px;
   margin-bottom: 20px;
   font-weight: 600;
   font-family: "Arapey", serif;
   text-align: center;
+  margin: 0;
 }
 
 .service-page h2 {
-  font-size: 24px;
-  color: rgb(255, 255, 255);
+  margin: 0;
+  font-size: 30px;
+  color: #DAA520;
   margin-top: 20px;
   margin-bottom: 60px;
+  text-align: center;
+  align-items: center;
 }
 
 .service-page p {
-  font-size: 18px;
+  font-family: "Teko", sans-serif;
+  font-size: 25px;
   color: #ffffff;
   margin-bottom: 20px;
+  position: relative;
+  text-align: center;
+  margin: 0;
+  bottom: 30px;
 }
 
 .service-page ul {
+  font-size: 18px;
   text-align: left;
-  margin: 20px auto;
+  margin: 0px auto;
   max-width: 600px;
   padding: 0 20px;
   list-style: none;
+  align-items: center;
 }
 
 .service-page li {
-  font-size: 16px;
+  font-size: 18px;
   color: #ffffff;
   margin-bottom: 10px;
   padding: 8px 0;
@@ -645,7 +1188,7 @@ footer {
   font-family: "Teko", sans-serif;
   display: inline-block;
   padding: 12px 30px;
-  font-size: 16px;
+  font-size: 23px;
   color: #fff;
   background-color: #000; /* Fundo preto */
   border: 2px solid #DAA520; /* Borda dourada */
@@ -654,11 +1197,14 @@ footer {
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
   margin-top: 30px;
+  width: 600px;
 }
 
 .back-button:hover {
   background-color: #DAA520; /* Altera cor ao passar o mouse */
   color: #000;
+  transform: scale(1.05);
+  transition: ease 0.3s;
 }
 
 /* Ajustes para telas pequenas */
@@ -683,4 +1229,11 @@ footer {
       padding: 10px 20px;
       font-size: 15px;
   }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    color: gold;
 }

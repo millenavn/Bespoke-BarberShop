@@ -9,13 +9,113 @@
     <link href="https://fonts.googleapis.com/css2?family=Arapey&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@55&display=swap" rel="stylesheet">
+
+    <style>
+        /* Estilos básicos */
+        body, html {
+            font-family: 'Archivo Narrow', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            min-height: 100vh;
+            height: 100%;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            position: relative;
+            width: 100%;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .logo {
+            width: 80px;
+            height: auto;
+        }
+        
+        /* Estilos para dispositivos móveis */
+        @media screen and (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                background-color: #333;
+                position: absolute;
+                top: 50px;
+                left: 0;
+                width: 100%;
+                padding: 20px 0;
+            }
+            nav ul li {
+                margin: 10px 0;
+                text-align: center;
+            }
+            .hamburger {
+                display: block;
+                cursor: pointer;
+                font-size: 1.5em;
+                color: #fff;
+            }
+        }
+        
+        /* Outros estilos */
+        .main-content {
+            padding: 20px;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        /* Botão do Menu Mobile */
+        .hamburger {
+            display: none;
+        }
+
+        /* Estilos do formulário e das sections */
+        .section, .contato-section, .agendamento-section, .franqueado-section {
+            padding: 20px;
+            margin: 10px auto;
+            width: 100%;
+            background-color: #f4f4f4;
+        }
+
+        /* Responsividade de largura das sections */
+        @media screen and (max-width: 768px) {
+            .contato-section, .agendamento-section, .franqueado-section {
+                width: 90%;
+                margin: 0 auto;
+            }
+            form label, form input, form select, form textarea {
+                width: 100%;
+            }
+        }
+
+    </style>
+
 </head>
 <body>
 
     <header class="head1">
         <nav>
             <img src="imagens/Logo.jpeg" alt="Logo da Barbearia" class="logo">
-            <ul>
+            <span class="hamburger" onclick="toggleMenu()">&#9776;</span>
+            <ul id="menu">
                 <li><a href="#inicio">Início</a></li>
                 <li><a href="#sobre">Sobre Nós</a></li>
                 <li><a href="#espaco">Espaço</a></li>
@@ -29,7 +129,7 @@
                 </li>
                 <li><a href="#localizacao">Localização</a></li>
                 <li><a href="#contato">Contato</a></li>
-                <li><a href="#agendar">Agendar</a></li>
+                <li><a href="#agendamento">Agendar</a></li>
                 <li><a href="#franqueado">Seja um Franqueado</a></li>
             </ul>
         </nav>
@@ -65,13 +165,13 @@
         </div>
         <div class="vector-3-line from-left"></div>
         <div class="aguardamos from-left">Estamos te esperando!</div>
-        <a href="#contato" class="botao"><span>Marque já seu horário</span></a>
+        <a href="#agendamento" class="botao"><span>Marque já seu horário</span></a>
     </div>
         </section>
         <hr>
         <section id="espaco">
             <div class="overlay">
-                <div class="content from-right">
+                <div class="content1 from-right">
                     <h1>COMO É O NOSSO ESPAÇO?</h1>
                     <div class="divider2"></div>
                     <p>Sem filas, estresse ou tédio, a Bespoke conta com um espaço ideal para o seu tempo sagrado conosco.</p>
@@ -100,42 +200,195 @@
                     <img src="imagens/frame1.png" alt="Barba">
                 </div>
             </a>
-        </div>
+        
          
     
-        <!-- Bloco de Inspirações com imagem -->
-        <a href="testeinspiracoes.html">
+            <!-- Bloco de Inspirações com imagem -->
+            <a href="testeinspiracoes.html">
             <div class="servico inspiracoes">
                 <img src="Imagens serviços/Frame 34.png" alt="Inspirações">
             
             </div>
         </a>
+        </div>
         </section>
         <hr>
         <section id="localizacao">
-            <h2>Localização</h2>
-            <p>Informações sobre a localização da barbearia.</p>
+            <div class="localizacao"></div>
+        <div class="nossas-unidades">
+            NOSSAS UNIDADES
+        </div>
+
+        <div class="unidades-container">
+            <!-- Unidade 1 -->
+            <div class="unidade bloco from-left">
+                <div class="informacoes">
+                    <div class="titulo">Vila Carrão</div>
+                    <div class="endereco">R. João Vieira Prioste, 785</div>
+                    <div class="telefone">Tel 11 2850-8794</div>
+                    <div class="horarios">
+                        <div class="hora">Segunda à Sexta 9h às 20h</div>
+                        <div class="hora">Sábado das 10h às 19h</div>
+                    </div>
+                </div>
+                <img src="imagens unidades/Vila Carrão.png" alt="Vila Carrão" class="imagem">
+            </div>
+
+            <!-- Unidade 2 -->
+            <div class="unidade bloco from-right">
+                <div class="informacoes">
+                    <div class="titulo">Vila Matilde</div>
+                    <div class="endereco">R. José Mascarenhas, 861</div>
+                    <div class="telefone">Tel 11 7630-2714</div>
+                    <div class="horarios">
+                        <div class="hora">Segunda à Sexta 9h às 20h</div>
+                        <div class="hora">Sábado das 10h às 19h</div>
+                    </div>
+                </div>
+                <img src="imagens unidades/Vila Matilde.png" alt="Vila Matilde" class="imagem">
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Adicionando o script JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const unidades = document.querySelectorAll('.unidade');
+
+            unidades.forEach(unidade => {
+                unidade.addEventListener('mouseover', function () {
+                    unidade.style.transform = 'scale(1.05)';
+                    unidade.style.transition = 'transform 0.3s ease';
+                });
+
+                unidade.addEventListener('mouseout', function () {
+                    unidade.style.transform = 'scale(1)';
+                });
+            });
+        });
+    </script>
         </section>
         <hr>
-        <section id="contato">
-            <h2>Contato</h2>
-            <p>Formulário de contato e informações.</p>
+        <section id="contato" class="contato-section">
+            <div class="contato-container">
+                <h2>Fale Conosco</h2>
+                <p>Tem alguma dúvida ou quer saber mais? Envie-nos uma mensagem ou entre em contato pelas redes sociais!</p>
+    
+                <!-- Formulário de Contato -->
+                <form class="contato-form" action="" method="get">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+    
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+    
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem aqui..." required></textarea>
+    
+                    <button type="submit">Enviar</button>
+                </form>
+    
+                <!-- Redes Sociais -->
+                <div class="redes-sociais">
+                    <p>Siga-nos:</p>
+                    <a href="https://facebook.com/seu_perfil" target="_blank" class="social-icon"><img src="face.png" alt="Facebook"></a>
+                    <a href="https://instagram.com/seu_perfil" target="_blank" class="social-icon"><img src="insta.jpeg" alt="Instagram"></a>
+                    <a href="https://twitter.com/seu_perfil" target="_blank" class="social-icon"><img src="X.png" alt="Twitter"></a>
+                    <a href="https://linkedin.com/seu_perfil" target="_blank" class="social-icon"><img src="in.png" alt="LinkedIn"></a>
+                </div>
+            </div>
         </section>
         <hr>
-        <section id="agendar">
-            <h2>Agende um horário</h2>
-            <p>Informações sobre como se tornar um franqueado.</p>
+        <section id="agendamento" class="agendamento-section">
+            <div class="agendamento-container">
+                <h2>Agende seu Horário</h2>
+                <p>Escolha o melhor horário e serviço para você!</p>
+    
+                <!-- Formulário de Agendamento -->
+                <form class="agendamento-form" action="" method="get">
+                    
+                    <!-- Seleção de Data e Horário -->
+                    <label for="data">Data:</label>
+                    <input type="date" id="data" name="data" required>
+    
+                    <label for="horario">Horário:</label>
+                    <input type="time" id="horario" name="horario" required>
+    
+                    <!-- Seleção do Tipo de Serviço -->
+                    <label for="servico">Tipo de Serviço:</label>
+                    <select id="servico" name="servico" required>
+                        <option value="">Selecione um serviço</option>
+                        <option value="corte">Corte de Cabelo</option>
+                        <option value="Infantil">Corte de Cabelo Infantil</option>
+                        <option value="corte-barba">Corte e Barba</option>
+                        <option value="maquina">Barba Máquina</option>
+                        <option value="navalha">Barba Navalha</option>
+                        <option value="pigmentacao">Barba Navalha + Pigmentação</option>
+                        <option value="completo">Completo</option>
+                    </select>
+    
+                    <!-- Seleção da Unidade -->
+                    <label for="unidade">Unidade:</label>
+                    <select id="unidade" name="unidade" required>
+                        <option value="">Selecione uma unidade</option>
+                        <option value="vila-carrao">Vila Carrão</option>
+                        <option value="vila-matilde">Vila Matilde</option>
+                    </select>
+    
+                    <!-- Seleção do Profissional -->
+                    <label for="profissional">Profissional:</label>
+                    <select id="profissional" name="profissional" required>
+                        <option value="">Escolha um profissional</option>
+                        <option value="joao">João</option>
+                        <option value="maria">Edivaldo</option>
+                        <option value="carlos">Carlos</option>
+                        <option value="ana">Felipe</option>
+                    </select>
+    
+                    <!-- Botão de Enviar -->
+                    <button type="submit">Agendar</button>
+                </form>
+            </div>
         </section>
         <hr>
-        <section id="franqueado">
-            <h2>Seja um Franqueado</h2>
-            <p>Informações sobre como se tornar um franqueado.</p>
+        <section id="franqueado" class="franqueado-section">
+            <div class="franqueado-container">
+                <h2>Seja um Franqueado</h2>
+                <p>Quer fazer parte do nosso time? Preencha o formulário abaixo e entraremos em contato!</p>
+                
+                <form class="franqueado-form" action="" method="get">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" required>
+    
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+    
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" required>
+    
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" id="cidade" name="cidade" required>
+    
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte-nos um pouco sobre você e por que quer ser nosso franqueado." required></textarea>
+    
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2024 Bespoke Barbershop. Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+        }
+    </script>
 
     <script src="teste.js"></script>
 </body>

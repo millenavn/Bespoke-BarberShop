@@ -764,7 +764,7 @@
 
 /* Bloco de Cabelo e Barba */
 .barba {
-  position: absolute;
+  position: relative;
   top: -70px;
   right: 60px;
   width: 450px;
@@ -772,7 +772,7 @@
 }
 
 .cabelo {
-  position: absolute;
+  position: relative;
   top: -70px;
   left: 100px;
   width: 450px;
@@ -781,7 +781,7 @@
 
 /* Bloco de Inspirações */
 .inspiracoes {
-  position: absolute;
+  position: relative;
   left: 25px;
   width: 1050px;
   height: 250px;
@@ -1567,3 +1567,125 @@ h2 {
   }
 }
 
+/* Ajustes gerais para todos os tamanhos de tela */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: black;
+}
+
+.head1 {
+  background-color: black;
+  padding: 0;
+}
+
+nav img.logo {
+  width: 8%;
+}
+
+.title {
+  font-size: 4rem;
+}
+
+.service-page {
+  max-width: 90%; /* Ajuste para garantir que fique responsivo */
+}
+
+/* Responsividade para Tablets - até 1024px */
+@media (max-width: 1024px) {
+  nav img.logo {
+      width: 12%;
+  }
+  
+  .title {
+      font-size: 3rem;
+  }
+
+  .vector-3-box, .nos-somos-bespoke {
+      width: 90%;
+      left: 5%;
+      padding: 10px;
+      font-size: 1.8rem;
+  }
+
+  .barba, .cabelo, .inspiracoes {
+      width: 80%;
+      margin-left: 10%;
+  }
+
+  .aguardamos {
+      font-size: 2.5rem;
+      right: -200px;
+  }
+}
+
+/* Responsividade para Smartphones Grandes - até 768px */
+@media (max-width: 768px) {
+  .title {
+      font-size: 2.5rem;
+      padding-top: 20%;
+  }
+
+  nav ul {
+      flex-direction: column;
+      gap: 10px;
+  }
+  
+  .nos-somos-bespoke, .vector-3-box {
+      font-size: 1.5rem;
+      left: 5%;
+      width: 90%;
+  }
+
+  .aguardamos {
+      font-size: 2rem;
+      right: 0;
+  }
+  
+  .service-page {
+      padding: 20px;
+  }
+
+  .barba, .cabelo, .inspiracoes {
+      width: 90%;
+      margin: 0 auto;
+  }
+}
+
+/* Responsividade para Smartphones Pequenos - até 480px */
+@media (max-width: 480px) {
+  .title {
+      font-size: 2rem;
+  }
+
+  nav img.logo {
+      width: 20%;
+  }
+
+  .nos-somos-bespoke, .vector-3-box {
+      font-size: 1.2rem;
+      padding: 5px;
+      width: 95%;
+  }
+
+  .aguardamos {
+      font-size: 1.8rem;
+      right: 0;
+      top: 10px;
+  }
+
+  .barba, .cabelo, .inspiracoes {
+      width: 100%;
+  }
+
+  .service-page h1 {
+      font-size: 1.5rem;
+  }
+
+  .back-button {
+      padding: 10px;
+      font-size: 0.9rem;
+  }
+}
