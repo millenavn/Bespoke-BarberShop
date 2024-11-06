@@ -535,44 +535,6 @@ hr{
     filter: brightness(1.2);
 }
   
-  /* MEDIA QUERIES - Responsividade */
-  
-  /* Para telas de até 1024px (tablets) */
-  @media screen and (max-width: 1024px) {
-    .barba, .cabelo {
-        width: 80%;
-    }
-    .inspiracoes {
-        width: 90%;
-    }
-  }
-  
-  /* Para telas de até 768px (smartphones grandes e tablets em modo retrato) */
-  @media screen and (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .barba, .cabelo {
-        width: 90%;
-    }
-    .inspiracoes {
-        width: 95%;
-    }
-  }
-  
-  /* Para telas de até 480px (smartphones menores) */
-  @media screen and (max-width: 480px) {
-    .barba, .cabelo {
-        width: 100%;
-    }
-    .inspiracoes {
-        width: 100%;
-    }
-    .servicos h2 {
-        font-size: 35px;
-    }
-  }
 
   #localizacao {
     overflow-x: hidden;
@@ -666,100 +628,6 @@ hr{
     right: 20px; /* Ajuste da posição */
   }
   
-  /* Media Queries para responsividade */
-  
-  @media (max-width: 1366px) {
-    .unidade {
-        width: 500px; /* Ajusta a largura dos blocos */
-        height: 400px; /* Ajusta a altura para melhor visualização */
-    }
-  
-    .nossas-unidades {
-        font-size: 60px; /* Diminui o tamanho da fonte do título principal */
-        margin-bottom: 30px;
-    }
-  
-    .titulo {
-        font-size: 50px; /* Ajusta o tamanho da fonte do título */
-    }
-  
-    .endereco, .telefone, .hora {
-        font-size: 30px; /* Reduz o tamanho da fonte */
-    }
-  
-    .imagem {
-        width: 250px;
-        height: 162px; /* Ajusta o tamanho da imagem */
-    }
-  }
-  
-  /* Ajustes para telas menores que 768px */
-  @media (max-width: 768px) {
-    .nossas-unidades {
-        font-size: 50px; /* Diminui ainda mais o título */
-        margin-bottom: 20px;
-    }
-  
-    .unidade {
-        width: 100%; /* Ajusta para ocupar a largura total */
-        margin-bottom: 20px; /* Espaçamento entre os blocos */
-    }
-  
-    .titulo {
-        font-size: 40px; /* Ajusta o tamanho da fonte do título */
-    }
-  
-    .endereco, .telefone, .hora {
-        font-size: 25px; /* Reduz o tamanho da fonte */
-    }
-  
-    .imagem {
-        width: 200px;
-        height: 130px; /* Reduz o tamanho da imagem */
-    }
-  }
-  
-  /* Ajustes para telas menores que 480px */
-  @media (max-width: 480px) {
-    .nossas-unidades {
-        font-size: 40px; /* Diminui ainda mais o título */
-        margin-bottom: 20px;
-    }
-  
-    .unidade {
-        width: 100%; /* Ajusta para ocupar a largura total */
-        padding: 10px; /* Reduz o padding */
-    }
-  
-    .titulo {
-        font-size: 30px; /* Diminui o tamanho do título */
-    }
-  
-    .endereco, .telefone, .hora {
-        font-size: 20px; /* Ajusta o tamanho da fonte */
-    }
-  
-    .imagem {
-        width: 150px;
-        height: 100px; /* Reduz ainda mais a imagem */
-    }
-  }  
-
-
-
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        width: 100%;
-    }
-
-    .dropdown {
-        position: relative;
-    }
-}
 /* Estilos para as páginas de serviços individuais */
 
 .body1{
@@ -1073,54 +941,6 @@ hr{
   transition: ease-in-out 0.3s;
 }
 
-/* Media Query para tablets */
-@media screen and (max-width: 768px) {
-  .agendamento-container {
-      padding: 20px;
-  }
-
-  .agendamento-container form label {
-      font-size: 14px;
-  }
-
-  .agendamento-container form input,
-  .agendamento-container form select,
-  .agendamento-container form button {
-      font-size: 14px;
-      padding: 10px;
-  }
-}
-
-/* Media Query para dispositivos móveis */
-@media screen and (max-width: 480px) {
-  .agendamento-section {
-      padding: 20px;
-  }
-
-  .agendamento-container {
-      padding: 15px;
-  }
-
-  .agendamento-container h2 {
-      font-size: 20px;
-  }
-
-  .agendamento-container form label {
-      font-size: 13px;
-  }
-
-  .agendamento-container form input,
-  .agendamento-container form select,
-  .agendamento-container form button {
-      font-size: 13px;
-      padding: 8px;
-  }
-
-  .agendamento-container form button {
-      padding: 10px;
-  }
-}
-
 .service-page {
   font-family: "Teko", sans-serif;
   max-width: 800px;
@@ -1207,6 +1027,195 @@ hr{
   transition: ease 0.3s;
 }
 
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    color: gold;
+}
+
+/* MEDIA QUERIES - Responsividade */
+  
+  /* Para telas de até 1024px (tablets) */
+  @media screen and (max-width: 1024px) {
+    .barba, .cabelo {
+        width: 80%;
+    }
+    .inspiracoes {
+        width: 90%;
+    }
+  }
+  
+  /* Para telas de até 768px (smartphones grandes e tablets em modo retrato) */
+  @media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .barba, .cabelo {
+        width: 90%;
+    }
+    .inspiracoes {
+        width: 95%;
+    }
+  }
+  
+  /* Para telas de até 480px (smartphones menores) */
+  @media screen and (max-width: 480px) {
+    .barba, .cabelo {
+        width: 100%;
+    }
+    .inspiracoes {
+        width: 100%;
+    }
+    .servicos h2 {
+        font-size: 35px;
+    }
+  }
+
+  /* Media Queries para responsividade */
+  
+  @media (max-width: 1366px) {
+    .unidade {
+        width: 500px; /* Ajusta a largura dos blocos */
+        height: 400px; /* Ajusta a altura para melhor visualização */
+    }
+  
+    .nossas-unidades {
+        font-size: 60px; /* Diminui o tamanho da fonte do título principal */
+        margin-bottom: 30px;
+    }
+  
+    .titulo {
+        font-size: 50px; /* Ajusta o tamanho da fonte do título */
+    }
+  
+    .endereco, .telefone, .hora {
+        font-size: 30px; /* Reduz o tamanho da fonte */
+    }
+  
+    .imagem {
+        width: 250px;
+        height: 162px; /* Ajusta o tamanho da imagem */
+    }
+  }
+  
+  /* Ajustes para telas menores que 768px */
+  @media (max-width: 768px) {
+    .nossas-unidades {
+        font-size: 50px; /* Diminui ainda mais o título */
+        margin-bottom: 20px;
+    }
+  
+    .unidade {
+        width: 100%; /* Ajusta para ocupar a largura total */
+        margin-bottom: 20px; /* Espaçamento entre os blocos */
+    }
+  
+    .titulo {
+        font-size: 40px; /* Ajusta o tamanho da fonte do título */
+    }
+  
+    .endereco, .telefone, .hora {
+        font-size: 25px; /* Reduz o tamanho da fonte */
+    }
+  
+    .imagem {
+        width: 200px;
+        height: 130px; /* Reduz o tamanho da imagem */
+    }
+  }
+  
+  /* Ajustes para telas menores que 480px */
+  @media (max-width: 480px) {
+    .nossas-unidades {
+        font-size: 40px; /* Diminui ainda mais o título */
+        margin-bottom: 20px;
+    }
+  
+    .unidade {
+        width: 100%; /* Ajusta para ocupar a largura total */
+        padding: 10px; /* Reduz o padding */
+    }
+  
+    .titulo {
+        font-size: 30px; /* Diminui o tamanho do título */
+    }
+  
+    .endereco, .telefone, .hora {
+        font-size: 20px; /* Ajusta o tamanho da fonte */
+    }
+  
+    .imagem {
+        width: 150px;
+        height: 100px; /* Reduz ainda mais a imagem */
+    }
+  }  
+
+
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    .dropdown {
+        position: relative;
+    }
+}
+
+/* Media Query para tablets */
+@media screen and (max-width: 768px) {
+  .agendamento-container {
+      padding: 20px;
+  }
+
+  .agendamento-container form label {
+      font-size: 14px;
+  }
+
+  .agendamento-container form input,
+  .agendamento-container form select,
+  .agendamento-container form button {
+      font-size: 14px;
+      padding: 10px;
+  }
+}
+
+/* Media Query para dispositivos móveis */
+@media screen and (max-width: 480px) {
+  .agendamento-section {
+      padding: 20px;
+  }
+
+  .agendamento-container {
+      padding: 15px;
+  }
+
+  .agendamento-container h2 {
+      font-size: 20px;
+  }
+
+  .agendamento-container form label {
+      font-size: 13px;
+  }
+
+  .agendamento-container form input,
+  .agendamento-container form select,
+  .agendamento-container form button {
+      font-size: 13px;
+      padding: 8px;
+  }
+
+  .agendamento-container form button {
+      padding: 10px;
+  }
+}
+
 /* Ajustes para telas pequenas */
 @media (max-width: 768px) {
   .service-page {
@@ -1231,9 +1240,3 @@ hr{
   }
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: black;
-    color: gold;
-}
