@@ -154,31 +154,38 @@ nav ul li:hover .dropdown {
   height: auto;
 }
 
+
+
 .section.visible {
-    filter: blur(0px);
-    opacity: 1;
+  filter: blur(0px);
+  opacity: 1;
 }
 
+/* Animação dos elementos que vêm da esquerda */
+.from-left {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Animação dos elementos que vêm da direita */
+.from-right {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Quando os elementos ficam visíveis */
+.section.visible .from-left,
+.section.visible .from-right {
+  opacity: 1;
+  transform: translateX(0);
+}
 .section {
-    height: 100vh; /* Cada seção ocupa 100% da altura da tela */
-    justify-content: center; /* Centraliza horizontalmente */
-    border-bottom: 1px solid #ccc;
-    filter: blur(15px);
-    opacity: 0;
-    transition: opacity 2s ease-out, transform 2s ease-out;
-    padding-top: 0;
-    overflow-x: hidden; /* Impede rolagem horizontal */
-    position: relative;
-    width: 100%;
-    display: flex;
-    flex-direction: row; /* Alinha o texto e a imagem horizontalmente */
-    justify-content: center; /* Centraliza verticalmente */
-    align-items: center; /* Alinha o conteúdo horizontalmente */
-    min-height: 100vh; /* Mantém a altura da seção */
-    padding: 0 0;
-    text-align: center; /* Centraliza o texto dentro do contêiner */
-    margin: 0 0;
-    min-width: 100%;
+  filter: blur(15px);
+  opacity: 0;
+  transition: opacity 2s ease-out, transform 2s ease-out;
+  padding-top: 80px;
 }
 
 #inicio{

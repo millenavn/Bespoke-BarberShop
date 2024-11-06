@@ -9,43 +9,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Arapey&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@55&display=swap" rel="stylesheet">
-
-    <style>
-    
-        .logo {
-            width: 80px;
-            height: auto;
-        }
-        
-        /* Outros estilos */
-        .main-content {
-            padding: 20px;
-            min-height: 100vh;
-            background-color: #f4f4f4;
-        }
-
-        /* Botão do Menu Mobile */
-        .hamburger {
-            display: none;
-        }
-
-        /* Estilos do formulário e das sections */
-        .section, .contato-section, .agendamento-section, .franqueado-section {
-            padding: 20px;
-            margin: 10px auto;
-            width: 100%;
-            background-color: #f4f4f4;
-        }
-
-    </style>
-
 </head>
 <body>
 
     <header class="head1">
         <nav>
             <img src="imagens/Logo.jpeg" alt="Logo da Barbearia" class="logo">
-            <span class="hamburger" onclick="toggleMenu()">&#9776;</span>
             <ul id="menu">
                 <li><a href="#inicio">Início</a></li>
                 <li><a href="#sobre">Sobre Nós</a></li>
@@ -67,7 +36,7 @@
     </header>
 
     <main>
-        <section id="inicio">
+        <section class="section" id="inicio">
             <h1 class="title">Bespoke BarberShop</h1>
             <p class="subtitle">A barbearia pensada para o seu conforto.</p>
             <div class="divider"></div>
@@ -77,7 +46,7 @@
                 juntos!
         </section>
         <hr>
-        <section id="sobre">
+        <section class="section" id="sobre">
             <div class="content">
                 <div class="vector-3-box-container">
                     <div class="vector-3-box from-left">
@@ -100,7 +69,7 @@
     </div>
         </section>
         <hr>
-        <section id="espaco">
+        <section class="section" id="espaco">
             <div class="overlay">
                 <div class="content1 from-right">
                     <h1>COMO É O NOSSO ESPAÇO?</h1>
@@ -114,7 +83,7 @@
             </div>
         </section>
         <hr>
-        <section id="servicos">
+        <section class="section" id="servicos">
             <h2>Nossos Serviços</h2>
     
         <div class="container">
@@ -144,7 +113,7 @@
         </div>
         </section>
         <hr>
-        <section id="localizacao">
+        <section class="section" id="localizacao">
             <div class="localizacao"></div>
         <div class="nossas-unidades">
             NOSSAS UNIDADES
@@ -314,13 +283,7 @@
         <p>&copy; 2024 Bespoke Barbershop. Todos os direitos reservados.</p>
     </footer>
 
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById("menu");
-            menu.style.display = menu.style.display === "flex" ? "none" : "flex";
-        }
-    </script>
-
+    
     <script src="teste.js"></script>
 </body>
 </html>
