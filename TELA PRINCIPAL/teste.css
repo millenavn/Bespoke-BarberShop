@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600&display=swap');
 body {
-  
+    overflow-x: hidden;
     box-sizing: border-box;
     min-height: 100vh;
     height: 100%;
@@ -47,11 +47,11 @@ nav ul {
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-left: 2%;
     flex-wrap: wrap;
     display: flex;
     list-style: none;
     margin: 0;
+    
 }
 
 nav img.logo{
@@ -60,12 +60,12 @@ nav img.logo{
 }
 
 nav ul li {
-    margin: 0 10px;
+    margin: 0 2px;
     display: flex;
     align-items: center; /* Centraliza verticalmente o texto dos itens */
     border: 2px solid #DAA520; /* Borda dourada ao redor dos itens da nav bar */
     border-radius: 5px; /* Borda arredondada */
-    padding: 5px 25px; /* Espaço interno ao redor do texto */
+    padding: 5px 15px; /* Espaço interno ao redor do texto */
 }
 
 nav ul li a {
@@ -121,7 +121,7 @@ nav ul li a:hover {
   .dropdown-menu .dropdown-item {
     display: block; /* Faz com que os itens do menu ocupem a largura total */
     color: #fff; /* Cor preta para o texto dos itens do menu */
-    padding: 5px 25px; /* Espaço interno dos itens do menu */
+    padding: 5px 15px; /* Espaço interno dos itens do menu */
     text-decoration: none; /* Remove sublinhado dos itens */
     font-size: 17px; /* Tamanho da fonte dos itens do menu */
     border: 2px solid #DAA520; /* Borda dourada ao redor dos itens do menu */
@@ -150,7 +150,7 @@ nav ul li:hover .dropdown {
 }
 
 .logo {
-  width: 80px;
+  width: 100px;
   height: auto;
 }
 
