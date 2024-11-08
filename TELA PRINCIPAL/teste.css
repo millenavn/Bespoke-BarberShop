@@ -478,9 +478,9 @@ hr{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-  }
+}
 
-  #servicos h2 {
+#servicos h2 {
     font-family: 'Arapey';
     text-align: center;
     font-size: 50px;
@@ -489,113 +489,77 @@ hr{
     text-transform: uppercase;
     font-weight: bold;
     margin-top: 10px;
-  }
-  
-  /* Container para os blocos de serviço */
-  .container {
+}
+
+/* Container para os blocos de serviço */
+.container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Centraliza os itens horizontalmente */
     gap: 20px;
     margin-bottom: 20px;
     width: 100%;
     max-width: 1200px;
     flex-wrap: wrap;
     position: relative;
-    justify-items: center;
-  }
-  
-  /* Blocos de serviço */
-  .servico {
-    width: 30%;
+}
+
+/* Blocos de serviço */
+.servico {
+    width: 30%; /* Ajuste a largura dos blocos */
     height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  /* Bloco de Cabelo e Barba */
-  .barba {
-    position: relative;
-    width: 1050px;
-    height: 180px;
     transition: transform 0.3s ease;
-  }
+}
 
-  .barba:hover{
-    transform: scale(1.05);
-  }
-  
-  .cabelo {
-    position: relative;
-    width: 1050px;
+/* Bloco de Cabelo e Barba */
+.barba {
+    width: 100%; /* Ajuste a largura para 100% para garantir que os blocos ocupem o espaço disponível */
     height: 180px;
     transition: transform 0.3s ease;
-  }
-  
-  .cabelo:hover{
-    transform: scale(1.05);
-  }
-  
-  /* Bloco de Inspirações */
-  .inspiracoes {
-    position: relative;
-    
-    width: 1050px;
-    height: 180px;
-    top: 0px;
-    transition: transform 0.3s ease;
-  }
-  
-  .inspiracoes:hover{
-    transform: scale(1.05);
-  }
+}
 
-  /* Estilização das imagens dentro dos blocos de serviço */
-  .servico img {
+.barba:hover {
+    transform: scale(1.05);
+}
+
+.cabelo {
+    width: 100%;
+    height: 180px;
+    transition: transform 0.3s ease;
+}
+
+.cabelo:hover {
+    transform: scale(1.05);
+}
+
+/* Bloco de Inspirações */
+.inspiracoes {
+    width: 100%;
+    height: 180px;
+    transition: transform 0.3s ease;
+}
+
+.inspiracoes:hover {
+    transform: scale(1.05);
+}
+
+/* Estilização das imagens dentro dos blocos de serviço */
+.servico img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-  }
-  
-  /* Estilização das imagens dentro dos blocos de serviço */
-  .servico img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-  }
-  
-  .servico {
-      transition: transform 0.3s ease;
-  }
-  
-  .servico.inspiracoes {
-      position: relative;
-      overflow: hidden;
-  }
-  
-  .servico.inspiracoes img {
-      transition: filter 0.3s ease;
-  }
-
-  .servico.cabelo img {
-    transition: filter 0.3s ease;
-}
-  
-.servico.barba img {
     transition: filter 0.3s ease;
 }
 
-  .servico.inspiracoes:hover img {
-      filter: brightness(1.2);
-  }
-  
-  .servico.cabelo:hover img {
-    filter: brightness(1.2);
-}
-
+/* Efeito de brilho nas imagens ao passar o mouse */
+.servico.inspiracoes:hover img,
+.servico.cabelo:hover img,
 .servico.barba:hover img {
     filter: brightness(1.2);
 }
+
   
 
   #localizacao {
