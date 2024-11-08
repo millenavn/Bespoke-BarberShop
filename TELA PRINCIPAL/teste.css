@@ -92,7 +92,7 @@ nav ul li.dropdown .dropdown-menu {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #444;
+  background-color: #00000000;
   padding: 10px;
 }
 
@@ -106,7 +106,7 @@ nav ul li.dropdown-menu a {
 }
 
 nav ul li.dropdown-menu a:hover {
-  background-color: #555;
+  background-color: #000000;
 }
 
 
@@ -143,9 +143,9 @@ nav ul li a:hover {
     position: absolute; /* Posiciona o menu em relação ao item pai */
     top: 100%; /* Posiciona o menu logo abaixo do botão */
     left: 0;
-    background-color: #ffffff00; /* Cor de fundo do menu */
+    background-color: #000000; /* Cor de fundo do menu */
     border-radius: 5px; /* Borda arredondada para o menu */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para o menu */
+    box-shadow: 0 4px 8px rgb(0, 0, 0); /* Sombra para o menu */
     z-index: 1000; /* Garante que o menu fique acima dos outros elementos */
     
 }
