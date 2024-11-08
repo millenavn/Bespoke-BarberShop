@@ -7,7 +7,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     color: black;
 }
 
@@ -41,42 +41,74 @@ nav{
    width: 100%;
 }
 
+/* Container da navegação */
 nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    display: flex;
-    list-style: none;
-    margin: 0;
-    
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Usando Flexbox para alinhar os itens */
+  justify-content: flex-start; /* Alinha os itens à esquerda */
+  gap: 10px; /* Espaçamento entre os itens */
+  flex-wrap: wrap; /* Permite que os itens quebrem de linha quando necessário */
+  width: 100%; /* Garante que o ul ocupe 100% da largura */
 }
 
-nav img.logo{
-    width: 10%;
-    flex-wrap: wrap;
+/* Estilo do logo (agora com maior largura) */
+nav img.logo {
+  width: 15%; /* Aumenta a largura da logo */
+  margin-right: 20px; /* Adiciona espaço à direita da logo */
+  max-width: 150px; /* Garante que o logo não ultrapasse 150px de largura */
 }
 
+/* Estilo dos itens do menu */
 nav ul li {
-    margin: 0 2px;
-    display: flex;
-    align-items: center; /* Centraliza verticalmente o texto dos itens */
-    border: 2px solid #DAA520; /* Borda dourada ao redor dos itens da nav bar */
-    border-radius: 5px; /* Borda arredondada */
-    padding: 5px 15px; /* Espaço interno ao redor do texto */
+  margin: 0 2px;
+  display: flex;
+  align-items: center; /* Centraliza verticalmente o texto */
+  border: 2px solid #DAA520; /* Borda dourada ao redor dos itens */
+  border-radius: 5px; /* Borda arredondada */
+  padding: 5px 15px; /* Espaço interno ao redor do texto */
 }
 
+/* Estilo dos links dentro dos itens */
 nav ul li a {
-    text-decoration: none;
-    color: #fff; /* Cor branca para os links */
-    font-size: 17px; /* Aumenta o tamanho da fonte dos itens da nav bar */
-    font-weight: bold;
-    transition: color 0.3s ease;
-    display: flex;
-    align-items: center; /* Alinha verticalmente o texto e a seta */
+  text-decoration: none;
+  color: #fff; /* Cor branca para os links */
+  font-size: 17px; /* Tamanho da fonte */
+  font-weight: bold;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center; /* Alinha verticalmente o texto */
 }
+
+/* Estilo do item dropdown (se houver) */
+nav ul li.dropdown {
+  position: relative;
+}
+
+/* O menu dropdown oculto por padrão */
+nav ul li.dropdown .dropdown-menu {
+  display: none; /* Esconde o menu */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #444;
+  padding: 10px;
+}
+
+nav ul li.dropdown:hover .dropdown-menu {
+  display: block; /* Mostra o menu ao passar o mouse */
+}
+
+nav ul li.dropdown-menu a {
+  color: #fff;
+  padding: 8px 12px;
+}
+
+nav ul li.dropdown-menu a:hover {
+  background-color: #555;
+}
+
 
 nav ul li a:hover {
     color: #DAA520;
