@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600&display=swap');
+* {
+  box-sizing: border-box;
+}
 body {
     overflow-x: hidden;
     box-sizing: border-box;
@@ -91,9 +94,10 @@ nav ul li.dropdown .dropdown-menu {
   display: none; /* Esconde o menu */
   position: absolute;
   top: 100%;
-  left: 0;
+  left: -12px;
   background-color: #00000000;
   padding: 10px;
+  box-shadow: none;
 }
 
 nav ul li.dropdown:hover .dropdown-menu {
@@ -294,10 +298,10 @@ hr{
 .vector-3-box {
     padding: 15px;
     position: relative;
-    width: 630px;
-    height: auto; 
+    width: 640px;
+    height: 420px; 
     left: 660px;
-    top: 50px;
+    top: 0px;
     border: 5px solid #DAA520;
     border-radius: 20px;
     display: flex;
@@ -349,19 +353,19 @@ hr{
     position: relative;
     width: 613px;
     height: 16px;
-    right: -410px;
-    top: 100px;
+    right: -100px;
+    top: 70px;
     font-family: "Yellowtail", cursive;
-    font-weight: 400;
-    font-size: 80px;
+    font-weight: 300;
+    font-size: 60px;
     line-height: 16px;
-    text-align: center;
+    text-align: left;
     letter-spacing: 0.5px;
     color: #DAA520;
   }
   
   /* Botão */
-  .botao {
+  .botao1 {
     text-decoration: none;
     position: fixed;  
     bottom: 20px;     
@@ -369,8 +373,7 @@ hr{
     padding: 15px 25px;
     background-color: #000000;  
     color: #daa520;      
-    font-size: 16px;  
-    border: none;     
+    font-size: 16px;       
     border-style: outset;
     border-radius: 10px; 
     cursor: pointer;  
@@ -379,18 +382,18 @@ hr{
     border-color: #DAA520;
   }
   
-  .botao:hover {
+  .botao1:hover {
     transform: scale(1.05); /* Efeito ao passar o mouse */
   }
   
-  .botao span {
+  .botao1 span {
     font-family: "Teko", sans-serif;
     font-size: 30px;
     position: sticky;
     font-weight: 600;
   }
   
-  .botao:hover {
+  .botao1:hover {
     background: #4b4b4b;
     color: #daa520;
   }
@@ -699,6 +702,7 @@ hr{
   border-style: outset;
   border-color: #DAA520;
   border-width: 3px;
+  margin: 30px;
 }
 
 .franqueado-container h2 {
@@ -791,8 +795,9 @@ hr{
   border-color: #DAA520;
   border-style: outset;
   border-width: 3px;
-  max-height: 600px;
-  height: 600px;
+  max-height: 700px;
+  height: 100%;
+  margin: 30px;
   
 }
 
@@ -867,7 +872,7 @@ hr{
 }
 
 .redes-sociais p {
-  font-size: 1rem;
+  font-size: 1.25rem;
   color: #ffffff;
   margin-bottom: 10px;
 }
@@ -898,9 +903,12 @@ hr{
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-position: center;
+  
 }
 
 .agendamento-container {
+  margin: 30px;
   max-width: 400px;
   width: 100%;
   background-color: #000000;
