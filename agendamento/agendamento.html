@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento - Vila Carrão e Vila Matilde</title>
+    <link rel="stylesheet" href="agendamento.css">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-overlay">
+        <header class="header">
+            <h1>Agende seu horário</h1>
+            <p>Escolha a unidade para seu atendimento personalizado</p>
+        </header>
+
+        <section class="unit-selection">
+            <div class="unit" id="vila-carrao">
+                <img src="imagens/Vila Carrão.png" alt="Unidade Vila Carrão" class="unit-image">
+                <h2>Vila Carrão</h2>
+                <button onclick="showServices()">Selecionar Unidade</button>
+            </div>
+            <div class="unit" id="vila-matilde">
+                <img src="imagens/Vila Matilde.png" alt="Unidade Vila Matilde" class="unit-image">
+                <h2>Vila Matilde</h2>
+                <button onclick="showServices()">Selecionar Unidade</button>
+            </div>
+        </section>
+
+        <!-- Modal para Seleção de Serviços -->
+        <div class="overlay" id="services">
+            <div class="modal">
+                <h3>Escolha um Serviço</h3>
+                <ul>
+                    <li onclick="showTimes()">Corte</li>
+                    <li onclick="showTimes()">Corte Infantil</li>
+                    <li onclick="showTimes()">Corte + Barba</li>
+                    <li onclick="showTimes()">Corte + Sobrancelha</li>
+                    <li onclick="showTimes()">Barba Máquina</li>
+                    <li onclick="showTimes()">Barba Navalha</li>
+                    <li onclick="showTimes()">Barba Navalha + Pigmentação</li>
+                </ul>
+                <button onclick="closeModal('services')">Fechar</button>
+            </div>
+        </div>
+
+        <!-- Modal para Seleção de Horários -->
+        <div class="overlay" id="times">
+            <div class="modal">
+                <h3>Escolha um Horário</h3>
+                <ul>
+                    <li onclick="showBarbers()">10:00</li>
+                    <li onclick="showBarbers()">11:00</li>
+                    <li onclick="showBarbers()">12:00</li>
+                    <li onclick="showBarbers()">13:00</li>
+                    <li onclick="showBarbers()">14:00</li>
+                </ul>
+                <button onclick="closeModal('times')">Fechar</button>
+            </div>
+        </div>
+
+        <!-- Modal para Seleção de Barbeiros -->
+        <div class="overlay" id="barbers">
+            <div class="modal">
+                <h3>Escolha seu Barbeiro</h3>
+                <ul>
+                    <li onclick="showLogin()">Barbeiro A</li>
+                    <li onclick="showLogin()">Barbeiro B</li>
+                    <li onclick="showLogin()">Barbeiro C</li>
+                    <li onclick="showLogin()">Sem preferência</li>
+                </ul>
+                <button onclick="closeModal('barbers')">Fechar</button>
+            </div>
+        </div>
+
+        <!-- Modal para Login / Criar Conta -->
+        <div class="overlay" id="login">
+            <div class="modal">
+                <div class="tab">
+                    <button class="tab-button active" onclick="showTab('login-form')">Login</button>
+                    <button class="tab-button" onclick="showTab('signup-form')">Criar Conta</button>
+                </div>
+
+                <!-- Formulário de Login -->
+                <div id="login-form" class="form-content" style="display: block;">
+                    <h3>Login</h3>
+                    <form onsubmit="return handleLogin(event)">
+                        <label for="username">Usuário</label>
+                        <input type="text" id="username" required>
+                        <label for="password">Senha</label>
+                        <input type="password" id="password" required>
+                        <button type="submit" class="login-button">Entrar</button>
+                    </form>
+                </div>
+
+                <!-- Formulário de Criar Conta -->
+                <div id="signup-form" class="form-content" style="display: none;">
+                    <h3>Criar Conta</h3>
+                    <form>
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" required>
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" required>
+                        <label for="new-password">Senha</label>
+                        <input type="password" id="new-password" required>
+                        <button type="submit" class="login-button">Cadastrar</button>
+                    </form>
+                </div>
+                
+                <button onclick="closeModal('login')" class="cancel-button">Cancelar</button>
+            </div>
+        </div>
+
+        <!-- Modal para Confirmação de Agendamento -->
+        <div class="overlay" id="confirmation" style="display: none;">
+            <div class="modal">
+                <h3>Agendamento Concluído</h3>
+                <p>Seu agendamento foi realizado com sucesso!</p>
+                <button onclick="closeConfirmation()">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showServices() {
+            document.getElementById("services").style.display = "flex";
+        }
+
+        function showTimes() {
+            document.getElementById("services").style.display = "none";
+            document.getElementById("times").style.display = "flex";
+        }
+
+        function showBarbers() {
+            document.getElementById("times").style.display = "none";
+            document.getElementById("barbers").style.display = "flex";
+        }
+
+        function showLogin() {
+            document.getElementById("barbers").style.display = "none";
+            document.getElementById("login").style.display = "flex";
+            showTab('login-form'); // Exibe automaticamente o formulário de login
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        function closeConfirmation() {
+            document.getElementById("confirmation").style.display = "none";
+        }
+
+        function showTab(tabId) {
+            document.querySelectorAll(".form-content").forEach(content => content.style.display = "none");
+            document.getElementById(tabId).style.display = "block";
+
+            document.querySelectorAll(".tab-button").forEach(button => button.classList.remove("active"));
+            document.querySelector(`.tab-button[onclick="showTab('${tabId}')"]`).classList.add("active");
+        }
+
+        function handleLogin(event) {
+            event.preventDefault(); // Previne o envio padrão do formulário
+            closeModal('login'); // Fecha o modal de login
+            document.getElementById("confirmation").style.display = "flex"; // Mostra a confirmação
+        }
+    </script>
+</body>
+</html>
