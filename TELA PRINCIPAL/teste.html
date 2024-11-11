@@ -253,33 +253,127 @@
             </div>
         </section>
         <hr>
-        <section id="franqueado" class="franqueado-section">
-            <div class="franqueado-container">
-                <h2>Seja um Franqueado</h2>
-                <p>Quer fazer parte do nosso time? Preencha o formulário abaixo e entraremos em contato!</p>
-                
-                <form class="franqueado-form" action="" method="get">
-                    <label for="nome">Nome Completo:</label>
-                    <input type="text" id="nome" name="nome" required>
-    
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" required>
-    
-                    <label for="telefone">Telefone:</label>
-                    <input type="tel" id="telefone" name="telefone" required>
-    
-                    <label for="cidade">Cidade:</label>
-                    <input type="text" id="cidade" name="cidade" required>
-    
-                    <label for="mensagem">Mensagem:</label>
-                    <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte-nos um pouco sobre você e por que quer ser nosso franqueado." required></textarea>
-    
-                    <button type="submit">Enviar</button>
-                </form>
+<section class="section" id="franqueado">
+        <!-- Texto à esquerda -->
+        <div class="text-left from-left">
+            <h1 class="franqueado">Seja um</h1>
+            <h1 class="franqueado">Franqueado</h1>
+            <div class="line"></div>
+            <p class="descricao1">
+                Faça parte de nossa fraternidade e tenha sua própria franquia da Bespoke BarberShop, a sua barbearia favorita!
+            </p>
+        </div>
+        <div class="form-wrapper from-right">
+        <form action="" method="get"> <!-- Substitua pela URL correta -->
+            
+                <div class="form-container">
+                    <!-- Nome -->
+                    <label class="form-label" for="nome">Nome:</label>
+                    <input type="text" id="nome" class="form-input" name="nome" >
+        
+                    <!-- Email e Telefone - lado a lado -->
+                    <div class="email-telefone-wrapper">
+                        <!-- E-mail -->
+                        <div class="email-wrapper">
+                            <label class="form-label email-label" for="email">E-mail:</label>
+                            <input type="email" id="email" class="form-input email" name="email">
+                        </div>
+                        <!-- Telefone -->
+                        <div class="telefone-wrapper">
+                            <label class="form-label telefone-label" for="telefone">Telefone:</label>
+                            <input type="tel" id="telefone" class="form-input telefone" name="telefone" >
+                        </div>
+                    </div>
+        
+                    <!-- Região de Interesse -->
+                    <label class="form-label" for="regiao">Região de Interesse:</label>
+                    <input type="text" id="regiao" class="form-input" name="regiao">
+        
+                    <!-- Assunto -->
+                    <label class="form-label" for="assunto">Assunto:</label>
+                    <input type="text" id="assunto" class="form-input" name="assunto" >
+        
+                    <!-- Valor para investimento -->
+                    <label class="form-label" for="investimento">Valor para investimento:</label>
+                    <input type="text" id="investimento" class="form-input" name="investimento" >
+        
+                    <!-- Como nos conheceu -->
+                    <label class="form-label" for="nos-conheceu">Como nos conheceu:</label>
+                    <input type="text" id="nos-conheceu" class="form-input" name="nos_conheceu" >
+        
+                    <!-- Mensagem -->
+                    <label class="form-label" for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" class="form-textarea" name="mensagem" placeholder="Deixe sua mensagem"></textarea>
+        
+                    <!-- Botão de enviar -->
+                    <button type="submit" class="submit-btn">Quero ser Bespoke</button>
+                </div>
             </div>
+        </form>
+    </section>
+
+        <hr>
+        <section id="feedback" class="feedback-section">
+          <div class="feedback-wrapper">
+            <div class="feedback-container1">
+              <h3 class="h3-feedback">Gabriel</h3>
+              <p class="p-feedback">A Bespoke BarberShop superou minhas expectativas! O atendimento foi excelente, e o corte ficou exatamente do jeito que eu queria. Eles realmente entendem o que o cliente precisa. Com certeza voltarei!</p>
+            </div>
+            <div class="feedback-container2">
+              <h3 class="h3-feedback">Carlos</h3>
+              <p class="p-feedback">Ambiente agradável e profissionalismo. Os barbeiros são muito qualificados e detalhistas, e o corte ficou perfeito. Foi uma experiência relaxante do começo ao fim. Recomendo muito!</p>
+            </div>
+            <div class="feedback-container3">
+              <h3 class="h3-feedback">Danilo</h3>
+              <p class="p-feedback">Melhor barbearia da cidade! Atendimento personalizado e atenção aos detalhes. Saí de lá com um corte impecável e ainda recebi ótimas dicas de cuidados para o cabelo e barba. Nota 10!</p>
+            </div>
+            <div class="feedback-container4">
+              <h3 class="h3-feedback">Alex</h3>
+              <p class="p-feedback">Equipe muito educada e ambiente acolhedor. Gostei muito do resultado e senti que realmente se importaram com minha satisfação. É bom encontrar um lugar onde eu confio e sei que sairei sempre satisfeito.</p>
+            </div>
+          </div>
+          <div>
+          <h1 class="feedback-clientes">Feedback de nossos clientes
+              <div id="feedback-form-container">
+                  <p class="feedback-text">
+                    Sua opinião é muito importante para nós! Conte-nos o que achou dos nossos serviços e atendimento, 
+                    para que possamos continuar melhorando sua experiência na Bespoke BarberShop.
+                  </p>
+                
+                  <form action="/enviar-feedback" method="POST" class="feedback-form">
+                    <label for="nome" class="h3-feedback">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                
+                    <label for="email" class="h3-feedback">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                
+                    <label for="avaliacao" class="h3-feedback">Avaliação:</label>
+                    <div class="star-rating">
+                      <input type="radio" id="star5" name="avaliacao" value="5">
+                      <label for="star5" title="5 estrelas">&#9733;</label>
+                      <input type="radio" id="star4" name="avaliacao" value="4">
+                      <label for="star4" title="4 estrelas">&#9733;</label>
+                      <input type="radio" id="star3" name="avaliacao" value="3">
+                      <label for="star3" title="3 estrelas">&#9733;</label>
+                      <input type="radio" id="star2" name="avaliacao" value="2">
+                      <label for="star2" title="2 estrelas">&#9733;</label>
+                      <input type="radio" id="star1" name="avaliacao" value="1">
+                      <label for="star1" title="1 estrela">&#9733;</label>
+                    </div>
+                
+                    <label for="mensagem" class="h3-feedback">Feedback:</label>
+                    <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+                
+                    <button type="submit" class="feedback-font">Enviar Feedback</button>
+                  </form>
+                </div>
+          
+          </h1>
+      </div>
+         
         </section>
     </main>
-
+    <hr>
     <footer>
         <p>&copy; 2024 Bespoke Barbershop. Todos os direitos reservados.</p>
     </footer>
