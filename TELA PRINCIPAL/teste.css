@@ -945,7 +945,10 @@ text-align: left;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0 auto;
 }
 
 .redes-sociais p {
