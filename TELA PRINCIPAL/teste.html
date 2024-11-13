@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Arapey&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@55&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
 
@@ -300,61 +301,63 @@ Instagram: @bespoke_barbershop
 </section>
 
 <footer class="footer">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="atendimento">
+                    <h2 class="atendimento-title">ATENDIMENTO</h2>
+                    <div>
+                        <span>Telefone:</span>
+                        <p>(00) 0 0000-0000</p>
+                    </div>
+                    <div>
+                        <span>E-mail:</span>
+                        <p>contato@bespokebarbershop.com.br</p>
+                    </div>
+                </div>
 
-<div class="frame-27">
+                <div class="redes-sociais mt-4">
+                    <h2 class="redes-title">REDES SOCIAIS</h2>
+                    <div class="social-link">
+                        <span>Instagram:</span>
+                        <a href="https://www.instagram.com/bespoke_barbershop" class="social-link2">@bespoke_barbershop</a>
+                    </div>
+                    <div class="social-link">
+                        <span>Facebook:</span>
+                        <a href="https://www.facebook.com/bespokebarbershop" class="social-link2">@bespokebarbershop</a>
+                    </div>
+                    <div class="social-link">
+                        <span>WhatsApp:</span>
+                        <span>(00) 0 0000-0000</span>
+                    </div>
+                </div>
+            </div>
 
-  <!-- Atendimento -->
-  <div class="atendimento">
-    <h2 class="atendimento-title">ATENDIMENTO</h2>
-    <div class="atendimento">
-      <span>Telefone:</span>
-      <p>(00) 0 0000-0000</p>
-    </div>
-    <div class="atendimento">
-      <span>E-mail:</span>
-      <p>contato@bespokebarbershop.com.br</p>
-    </div>
-  </div>
+            <div class="col-md-6">
+                <div class="duvidas">
+                    <h2 class="duvidas-title">DÚVIDAS</h2>
+                    <label for="duvida-nome">Nome:</label>
+                    <input type="text" id="duvida-nome" name="duvida-nome" class="form-control" placeholder="Seu nome">
+                    <label for="duvida-email">E-mail:</label>
+                    <input type="email" id="duvida-email" name="duvida-email" class="form-control" placeholder="Seu e-mail">
+                    <label for="duvida-mensagem">Dúvida:</label>
+                        <textarea id="duvida-mensagem" name="duvida-mensagem" class="form-control" rows="3" placeholder="Escreva sua dúvida"></textarea>
+                        <button type="submit" class="btn btn-primary mt-2">Enviar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <!-- Imagem e Copyright -->
+        <div class="footer-bottom text-center mt-4">
+            <img src="WhatsApp Image 2024-09-02 at 11.04.29 3.png" alt="" class="logo">
+            <p class="copyright">Copyright © 2024 Bespoke Barber Cia. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
-  <!-- Redes Sociais -->
-  <div class="redes-sociais">
-    <h2 class="redes-title">REDES SOCIAIS</h2>
-    <div class="social-link">
-      <span>Instagram:</span>
-      <a href="https://www.instagram.com/bespoke_barbershop" class="social-link2">@bespoke_barbershop</a>
-    </div>
-    <div class="social-link">
-      <span>Facebook:</span>
-      <a href="https://www.facebook.com/bespokebarbershop" class="social-link2">@bespokebarbershop</a>
-    </div>
-    <div class="social-link">
-      <span>WhatsApp: </span>
-      <span>(00) 0 0000-0000 </span>
-    </div>
-  </div>
-  
-
-  <!-- Caixinha de dúvidas -->
-  <div class="duvidas">
-    <h2 class="duvidas-title">DÚVIDAS</h2>
-    <label for="duvida-nome">Nome:</label>
-    <input type="text" id="duvida-nome" name="duvida-nome" placeholder="Seu nome">
-    <label for="duvida-email">E-mail:</label>
-    <input type="email" id="duvida-email" name="duvida-email" placeholder="Seu e-mail">
-    <label for="duvida-mensagem">Dúvida:</label>
-    <textarea id="duvida-mensagem" name="duvida-mensagem" rows="3" placeholder="Escreva sua dúvida"></textarea>
-    <button type="submit">Enviar</button>
-  </div>
-</div>
-
-<!-- Imagem e Copyright -->
-<div class="footer-bottom">
-  <img src="WhatsApp Image 2024-09-02 at 11.04.29 3.png" alt="" class="logo">
-  <p class="copyright">Copyright © 2024 Bespoke Barber Cia. Todos os direitos reservados.</p>
-</div>
-
-</footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     
     <script src="teste.js"></script>
