@@ -5,8 +5,8 @@
     font-family: 'Teko', sans-serif;
 }
 
-body {
-    background: url('imagens/agendamento\ fundo.png') no-repeat center center/cover;
+.body {
+    background: url(imagens/agendamentofundo.png) no-repeat center center/cover;
     height: 100vh;
     display: flex;
     justify-content: center;
