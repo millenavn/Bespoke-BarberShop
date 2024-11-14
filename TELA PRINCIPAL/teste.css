@@ -292,12 +292,11 @@ nav ul li:hover .dropdown {
 }
 
 .divider {
-    width: 50%; 
-    height: 3px; 
-    background-color: #DAA520; 
-    margin: 20px auto; 
-  }
-
+  border: 0; /* Remove bordas extras */
+  border-top: 2px solid #FFD700; /* Linha dourada */
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
   .subtitle {
     font-family: 'Arapey', serif;
     font-size: 45px; /* Aumenta o tamanho da fonte do subtítulo */
@@ -317,11 +316,11 @@ nav ul li:hover .dropdown {
     text-align: center; 
   }
 
-hr{
-    background-color: #DAA520;
-    width: 100%;
-    height: 5px;
-    margin: 0px auto;
+/* Remover a borda branca e manter apenas a borda dourada */
+hr {
+  border: 0; /* Remove qualquer borda padrão */
+  border-top: 2px solid #FFD700; /* Linha dourada */
+  margin: 20px 0; /* Adiciona margem para o espaçamento entre as seções */
 }
 
 #sobre {
@@ -479,15 +478,13 @@ hr{
     
   }
   
+
   .divider2 {
-    position: relative;
-    width: 95%; 
-    height: 4px; 
-    background-color: #DAA520; 
-    margin: 10px auto;
-    left: 20px;
-    bottom: 100px;
-  }
+    border: 0; /* Remove bordas extras */
+    border-top: 2px solid #FFD700; /* Linha dourada */
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
   
   .content1 p {
     font-family: "Archivo Narrow", sans-serif; /* Fonte */
@@ -1315,49 +1312,64 @@ text-align: left;
   flex-direction: column;
 }
 
-/* Frame for the sections */
-.frame-27 {
+/* Flexbox para organizar as divs do rodapé uma ao lado da outra */
+.footer .container {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-bottom: 15px;
+  justify-content: space-between; /* Espaço entre as colunas */
+  gap: 20px; /* Espaçamento entre as divs */
+  flex-wrap: wrap; /* Quebra a linha quando necessário */
 }
 
-/* Atendimento */
-.atendimento, .redes-sociais {
-  text-align: center;
-  flex: 1;
-  min-width: 150px;
-  margin: 10px 15px;
-  font-size: 22px;
-  font-family: sitara-sans;
+/* Colunas do rodapé */
+.footer .col-md-6 {
+  flex: 1 1 45%; /* Ajuste a largura conforme necessário */
+  min-width: 250px; /* Largura mínima das colunas */
+  margin: 10px;
 }
 
-/* Inversão da ordem das divs */
-.atendimento {
-  order: 0; /* Coloca o atendimento depois */
+/* Definindo a ordem das colunas */
+.atendimento-redes {
+  order: 1; /* Primeira posição */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .duvidas {
-  order: 1; /* Coloca as dúvidas antes */
-  background-color: #000;
+  order: 2; /* Segunda posição */
+}
+
+/* Atendimento e Redes Sociais */
+.atendimento, .redes-sociais {
+  text-align: left; /* Alinhar o conteúdo à esquerda */
+  margin: 10px 0;
+  font-size: 22px;
+}
+
+.atendimento h2, .redes-sociais h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.atendimento div, .redes-sociais .social-link {
+  margin: 10px 0;
+}
+
+/* Dúvidas */
+.duvidas {
+  background-color: #1a1a1a;
   color: #fff;
-  padding: 10px;
+  padding: 20px;
   border-radius: 5px;
-  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  max-width: 350px;
-  margin-top: 0;
-  margin-bottom: 10px;
+  gap: 10px;
   font-family: sitara-sans;
-  font-size: 22px;
 }
 
 .duvidas label {
   font-weight: bold;
-  font-size: 22px;
+  font-size: 18px;
 }
 
 .duvidas input,
@@ -1366,10 +1378,9 @@ text-align: left;
   padding: 8px;
   border: 1px solid #333;
   border-radius: 3px;
-  background-color: #1a1a1a;
+  background-color: #333;
   color: #fff;
-  font-size: 22px;
-  font-family: sitara-sans;
+  font-size: 16px;
 }
 
 .duvidas button {
@@ -1379,8 +1390,7 @@ text-align: left;
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 22px;
-  font-family: sitara-sans;
+  font-size: 18px;
 }
 
 .duvidas button:hover {
@@ -1388,22 +1398,18 @@ text-align: left;
 }
 
 /* Redes Sociais */
-.redes-sociais {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.redes-sociais .social-link {
+  margin: 10px 0;
 }
 
 .social-link2 {
-  text-align: left;
-  margin-left: 10px;
-  display: block;
-  margin: 3px 0;
   text-decoration: none;
   color: #fff;
-  font-size: 22px;
-  line-height: 25px;
-  font-family: sitara-sans;
+  font-size: 18px;
+}
+
+.social-link2:hover {
+  color: #DAA520; /* Cor dourada para hover */
 }
 
 /* Footer bottom */
@@ -1411,12 +1417,12 @@ text-align: left;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .footer-bottom .logo {
   margin-right: 20px;
-  height: 100px;
+  height: 60px;
 }
 
 .footer-bottom .copyright {
@@ -1424,7 +1430,6 @@ text-align: left;
   text-align: left;
   margin-right: 100px;
 }
-
   /* Media Queries para responsividade */
   
   @media (max-width: 1366px) {
@@ -2027,54 +2032,58 @@ hr{
     transition: transform 0.3s ease;
 }
 
-/* Bloco de Cabelo e Barba */
-.barba {
-    width: 100%; /* Ajuste a largura para 100% para garantir que os blocos ocupem o espaço disponível */
-    height: 180px;
-    transition: transform 0.3s ease;
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.barba:hover {
-    transform: scale(1.05);
+/* Estilização do body para imagem de fundo */
+body {
+  background-image: url('sua-imagem.jpg'); /* Substitua pelo caminho da sua imagem */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.cabelo {
-    width: 100%;
-    height: 180px;
-    transition: transform 0.3s ease;
+/* Blocos de Cabelo e Barba */
+.conteudo {
+  max-width: 100%;
+  overflow-x: hidden;
+  border-bottom: 1px solid #DAA520; /* Diminui a espessura da borda inferior */
 }
 
-.cabelo:hover {
-    transform: scale(1.05);
+.conteudo > * {
+  margin: 0;
+  padding: 0;
 }
 
-/* Bloco de Inspirações */
-.inspiracoes {
-    width: 100%;
-    height: 180px;
-    transition: transform 0.3s ease;
+.barba, .cabelo, .inspiracoes {
+  width: 100%;
+  height: 180px;
+  transition: transform 0.3s ease;
+  overflow: hidden;
 }
 
-.inspiracoes:hover {
-    transform: scale(1.05);
+.barba:hover, .cabelo:hover, .inspiracoes:hover {
+  transform: scale(1.05);
 }
 
 /* Estilização das imagens dentro dos blocos de serviço */
 .servico img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    transition: filter 0.3s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s ease;
 }
 
 /* Efeito de brilho nas imagens ao passar o mouse */
 .servico.inspiracoes:hover img,
 .servico.cabelo:hover img,
 .servico.barba:hover img {
-    filter: brightness(1.2);
+  filter: brightness(1.2);
 }
-
-  
 
   #localizacao {
     overflow-x: hidden;
