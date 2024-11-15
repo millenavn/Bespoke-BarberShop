@@ -284,7 +284,7 @@ nav ul li:hover .dropdown {
 
 .title {
     font-family: 'Yellowtail';
-    font-size: 100px;
+    font-size: 1px;
     color: #DAA520; /* Cor dourada para o título */
     margin: 0;
     text-align: center;
@@ -292,11 +292,12 @@ nav ul li:hover .dropdown {
 }
 
 .divider {
-  border: 0; /* Remove bordas extras */
-  border-top: 2px solid #FFD700; /* Linha dourada */
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
+    width: 50%; 
+    height: 3px; 
+    background-color: #DAA520; 
+    margin: 20px auto; 
+  }
+
   .subtitle {
     font-family: 'Arapey', serif;
     font-size: 45px; /* Aumenta o tamanho da fonte do subtítulo */
@@ -316,11 +317,11 @@ nav ul li:hover .dropdown {
     text-align: center; 
   }
 
-/* Remover a borda branca e manter apenas a borda dourada */
-hr {
-  border: 0; /* Remove qualquer borda padrão */
-  border-top: 2px solid #FFD700; /* Linha dourada */
-  margin: 20px 0; /* Adiciona margem para o espaçamento entre as seções */
+hr{
+    background-color: #DAA520;
+    width: 100%;
+    height: 5px;
+    margin: 0px auto;
 }
 
 #sobre {
@@ -342,7 +343,7 @@ hr {
     height: 550px; 
     left: 1000px;
     top: 0px;
-    border: 5px solid #DAA520;
+    border: 5px solid #000000;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -478,13 +479,15 @@ hr {
     
   }
   
-
   .divider2 {
-    border: 0; /* Remove bordas extras */
-    border-top: 2px solid #FFD700; /* Linha dourada */
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
+    position: relative;
+    width: 95%; 
+    height: 4px; 
+    background-color: #DAA520; 
+    margin: 10px auto;
+    left: 20px;
+    bottom: 100px;
+  }
   
   .content1 p {
     font-family: "Archivo Narrow", sans-serif; /* Fonte */
@@ -688,7 +691,7 @@ hr {
 }
 
 .content2{
-  margin: -18px;
+  margin: 0;
 }
 
 .linha{
@@ -1002,15 +1005,13 @@ text-align: left;
   font-family: "Teko", sans-serif;
   max-width: 800px;
   margin: 0 auto; /* Centraliza o conteúdo da página */
-  padding: 65px 80px; /* Espaçamento ao redor do conteúdo */
+  padding: 40px 20px; /* Espaçamento ao redor do conteúdo */
   text-align: center;
   background-color: rgb(44, 44, 44);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para destaque */
   border-radius: 8px;
   border-color: #DAA520;
   border-style: outset;
-  margin-top: 40px;
-  height: 520px;
 }
 
 .head2 {
@@ -1307,71 +1308,55 @@ text-align: left;
   color: #fff;
   padding: 20px 30px;
   box-sizing: border-box;
-  text-align: center;
   margin-top: auto;
   height: auto;
   display: flex;
   flex-direction: column;
 }
 
-/* Flexbox para organizar as divs do rodapé uma ao lado da outra */
-.footer .container {
+/* Frame for the sections */
+.frame-27 {
   display: flex;
-  justify-content: space-between; /* Espaço entre as colunas */
-  gap: 20px; /* Espaçamento entre as divs */
-  flex-wrap: wrap; /* Quebra a linha quando necessário */
-}
-
-/* Colunas do rodapé */
-.footer .col-md-6 {
-  flex: 1 1 45%; /* Ajuste a largura conforme necessário */
-  min-width: 250px; /* Largura mínima das colunas */
-  margin: 10px;
-}
-
-/* Definindo a ordem das colunas */
-.atendimento-redes {
-  order: 1; /* Primeira posição */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.duvidas {
-  order: 2; /* Segunda posição */
+  justify-content: space-between;
+  align-items: flex-start; /* Alinha os itens ao topo */
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  gap: 20px; /* Adiciona espaçamento entre as seções */
 }
 
 /* Atendimento e Redes Sociais */
 .atendimento, .redes-sociais {
-  text-align: left; /* Alinhar o conteúdo à esquerda */
-  margin: 10px 0;
+  text-align: center;
+  flex: 1;
+  min-width: 200px; /* Mantém largura mínima consistente */
+  margin: 10px 15px;
   font-size: 22px;
-}
-
-.atendimento h2, .redes-sociais h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.atendimento div, .redes-sociais .social-link {
-  margin: 10px 0;
+  font-family: sitara-sans;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Alinha o conteúdo ao topo */
 }
 
 /* Dúvidas */
 .duvidas {
-  background-color: #1a1a1a;
+  flex: 1;
+  background-color: #000;
   color: #fff;
-  padding: 20px;
+  padding: 10px;
   border-radius: 5px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
+  max-width: 350px;
+  margin: 0 15px;
   font-family: sitara-sans;
+  font-size: 22px;
 }
 
 .duvidas label {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 22px;
 }
 
 .duvidas input,
@@ -1380,9 +1365,10 @@ text-align: left;
   padding: 8px;
   border: 1px solid #333;
   border-radius: 3px;
-  background-color: #333;
+  background-color: #1a1a1a;
   color: #fff;
-  font-size: 16px;
+  font-size: 22px;
+  font-family: sitara-sans;
 }
 
 .duvidas button {
@@ -1392,7 +1378,8 @@ text-align: left;
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 22px;
+  font-family: sitara-sans;
 }
 
 .duvidas button:hover {
@@ -1400,18 +1387,23 @@ text-align: left;
 }
 
 /* Redes Sociais */
-.redes-sociais .social-link {
-  margin: 10px 0;
+.redes-sociais {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .social-link2 {
+  text-align: left;
+  margin-left: 10px;
+  display: block;
+  margin: 3px 0;
   text-decoration: none;
   color: #fff;
-  font-size: 18px;
-}
-
-.social-link2:hover {
-  color: #DAA520; /* Cor dourada para hover */
+  font-size: 22px;
+  line-height: 25px;
+  font-family: sitara-sans;
 }
 
 /* Footer bottom */
@@ -1419,12 +1411,12 @@ text-align: left;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .footer-bottom .logo {
   margin-right: 20px;
-  height: 60px;
+  height: 100px;
 }
 
 .footer-bottom .copyright {
@@ -1432,6 +1424,8 @@ text-align: left;
   text-align: left;
   margin-right: 100px;
 }
+
+
   /* Media Queries para responsividade */
   
   @media (max-width: 1366px) {
@@ -2034,58 +2028,54 @@ hr{
     transition: transform 0.3s ease;
 }
 
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Bloco de Cabelo e Barba */
+.barba {
+    width: 100%; /* Ajuste a largura para 100% para garantir que os blocos ocupem o espaço disponível */
+    height: 180px;
+    transition: transform 0.3s ease;
 }
 
-/* Estilização do body para imagem de fundo */
-body {
-  background-image: url('sua-imagem.jpg'); /* Substitua pelo caminho da sua imagem */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.barba:hover {
+    transform: scale(1.05);
 }
 
-/* Blocos de Cabelo e Barba */
-.conteudo {
-  max-width: 100%;
-  overflow-x: hidden;
-  border-bottom: 1px solid #DAA520; /* Diminui a espessura da borda inferior */
+.cabelo {
+    width: 100%;
+    height: 180px;
+    transition: transform 0.3s ease;
 }
 
-.conteudo > * {
-  margin: 0;
-  padding: 0;
+.cabelo:hover {
+    transform: scale(1.05);
 }
 
-.barba, .cabelo, .inspiracoes {
-  width: 100%;
-  height: 180px;
-  transition: transform 0.3s ease;
-  overflow: hidden;
+/* Bloco de Inspirações */
+.inspiracoes {
+    width: 100%;
+    height: 180px;
+    transition: transform 0.3s ease;
 }
 
-.barba:hover, .cabelo:hover, .inspiracoes:hover {
-  transform: scale(1.05);
+.inspiracoes:hover {
+    transform: scale(1.05);
 }
 
 /* Estilização das imagens dentro dos blocos de serviço */
 .servico img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: filter 0.3s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: filter 0.3s ease;
 }
 
 /* Efeito de brilho nas imagens ao passar o mouse */
 .servico.inspiracoes:hover img,
 .servico.cabelo:hover img,
 .servico.barba:hover img {
-  filter: brightness(1.2);
+    filter: brightness(1.2);
 }
+
+  
 
   #localizacao {
     overflow-x: hidden;
@@ -2186,7 +2176,7 @@ body {
 }
 
 .content2{
-  margin: -18px;
+  margin: 0;
 }
 
 .linha{
@@ -2500,15 +2490,13 @@ text-align: left;
   font-family: "Teko", sans-serif;
   max-width: 800px;
   margin: 0 auto; /* Centraliza o conteúdo da página */
-  padding: 65px 80px; /* Espaçamento ao redor do conteúdo */
+  padding: 40px 20px; /* Espaçamento ao redor do conteúdo */
   text-align: center;
   background-color: rgb(44, 44, 44);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para destaque */
   border-radius: 8px;
   border-color: #DAA520;
   border-style: outset;
-  margin-top: 40px;
-  height: 520px;
 }
 
 .head2 {
@@ -3125,5 +3113,4 @@ text-align: left;
       width: 100%;
   }
 }
-
 
