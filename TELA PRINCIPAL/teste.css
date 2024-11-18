@@ -231,6 +231,23 @@ nav ul li:hover .dropdown {
   height: auto;
 }
 
+/* Estilo para o link ativo */
+.nav-link.active {
+  color: #daa520; /* Cor dourada */
+  font-weight: bold; /* Para destacar mais */
+}
+
+/* Estilo padrão dos links */
+.nav-link {
+  color: #ffffff; /* Cor preta ou qualquer cor padrão */
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #555; /* Cor de hover */
+}
+
+
 
 
 .section.visible {

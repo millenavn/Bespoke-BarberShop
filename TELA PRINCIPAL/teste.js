@@ -42,4 +42,24 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+// Função para adicionar a classe 'active' ao link correspondente à seção visível
+window.addEventListener("scroll", function() {
+    var sections = document.querySelectorAll("section");
+    var links = document.querySelectorAll(".nav-link");
+
+    // Verifique qual seção está visível na tela
+    sections.forEach(function(section, index) {
+        var rect = section.getBoundingClientRect();
+        var link = links[index];
+
+        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+            // Adiciona a classe 'active' no link da seção visível
+            link.classList.add("active");
+        } else {
+            // Remove a classe 'active' dos links que não estão na seção visível
+            link.classList.remove("active");
+        }
+    });
+});
+
 
