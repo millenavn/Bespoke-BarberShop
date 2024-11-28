@@ -664,9 +664,10 @@ hr{
 
 .content2{
   margin: 0;
+  
 }
 
-.linha{
+.linha1{
   background-color: #DAA520;
   height: 3px;
   width: 50%;
@@ -844,19 +845,6 @@ text-align: left;
   width: 80%;  /* Para que ambos caibam lado a lado */
 }
 
-.service-page {
-  font-family: "Teko", sans-serif;
-  max-width: 800px;
-  margin: 0 auto; /* Centraliza o conteúdo da página */
-  padding: 40px 20px; /* Espaçamento ao redor do conteúdo */
-  text-align: center;
-  background-color: rgb(44, 44, 44);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para destaque */
-  border-radius: 8px;
-  border-color: #DAA520;
-  border-style: outset;
-}
-
 .head2 {
   color: #ffffff; 
   font-size: 30px;
@@ -865,45 +853,6 @@ text-align: left;
   font-family: "Arapey", serif;
   text-align: center;
   margin: 0;
-}
-
-.service-page h2 {
-  margin: 0;
-  font-size: 30px;
-  color: #DAA520;
-  margin-top: 20px;
-  margin-bottom: 60px;
-  text-align: center;
-  align-items: center;
-}
-
-.service-page p {
-  font-family: "Teko", sans-serif;
-  font-size: 25px;
-  color: #ffffff;
-  margin-bottom: 20px;
-  position: relative;
-  text-align: center;
-  margin: 0;
-  bottom: 30px;
-}
-
-.service-page ul {
-  font-size: 18px;
-  text-align: left;
-  margin: 0px auto;
-  max-width: 600px;
-  padding: 0 20px;
-  list-style: none;
-  align-items: center;
-}
-
-.service-page li {
-  font-size: 18px;
-  color: #ffffff;
-  margin-bottom: 10px;
-  padding: 8px 0;
-  border-bottom: 1px solid #e0e0e0;
 }
 
 /* Estilo para o botão de voltar */
@@ -1268,29 +1217,6 @@ text-align: left;
   margin-right: 100px;
 }
 
-  
-/* Estilos para as páginas de serviços individuais */
-
-.body1{
-  background-image: url(imagens/Fundo.png);
-}
-
-.content2{
-  margin: 0;
-}
-
-.linha{
-  background-color: #DAA520;
-  height: 3px;
-  width: 50%;
-  border: #DAA520;
-  position: absolute;
-  top: 230px;
-  left: 340px;
-}
-
-
-
 /* Estilo para a seção de contato */
 #contato {
   overflow-x: hidden;
@@ -1423,7 +1349,7 @@ text-align: left;
 .service-page {
   font-family: "Teko", sans-serif;
   max-width: 800px;
-  margin: 0 auto; /* Centraliza o conteúdo da página */
+  margin: 100px auto; /* Centraliza o conteúdo da página */
   padding: 40px 20px; /* Espaçamento ao redor do conteúdo */
   text-align: center;
   background-color: rgb(44, 44, 44);
@@ -1445,7 +1371,7 @@ text-align: left;
 
 .service-page h2 {
   margin: 0;
-  font-size: 30px;
+  font-size: 40px;
   color: #DAA520;
   margin-top: 20px;
   margin-bottom: 60px;
@@ -1455,7 +1381,7 @@ text-align: left;
 
 .service-page p {
   font-family: "Teko", sans-serif;
-  font-size: 25px;
+  font-size: 30px;
   color: #ffffff;
   margin-bottom: 20px;
   position: relative;
@@ -1475,7 +1401,7 @@ text-align: left;
 }
 
 .service-page li {
-  font-size: 18px;
+  font-size: 25px;
   color: #ffffff;
   margin-bottom: 10px;
   padding: 8px 0;
