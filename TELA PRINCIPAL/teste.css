@@ -40,61 +40,57 @@ main{
 
 nav {
   display: flex;
-  justify-content: center; /* Centraliza os itens horizontalmente */
-  align-items: center; /* Centraliza os itens verticalmente */
+  justify-content: center; 
+  align-items: center; 
   width: 100%;
 }
 
-/* Container da navegação */
+
 nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex; /* Usando Flexbox para alinhar os itens */
-  justify-content: center; /* Centraliza os itens na horizontal */
-  align-items: center; /* Centraliza os itens na vertical */
-  gap: 20px; /* Espaçamento entre os itens */
-  flex-wrap: wrap; /* Permite que os itens quebrem de linha quando necessário */
-  width: 100%; /* Garante que o ul ocupe 100% da largura */
-}
-
-/* Estilo do logo (agora com maior largura) */
-nav img.logo {
-  width: 15%; /* Aumenta a largura da logo */
-  margin-right: 40px; /* Adiciona mais espaço à direita da logo */
-  max-width: 150px; /* Garante que o logo não ultrapasse 150px de largura */
-}
-
-/* Estilo dos itens do menu */
-nav ul li {
-  margin: 0 10px; /* Mantém o espaçamento entre os itens */
   display: flex;
-  align-items: center; /* Centraliza verticalmente o texto */
-  border: 2px solid #DAA520; /* Borda dourada ao redor dos itens */
-  border-radius: 5px; /* Borda arredondada */
-  padding: 5px 15px; /* Espaço interno ao redor do texto */
+  justify-content: center;
+  align-items: center; 
+  gap: 20px;
+  flex-wrap: wrap; 
+  width: 100%; 
 }
 
-/* Estilo dos links dentro dos itens */
+
+nav img.logo {
+  width: 15%; 
+  margin-right: 40px;
+  max-width: 150px;
+}
+
+nav ul li {
+  margin: 0 10px;
+  display: flex;
+  align-items: center; 
+  border: 2px solid #DAA520; 
+  border-radius: 5px; 
+  padding: 5px 15px; 
+}
+
 nav ul li a {
   text-decoration: none;
-  color: #fff; /* Cor branca para os links */
-  font-size: 17px; /* Tamanho da fonte */
+  color: #fff;
+  font-size: 17px; 
   font-weight: bold;
   transition: color 0.3s ease;
   display: flex;
-  align-items: center; /* Alinha verticalmente o texto */
-  padding: 10px 15px; /* Aumenta o espaçamento vertical dos links */
+  align-items: center; 
+  padding: 10px 15px; 
 }
 
-/* Estilo do item dropdown (se houver) */
 nav ul li.dropdown {
   position: relative;
 }
 
-/* O menu dropdown oculto por padrão */
 nav ul li.dropdown .dropdown-menu {
-  display: none; /* Esconde o menu */
+  display: none; 
   position: absolute;
   top: 100%;
   left: -12px;
@@ -104,12 +100,12 @@ nav ul li.dropdown .dropdown-menu {
 }
 
 nav ul li.dropdown:hover .dropdown-menu {
-  display: block; /* Mostra o menu ao passar o mouse */
+  display: block; 
 }
 
 nav ul li.dropdown-menu a {
   color: #fff;
-  padding: 8px 12px;
+   padding: 8px 12px;
 }
 
 nav ul li.dropdown-menu a:hover {
@@ -127,18 +123,18 @@ nav ul li a:hover {
 
 .dropdown-toggle{
     text-decoration: none;
-    color: #fff; /* Cor branca para o texto do botão */
-    font-size: 17px; /* Tamanho da fonte do botão */
+    color: #fff; 
+    font-size: 17px; 
     font-weight: bold;
-    background: none; /* Remove fundo padrão do link */
-    border: none; /* Remove a borda padrão do botão */
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    background: none; 
+    border: none; 
+    cursor: pointer; 
     display: flex;
     align-items: center;
 }
 
 .dropdown-toggle i {
-    margin-left: 8px; /* Adiciona um espaço entre o texto e a seta */
+    margin-left: 8px;
     transform: translateY(1px);
 }
   .dropdown-toggle i:hover{
@@ -146,27 +142,26 @@ nav ul li a:hover {
 }
 
   .dropdown-menu {
-    display: none; /* Oculta o menu por padrão */
-    position: absolute; /* Posiciona o menu em relação ao item pai */
-    top: 100%; /* Posiciona o menu logo abaixo do botão */
+    display: none; 
+    position: absolute; 
+    top: 100%; 
     left: 0;
-    background-color: #000000; /* Cor de fundo do menu */
-    border-radius: 5px; /* Borda arredondada para o menu */
-    box-shadow: 0 4px 8px rgb(0, 0, 0); /* Sombra para o menu */
-    z-index: 1000; /* Garante que o menu fique acima dos outros elementos */
+    background-color: #000000; 
+    border-radius: 5px; 
+    box-shadow: 0 4px 8px rgb(0, 0, 0); 
+    z-index: 1000;
     
 }
   
   .dropdown-menu .dropdown-item {
-    display: block; /* Faz com que os itens do menu ocupem a largura total */
-    color: #fff; /* Cor preta para o texto dos itens do menu */
-    padding: 5px 15px; /* Espaço interno dos itens do menu */
-    text-decoration: none; /* Remove sublinhado dos itens */
-    font-size: 17px; /* Tamanho da fonte dos itens do menu */
-    border: 2px solid #DAA520; /* Borda dourada ao redor dos itens do menu */
-    border-radius: 5px; /* Borda arredondada para os itens */
-    margin-bottom: 2px; /* Espaço entre os itens */
-    background-color: #000000;
+    display: block; 
+    color: #fff; 
+    padding: 5px 15px; 
+    text-decoration: none; 
+    font-size: 17px; 
+    border: 2px solid #DAA520; 
+    border-radius: 5px; 
+    margin-bottom: 2px; 
 }
   
   .dropdown-menu .dropdown-item:hover {
@@ -193,7 +188,7 @@ nav ul li:hover .dropdown {
   height: auto;
 }
 
-/* Estilo para o link ativo */
+
 .nav-link.active {
   color: #daa520; /* Cor dourada */
   font-weight: bold; /* Para destacar mais */
@@ -561,14 +556,116 @@ hr{
 .servico.barba:hover img {
     filter: brightness(1.2);
 }
+.service-page {
+  font-family: "Teko", sans-serif;
+  max-width: 800px;
+  margin: 100px auto; /* Centraliza o conteúdo da página */
+  padding: 40px 20px; /* Espaçamento ao redor do conteúdo */
+  text-align: center;
+  background-color: rgb(44, 44, 44);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para destaque */
+  border-radius: 8px;
+  border-color: #DAA520;
+  border-style: outset;
+}
+.head2 {
+  color: #ffffff; 
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-family: "Arapey", serif;
+  text-align: center;
+  margin: 0;
+}
 
-  
+.service-page h2 {
+  margin: 0;
+  font-size: 40px;
+  color: #DAA520;
+  margin-top: 20px;
+  margin-bottom: 60px;
+  text-align: center;
+  align-items: center;
+}
+
+.service-page p {
+  font-family: "Teko", sans-serif;
+  font-size: 30px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  position: relative;
+  text-align: center;
+  margin: 0;
+  bottom: 30px;
+}
+
+.service-page ul {
+  font-size: 18px;
+  text-align: left;
+  margin: 0px auto;
+  max-width: 600px;
+  padding: 0 20px;
+  list-style: none;
+  align-items: center;
+}
+
+.service-page li {
+  font-size: 25px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.back-button {
+  font-family: "Teko", sans-serif;
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 23px;
+  color: #fff;
+  background-color: #000; /* Fundo preto */
+  border: 2px solid #DAA520; /* Borda dourada */
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: 30px;
+  width: 600px;
+}
+
+
+.back-button:hover {
+  background-color: #DAA520; /* Altera cor ao passar o mouse */
+  color: #000;
+  transform: scale(1.05);
+  transition: ease 0.3s;
+}
+
+.linha1{
+  background-color: #DAA520;
+  height: 3px;
+  width: 50%;
+  border: #DAA520;
+  position: absolute;
+  top: 210px;
+  left: 340px;
+}
+
+.body1{
+  background-image: url(imagens/Fundo.png);
+}
+
+.content2{
+  margin: 0;
+}
+
 
   #localizacao {
     overflow-x: hidden;
   font-family: 'Archivo Narrow', sans-serif;
   height: 100vh;
-  background-image: url('Fundo.png'); /* Imagem de fundo */
+  background-image: url('Fundo.png'); 
+  background-color: rgba(0, 0, 0, 0.5); /* Cor preta semi-transparente */
   background-size: cover;
   background-position: center;
   position: relative;
@@ -655,27 +752,7 @@ hr{
     bottom: 20px;
     right: 20px; /* Ajuste da posição */
   }
-  
-/* Estilos para as páginas de serviços individuais */
 
-.body1{
-  background-image: url(imagens/Fundo.png);
-}
-
-.content2{
-  margin: 0;
-  
-}
-
-.linha1{
-  background-color: #DAA520;
-  height: 3px;
-  width: 50%;
-  border: #DAA520;
-  position: absolute;
-  top: 230px;
-  left: 340px;
-}
 
 #franqueado {
   margin: 0;
@@ -845,16 +922,6 @@ text-align: left;
   width: 80%;  /* Para que ambos caibam lado a lado */
 }
 
-.head2 {
-  color: #ffffff; 
-  font-size: 30px;
-  margin-bottom: 20px;
-  font-weight: 600;
-  font-family: "Arapey", serif;
-  text-align: center;
-  margin: 0;
-}
-
 /* Estilo para o botão de voltar */
 .back-button {
   font-family: "Teko", sans-serif;
@@ -892,6 +959,7 @@ text-align: left;
 
 #feedback {
   background-image: url(imagens/Vila\ Carrão.png);
+  background-color: rgba(0, 0, 0, 0.5); 
   max-height: 150vh;
   height: 100%;
   margin: 0;
@@ -933,6 +1001,7 @@ text-align: left;
   width: 100%;
   max-height: 450px;
   height: 100%;
+  margin-bottom: 100px;
   background-color: #4b4b4b;
   padding: 30px;
   border-radius: 10px;
@@ -1129,9 +1198,14 @@ text-align: left;
   justify-content: flex-start; /* Alinha o conteúdo ao topo */
 }
 
+/* Inversão da ordem das divs */
+.atendimento {
+  order: 2; /* Coloca o atendimento depois */
+}
+
 /* Dúvidas */
 .duvidas {
-  flex: 1;
+  order: 1;
   background-color: #000;
   color: #fff;
   padding: 10px;
@@ -1217,559 +1291,3 @@ text-align: left;
   margin-right: 100px;
 }
 
-/* Estilo para a seção de contato */
-#contato {
-  overflow-x: hidden;
-  background-image: url(fundo-inspiracoes.png);
-  background-size: cover;
-  background-position: center;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  min-width: 100%;
-  min-height: 100%;
-}
-
-.contato-container {
-  max-width: 400px;
-  width: 100%;
-  background-color: #000000;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  border-color: #DAA520;
-  border-style: outset;
-  border-width: 3px;
-  max-height: 700px;
-  height: 100%;
-  margin: 30px;
-  
-}
-
-.contato-container h2 {
-  font-family: "Teko", sans-serif;;
-  color: #DAA520;
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
-
-.contato-container p {
-  font-family: "Teko", sans-serif;
-  color: #ffffff;
-  margin-bottom: 20px;
-}
-
-/* Estilo para o formulário */
-.contato-form {
-  display: flex;
-  flex-direction: column;
-}
-
-.contato-form label {
-  font-family: "Teko", sans-serif;
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: #DAA520;
-  text-align: left;
-}
-
-.contato-form input,
-.contato-form textarea {
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.contato-form input:focus,
-.contato-form textarea:focus {
-  border-color: #007bff;
-  outline: none;
-}
-
-/* Estilo para o botão de envio */
-.contato-form button {
-  padding: 12px;
-  background-color: #007bff;
-  color: #ffffff;
-  font-size: 1rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.contato-form button:hover {
-  background-color: #0056b3;
-}
-
-/* Estilo para as redes sociais */
-.redes-sociais {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
-  overflow: hidden;
-  margin: 0 auto;
-}
-
-.redes-sociais p {
-  font-size: 1.25rem;
-  color: #ffffff;
-  margin-bottom: 10px;
-}
-
-.social-icon {
-  margin: 0 10px;
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-}
-
-.social-icon img {
-  width: 90%;
-  height: 90%;
-  transition: transform 0.3s;
-}
-
-.social-icon img:hover {
-  transform: scale(1.1);
-}
-
-.service-page {
-  font-family: "Teko", sans-serif;
-  max-width: 800px;
-  margin: 100px auto; /* Centraliza o conteúdo da página */
-  padding: 40px 20px; /* Espaçamento ao redor do conteúdo */
-  text-align: center;
-  background-color: rgb(44, 44, 44);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para destaque */
-  border-radius: 8px;
-  border-color: #DAA520;
-  border-style: outset;
-}
-
-.head2 {
-  color: #ffffff; 
-  font-size: 30px;
-  margin-bottom: 20px;
-  font-weight: 600;
-  font-family: "Arapey", serif;
-  text-align: center;
-  margin: 0;
-}
-
-.service-page h2 {
-  margin: 0;
-  font-size: 40px;
-  color: #DAA520;
-  margin-top: 20px;
-  margin-bottom: 60px;
-  text-align: center;
-  align-items: center;
-}
-
-.service-page p {
-  font-family: "Teko", sans-serif;
-  font-size: 30px;
-  color: #ffffff;
-  margin-bottom: 20px;
-  position: relative;
-  text-align: center;
-  margin: 0;
-  bottom: 30px;
-}
-
-.service-page ul {
-  font-size: 18px;
-  text-align: left;
-  margin: 0px auto;
-  max-width: 600px;
-  padding: 0 20px;
-  list-style: none;
-  align-items: center;
-}
-
-.service-page li {
-  font-size: 25px;
-  color: #ffffff;
-  margin-bottom: 10px;
-  padding: 8px 0;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-/* Estilo para o botão de voltar */
-.back-button {
-  font-family: "Teko", sans-serif;
-  display: inline-block;
-  padding: 12px 30px;
-  font-size: 23px;
-  color: #fff;
-  background-color: #000; /* Fundo preto */
-  border: 2px solid #DAA520; /* Borda dourada */
-  border-radius: 5px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  margin-top: 30px;
-  width: 600px;
-}
-
-.back-button:hover {
-  background-color: #DAA520; /* Altera cor ao passar o mouse */
-  color: #000;
-  transform: scale(1.05);
-  transition: ease 0.3s;
-}
-
-.linha1{
-  background-color: #DAA520;
-  height: 3px;
-  width: 50%;
-  border: #DAA520;
-  position: absolute;
-  top: 210px;
-  left: 340px;
-}
-
-
-#feedback {
-  background-image: url(imagens/Vila\ Carrão.png);
-  max-height: 150vh;
-  height: 100%;
-  margin: 0;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  position: relative;
-
-}
-
-.feedback-wrapper {
-  display: grid;
-  grid-template-areas:
-    "container1 container3"
-    "container2 container4";
-  column-gap: 2%;
-  row-gap: 2%;
-}
-
-.feedback-container1 {
-  grid-area: container1;
-  max-width: 300px;
-  width: 100%;
-  max-height: 450px;
-  height: 100%;
-  background-color: #4b4b4b;
-  padding: 30px;
-  border-radius: 10px;
-  margin-right: 20%;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  border: 3px outset #DAA520;
-}
-
-.feedback-container2 {
-  grid-area: container2;
-  max-width: 300px;
-  width: 100%;
-  max-height: 450px;
-  height: 100%;
-  background-color: #4b4b4b;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  border: 3px outset #DAA520;
-}
-
-.feedback-container3 {
-  grid-area: container3;
-  max-width: 300px;
-  width: 100%;
-  max-height: 450px;
-  height: 100%;
-  background-color: #4b4b4b;
-  padding: 30px;
-  border-radius: 10px;
-  margin-right: 800px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  border: 3px outset #DAA520;
-}
-
-.feedback-container4 {
-  grid-area: container4;
-  max-width: 300px;
-  width: 100%;
-  max-height: 450px;
-  height: 100%;
-  background-color: #4b4b4b;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  border: 3px outset #DAA520;
-}
-
-.h3-feedback {
-  font-family: "Teko", sans-serif;
-  font-size: 25px;
-  color: #DAA520;
-}
-
-.p-feedback {
-  font-family: "Archivo Narrow", sans-serif;
-  font-size: 20px;
-  color: #FFFFFF;
-}
-
-.feedback-clientes {
-  font-family: "Arapey", serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 42px;
-  color: white;
-  text-align: right;  /* Alinha o texto à direita */
-  white-space: nowrap;  /* Garante que o texto não quebre em múltiplas linhas */
-  position: absolute;  /* Para que o h1 fique fixo no topo */
-  top: 40px;  /* Distância do topo da seção */
-  right: 70px;  /* Distância da direita da seção */
-  margin: 0;
-}
-/* Container do formulário com borda neon */
-#feedback-form-container {
-  max-width: 400px;
-  margin-top: 20px;
-  margin-left: 900px;
-  padding: 20px;
-  background-color: #000;
-  color: #FFFFFF;
-  border: 3px solid #DAA520;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-  text-align: center;
-  transition: box-shadow 0.3s, border-color 0.3s;
-}
-
-/* Efeito de hover neon */
-#feedback-form-container:hover {
-  border-color: #DAA520;
-  box-shadow: 0px 0px 15px #DAA520, 0px 0px 25px #DAA520;
-}
-
-.feedback-text {
-  text-align: center; /* Alinha o texto ao centro */
-  font-family: "Archivo Narrow", sans-serif;
-  font-style: none;
-  font-size: 19px;
-  margin: 0 10px 20px; /* Define margens laterais pequenas para centralização */
-  padding: 0;
-  max-width: 100%; /* Garante que o texto não ultrapasse a largura do contêiner */
-  line-height: 1.5; /* Melhor espaçamento entre linhas */
-  word-wrap: break-word; /* Quebra o texto se necessário */
-  white-space: normal; /* Permite quebra de linha conforme o espaço */
-}
-
-/* Formulário */
-.feedback-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.feedback-form label {
-  text-align: left;
-  font-weight: bold;
-}
-
-/* Estilo dos campos de entrada */
-.feedback-form input,
-.feedback-form textarea {
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #DAA520;
-  background-color: #444444;
-  color: #FFFFFF;
-}
-
-/* Botão de envio */
-.feedback-form button {
-  padding: 10px;
-  background-color: #000;
-  color: #FFFFFF;
-  border-style: outset;
-  border-radius: 5px;
-  border-color: #DAA520;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.feedback-font{
-  font-family: "Archivo Narrow", sans-serif;
-  font-size: 20px;
-}
-
-.feedback-form button:hover {
-  background-color: #DAA520;
-}
-
-/* Avaliação com estrelas */
-.star-rating {
-  display: flex;
-  gap: 5px;
-  justify-content: center;
-}
-
-.star-rating input[type="radio"] {
-  display: none;
-}
-
-.star-rating label {
-  font-size: 30px;
-  color: #444444;
-  transition: color 0.3s;
-  cursor: pointer;
-}
-
-/* Efeito de estrela selecionada */
-.star-rating input[type="radio"]:checked ~ label,
-.star-rating label:hover,
-.star-rating label:hover ~ label {
-  color: #FFD700; /* Cor da estrela ao selecionar */
-}
-
-/* Footer */
-.footer {
-  background-color: #000;
-  color: #fff;
-  padding: 20px 30px;
-  box-sizing: border-box;
-  text-align: center;
-  margin-top: auto;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Frame for the sections */
-.frame-27 {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-bottom: 15px;
-}
-
-/* Atendimento */
-.atendimento, .redes-sociais {
-  text-align: center;
-  flex: 1;
-  min-width: 150px;
-  margin: 10px 15px;
-  font-size: 22px;
-  font-family: sitara-sans;
-}
-
-/* Inversão da ordem das divs */
-.atendimento {
-  order: 2; /* Coloca o atendimento depois */
-}
-
-.duvidas {
-  order: 1; /* Coloca as dúvidas antes */
-  background-color: #000;
-  color: #fff;
-  padding: 10px;
-  border-radius: 5px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  max-width: 350px;
-  margin-top: 0;
-  margin-bottom: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  font-family: sitara-sans;
-  font-size: 22px;
-}
-
-.duvidas label {
-  font-weight: bold;
-  font-size: 22px;
-}
-
-.duvidas input,
-.duvidas textarea {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #333;
-  border-radius: 3px;
-  background-color: #1a1a1a;
-  color: #fff;
-  font-size: 22px;
-  font-family: sitara-sans;
-}
-
-.duvidas button {
-  background-color: #333;
-  color: #fff;
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 22px;
-  font-family: sitara-sans;
-}
-
-.duvidas button:hover {
-  background-color: #555;
-}
-
-/* Redes Sociais */
-.redes-sociais {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.social-link2 {
-  text-align: left;
-  margin-left: 10px;
-  display: block;
-  margin: 3px 0;
-  text-decoration: none;
-  color: #fff;
-  font-size: 22px;
-  line-height: 25px;
-  font-family: sitara-sans;
-}
-
-/* Footer bottom */
-.footer-bottom {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.footer-bottom .logo {
-  margin-right: 20px;
-  height: 100px;
-}
-
-.footer-bottom .copyright {
-  font-size: 1rem;
-  text-align: left;
-  margin-right: 100px;
-}
-
-  
