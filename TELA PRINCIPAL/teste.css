@@ -1260,17 +1260,30 @@ text-align: left;
   justify-content: flex-start;
 }
 
-.social-link2 {
-  text-align: left;
-  margin-left: 10px;
-  display: block;
-  margin: 3px 0;
-  text-decoration: none;
-  color: #fff;
-  font-size: 22px;
-  line-height: 25px;
-  font-family: sitara-sans;
+.social-link {
+  margin: 10px 0;
 }
+
+.social-icon {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espaço entre o ícone e o texto */
+  font-size: 18px; /* Tamanho do texto */
+  color: #fff;
+  font-family: Arial, sans-serif;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon i {
+  font-size: 30px; /* Tamanho do ícone */
+}
+
+.social-icon:hover {
+  color: #daa520; /* Cor ao passar o mouse */
+  transform: scale(1.05); /* Aumenta o tamanho do link */
+}
+
 
 /* Footer bottom */
 .footer-bottom {
