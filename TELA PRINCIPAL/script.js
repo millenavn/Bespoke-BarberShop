@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }, observerOptions);
 
     sections.forEach(section => {
-        observer.observe(section); // Observa cada secção
+        observer.observe(section);
     });
 
     // Código para scroll suave nos links de navegação
