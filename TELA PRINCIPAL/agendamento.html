@@ -18,15 +18,17 @@
             <div class="unit" id="vila-carrao">
                 <img src="imagens/Vila Carrão.png" alt="Unidade Vila Carrão" class="unit-image">
                 <h2>Vila Carrão</h2>
-                <button onclick="showServices()">Selecionar Unidade</button>
+                <button class="button1" onclick="showServices()">Selecionar Unidade</button>
             </div>
             <div class="unit" id="vila-matilde">
                 <img src="imagens/Vila Matilde.png" alt="Unidade Vila Matilde" class="unit-image">
                 <h2>Vila Matilde</h2>
-                <button onclick="showServices()">Selecionar Unidade</button>
+                <button class="button1" onclick="showServices()">Selecionar Unidade</button>
             </div>
         </section>
 
+        <button onclick="window.location.href='teste.html'" class="back-button">Voltar à Página Inicial</button>
+        
         <!-- Modal para Seleção de Serviços -->
         <div class="overlay" id="services">
             <div class="modal">
@@ -40,7 +42,7 @@
                     <li onclick="showTimes()">Barba Navalha</li>
                     <li onclick="showTimes()">Barba Navalha + Pigmentação</li>
                 </ul>
-                <button onclick="closeModal('services')">Fechar</button>
+                <button class="button1" onclick="closeModal('services')">Fechar</button>
             </div>
         </div>
 

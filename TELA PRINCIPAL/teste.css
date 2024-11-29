@@ -762,14 +762,14 @@ hr{
   font-weight: 400;
   font-style: normal;
   background-color: black;
-  background-image: url(image.png);
+  background-image: url(imagens/fundo-inspiracoes.png);
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  height: 140vh;
+  height: 110vh;
 }
 
 
