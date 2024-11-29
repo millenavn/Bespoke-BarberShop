@@ -34,18 +34,33 @@
             <div class="modal">
                 <h3>Escolha um Serviço</h3>
                 <ul>
-                    <li onclick="showTimes()">Corte</li>
-                    <li onclick="showTimes()">Corte Infantil</li>
-                    <li onclick="showTimes()">Corte + Barba</li>
-                    <li onclick="showTimes()">Corte + Sobrancelha</li>
-                    <li onclick="showTimes()">Barba Máquina</li>
-                    <li onclick="showTimes()">Barba Navalha</li>
-                    <li onclick="showTimes()">Barba Navalha + Pigmentação</li>
+                    <li onclick="showDays()">Corte</li>
+                    <li onclick="showDays()">Corte Infantil</li>
+                    <li onclick="showDays()">Corte + Barba</li>
+                    <li onclick="showDays()">Corte + Sobrancelha</li>
+                    <li onclick="showDays()">Barba Máquina</li>
+                    <li onclick="showDays()">Barba Navalha</li>
+                    <li onclick="showDays()">Barba Navalha + Pigmentação</li>
                 </ul>
+                
                 <button class="button1" onclick="closeModal('services')">Fechar</button>
             </div>
         </div>
 
+        <div class="overlay" id="days">
+            <div class="modal">
+                <h3>Escolha um Dia</h3>
+                <ul>
+                    <li onclick="showTimes()">Segunda-feira</li>
+                    <li onclick="showTimes()">Terça-feira</li>
+                    <li onclick="showTimes()">Quarta-feira</li>
+                    <li onclick="showTimes()">Quinta-feira</li>
+                    <li onclick="showTimes()">Sexta-feira</li>
+                    <li onclick="showTimes()">Sábado</li>
+                </ul>
+                <button class="button1" onclick="closeModal('days')">Fechar</button>
+            </div>
+        </div>
         
         <div class="overlay" id="times">
             <div class="modal">
@@ -127,6 +142,10 @@
         function showServices() {
             document.getElementById("services").style.display = "flex";
         }
+        function showDays() {
+    document.getElementById("services").style.display = "none"; // Fecha o modal de serviços
+    document.getElementById("days").style.display = "flex";    // Exibe o modal de dias
+}
 
         function showTimes() {
             document.getElementById("services").style.display = "none";
