@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barbearia Exemplo</title>
+    <title>Bespoke BarberShop</title>
     <link rel="stylesheet" href="teste.css">
     <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Arapey&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@55&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
 </head>
 <body>
 
@@ -16,23 +18,24 @@
         <nav>
             <img src="imagens/Logo.jpeg" alt="Logo da Barbearia" class="logo">
             <ul id="menu">
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre">Sobre Nós</a></li>
-                <li><a href="#espaco">Espaço</a></li>
-                <li class="dropdown"> 
-                    <a href="#servicos" id="dropdownMenuButton" class="dropdown-toggle">Serviços <i class="arrow-down">&#9662;</i></a>
+                <li><a href="#inicio" class="nav-link">Início</a></li>
+                <li><a href="#sobre" class="nav-link">Sobre Nós</a></li>
+                <li><a href="#espaco" class="nav-link">Espaço</a></li>
+                <li class="dropdown">
+                    <a href="#servicos" id="dropdownMenuButton" class="dropdown-toggle nav-link">Serviços <i class="arrow-down">&#9662;</i></a>
                     <div id="dropdownMenu" class="dropdown-menu">
                         <a class="dropdown-item" href="testecabelo.html">Cabelo</a>
                         <a class="dropdown-item" href="testebarba.html">Barba</a>
                         <a class="dropdown-item" href="testeinspiracoes.html">Inspirações</a>
                     </div>
                 </li>
-                <li><a href="#localizacao">Localização</a></li>
-                <li><a href="#contato">Contato</a></li>
-                <li><a href="#agendamento">Agendar</a></li>
-                <li><a href="#franqueado">Seja um Franqueado</a></li>
+                <li><a href="#localizacao" class="nav-link">Localização</a></li>
+                <li><a href="#franqueado" class="nav-link">Seja um Franqueado</a></li>
+                <li><a href="#feedback" class="nav-link">Feedback</a></li>
+                <li><a href="agendamento.html" class="nav-link">Agendamento</a></li>
             </ul>
         </nav>
+        
     </header>
 
     <main>
@@ -48,12 +51,10 @@
         </section>
         <hr>
         <section class="section" id="sobre">
-            <div class="content">
+
                 <div class="vector-3-box-container">
                     <div class="vector-3-box from-left">
-                        <div class="image-2">
-                            <img src="Imagens/image 2.png" alt="Barbeiro">
-                        </div>
+
                     </div>
             <div class="nos-somos-bespoke-container">
                 <div class="nos-somos-bespoke from-left">NÓS SOMOS BESPOKE</div>
@@ -66,8 +67,8 @@
         </div>
         <div class="vector-3-line from-left"></div>
         <div class="aguardamos from-left">Estamos te esperando!</div>
-        
-    </div>
+
+
         </section>
         <hr>
         <section class="section" id="espaco">
@@ -86,32 +87,26 @@
         <hr>
         <section class="section" id="servicos">
             <h2>Nossos Serviços</h2>
-    
-        <div class="container">
-            <!-- Bloco de Cabelo com imagem -->
+
             <a href="testecabelo.html">
                 <div class="servico cabelo">
                     <img src="imagens/Default.png" alt="Cabelo">
                 </div>
             </a>
-    
-            <!-- Bloco de Barba com imagem -->
+
             <a href="testebarba.html">
                 <div class="servico barba">
                     <img src="imagens/frame1.png" alt="Barba">
                 </div>
             </a>
-        
-         
-    
-            <!-- Bloco de Inspirações com imagem -->
+
             <a href="testeinspiracoes.html">
             <div class="servico inspiracoes">
                 <img src="Imagens serviços/Frame 34.png" alt="Inspirações">
-            
+
             </div>
         </a>
-        </div>
+
         </section>
         <hr>
         <section class="section" id="localizacao">
@@ -121,7 +116,7 @@
         </div>
 
         <div class="unidades-container">
-            <!-- Unidade 1 -->
+         
             <div class="unidade bloco from-left">
                 <div class="informacoes">
                     <div class="titulo">Vila Carrão</div>
@@ -135,7 +130,6 @@
                 <img src="imagens unidades/Vila Carrão.png" alt="Vila Carrão" class="imagem">
             </div>
 
-            <!-- Unidade 2 -->
             <div class="unidade bloco from-right">
                 <div class="informacoes">
                     <div class="titulo">Vila Matilde</div>
@@ -152,7 +146,6 @@
     </div>
 </section>
 
-    <!-- Adicionando o script JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const unidades = document.querySelectorAll('.unidade');
@@ -170,60 +163,56 @@
         });
     </script>
     
-    <hr>    
+        
 <section class="section" id="franqueado">
-        <!-- Texto à esquerda -->
         <div class="text-left from-left">
-            <h1 class="franqueado">Seja um</h1>
-            <h1 class="franqueado">Franqueado</h1>
+            <h1 class="franqueado">Seja um franqueado</h1>
             <div class="line"></div>
             <p class="descricao1">
                 Faça parte de nossa fraternidade e tenha sua própria franquia da Bespoke BarberShop, a sua barbearia favorita!
             </p>
         </div>
         <div class="form-wrapper from-right">
-        <form action="" method="get"> <!-- Substitua pela URL correta -->
-            
+        <form action="" method="get"> 
+
                 <div class="form-container">
-                    <!-- Nome -->
+                 
                     <label class="form-label" for="nome">Nome:</label>
                     <input type="text" id="nome" class="form-input" name="nome" >
-        
-                    <!-- Email e Telefone - lado a lado -->
+
+                
                     <div class="email-telefone-wrapper">
-                        <!-- E-mail -->
+                        
                         <div class="email-wrapper">
                             <label class="form-label email-label" for="email">E-mail:</label>
                             <input type="email" id="email" class="form-input email" name="email">
                         </div>
-                        <!-- Telefone -->
+                       
                         <div class="telefone-wrapper">
                             <label class="form-label telefone-label" for="telefone">Telefone:</label>
                             <input type="tel" id="telefone" class="form-input telefone" name="telefone" >
                         </div>
                     </div>
-        
-                    <!-- Região de Interesse -->
+
+                   
                     <label class="form-label" for="regiao">Região de Interesse:</label>
                     <input type="text" id="regiao" class="form-input" name="regiao">
-        
-                    <!-- Assunto -->
+
+                   
                     <label class="form-label" for="assunto">Assunto:</label>
                     <input type="text" id="assunto" class="form-input" name="assunto" >
-        
-                    <!-- Valor para investimento -->
+
+                    
                     <label class="form-label" for="investimento">Valor para investimento:</label>
                     <input type="text" id="investimento" class="form-input" name="investimento" >
-        
-                    <!-- Como nos conheceu -->
+
                     <label class="form-label" for="nos-conheceu">Como nos conheceu:</label>
                     <input type="text" id="nos-conheceu" class="form-input" name="nos_conheceu" >
-        
-                    <!-- Mensagem -->
+
+                   
                     <label class="form-label" for="mensagem">Mensagem:</label>
                     <textarea id="mensagem" class="form-textarea" name="mensagem" placeholder="Deixe sua mensagem"></textarea>
-        
-                    <!-- Botão de enviar -->
+
                     <button type="submit" class="submit-btn">Quero ser Bespoke</button>
                 </div>
             </div>
@@ -231,8 +220,8 @@
     </section>
 
         <hr>
-        <section id="feedback" class="feedback-section">
-          <div class="feedback-wrapper">
+        <section id="feedback" class="section">
+          <div class="feedback-wrapper from-left">
             <div class="feedback-container1">
               <h3 class="h3-feedback">Gabriel</h3>
               <p class="p-feedback">A Bespoke BarberShop superou minhas expectativas! O atendimento foi excelente, e o corte ficou exatamente do jeito que eu queria. Eles realmente entendem o que o cliente precisa. Com certeza voltarei!</p>
@@ -251,59 +240,49 @@
             </div>
           </div>
           <div>
-          <h1 class="feedback-clientes">Feedback de nossos clientes
+          <h1 class="feedback-clientes from-right">Feedback de nossos clientes
               <div id="feedback-form-container">
                   <p class="feedback-text">
                     Sua opinião é muito importante para nós! Conte-nos o que achou dos nossos serviços e atendimento, 
                     para que possamos continuar melhorando sua experiência na Bespoke BarberShop.
                   </p>
-                
+
                   <form action="/enviar-feedback" method="POST" class="feedback-form">
                     <label for="nome" class="h3-feedback">Nome:</label>
                     <input type="text" id="nome" name="nome" required>
-                
+
                     <label for="email" class="h3-feedback">Email:</label>
                     <input type="email" id="email" name="email" required>
-                
+
                     <label for="avaliacao" class="h3-feedback">Avaliação:</label>
                     <div class="star-rating">
-                      <input type="radio" id="star5" name="avaliacao" value="5">
-                      <label for="star5" title="5 estrelas">&#9733;</label>
-                      <input type="radio" id="star4" name="avaliacao" value="4">
-                      <label for="star4" title="4 estrelas">&#9733;</label>
-                      <input type="radio" id="star3" name="avaliacao" value="3">
-                      <label for="star3" title="3 estrelas">&#9733;</label>
+                      <input type="radio" id="star1" name="avaliacao" value="1">
+                      <label for="star1" title="1 estrelas">&#9733;</label>
                       <input type="radio" id="star2" name="avaliacao" value="2">
                       <label for="star2" title="2 estrelas">&#9733;</label>
-                      <input type="radio" id="star1" name="avaliacao" value="1">
-                      <label for="star1" title="1 estrela">&#9733;</label>
+                      <input type="radio" id="star3" name="avaliacao" value="3">
+                      <label for="star3" title="3 estrelas">&#9733;</label>
+                      <input type="radio" id="star4" name="avaliacao" value="4">
+                      <label for="star4" title="4 estrelas">&#9733;</label>
+                      <input type="radio" id="star5" name="avaliacao" value="5">
+                      <label for="star5" title="5 estrela">&#9733;</label>
                     </div>
-                
+
                     <label for="mensagem" class="h3-feedback">Feedback:</label>
                     <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
-                
+
                     <button type="submit" class="feedback-font">Enviar Feedback</button>
                   </form>
                 </div>
-          
+
           </h1>
       </div>
-<!-- Nossos Contatos -->
-<h2 class="nossoscontatos from-right">NOSSOS CONTATOS</h2>
-<hr class="linha from-right">
-<div class="contatos from-right">
-Telefone: (00) 0 0000-0000<br>
-E-mail: contato@bespokebarbershop.com.br<br>
-Instagram: @bespoke_barbershop
-</div>
-
 </section>
 
 <footer class="footer">
 
 <div class="frame-27">
-
-  <!-- Atendimento -->
+ 
   <div class="atendimento">
     <h2 class="atendimento-title">ATENDIMENTO</h2>
     <div class="atendimento">
@@ -316,26 +295,31 @@ Instagram: @bespoke_barbershop
     </div>
   </div>
 
-
-  <!-- Redes Sociais -->
   <div class="redes-sociais">
     <h2 class="redes-title">REDES SOCIAIS</h2>
     <div class="social-link">
-      <span>Instagram:</span>
-      <a href="https://www.instagram.com/bespoke_barbershop" class="social-link2">@bespoke_barbershop</a>
+        <a href="https://www.instagram.com/bespoke_barbershop" class="social-icon" target="_blank">
+            <i class="fab fa-instagram"></i>
+            <span>@bespoke_barbershop</span>
+        </a>
     </div>
     <div class="social-link">
-      <span>Facebook:</span>
-      <a href="https://www.facebook.com/bespokebarbershop" class="social-link2">@bespokebarbershop</a>
+        <a href="https://www.facebook.com/bespokebarbershop" class="social-icon" target="_blank">
+            <i class="fab fa-facebook"></i>
+            <span>@bespokebarbershop</span>
+        </a>
     </div>
     <div class="social-link">
-      <span>WhatsApp: </span>
-      <span>(00) 0 0000-0000 </span>
+        <a href="https://wa.me/00000000000" class="social-icon" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            <span>(00) 0 0000-0000</span>
+        </a>
     </div>
-  </div>
+</div>
+
   
 
-  <!-- Caixinha de dúvidas -->
+ 
   <div class="duvidas">
     <h2 class="duvidas-title">DÚVIDAS</h2>
     <label for="duvida-nome">Nome:</label>
@@ -348,16 +332,17 @@ Instagram: @bespoke_barbershop
   </div>
 </div>
 
-<!-- Imagem e Copyright -->
-<div class="footer-bottom">
-  <img src="WhatsApp Image 2024-09-02 at 11.04.29 3.png" alt="" class="logo">
-  <p class="copyright">Copyright © 2024 Bespoke Barber Cia. Todos os direitos reservados.</p>
-</div>
+       
+        <div class="footer-bottom text-center mt-4">
+            <img src="WhatsApp Image 2024-09-02 at 11.04.29 3.png" alt="" class="logo">
+            <p class="copyright">Copyright © 2024 Bespoke Barber Cia. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
 </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    
+
     <script src="teste.js"></script>
-</body>
-</html>
-

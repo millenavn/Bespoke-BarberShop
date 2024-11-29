@@ -32,12 +32,12 @@
 }
 
 .header h1 {
-    font-size: 3rem; /* Aumentado de 2.5rem para 3rem */
+    font-size: 3rem; 
     color: #DAA520;
 }
 
 .header p {
-    font-size: 1.5rem; /* Aumentado de 1.2rem para 1.5rem */
+    font-size: 1.5rem;
 }
 
 .unit-selection {
@@ -69,7 +69,7 @@
 }
 
 .unit h2 {
-    font-size: 2.5rem; /* Aumentado de 2rem para 2.5rem */
+    font-size: 2.5rem; 
     margin-bottom: 10px;
 }
 
@@ -81,7 +81,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s;
-    font-size: 1.2rem; /* Aumentado */
+    font-size: 1.2rem; 
 }
 
 button:hover {
@@ -111,7 +111,7 @@ button:hover {
 }
 
 .modal h3 {
-    font-size: 2rem; /* Aumentado de 1.8rem para 2rem */
+    font-size: 2rem;
     margin-bottom: 15px;
 }
 
@@ -121,10 +121,10 @@ button:hover {
 }
 
 .modal ul li {
-    padding: 15px 0; /* Aumentado */
+    padding: 15px 0;
     cursor: pointer;
     transition: color 0.3s;
-    font-size: 1.2rem; /* Aumentado */
+    font-size: 1.2rem;
 }
 
 .modal ul li:hover {
@@ -141,7 +141,7 @@ button:hover {
     background: transparent;
     color: #DAA520;
     border: none;
-    font-size: 1.5rem; /* Aumentado de 1.2rem para 1.5rem */
+    font-size: 1.5rem;
     cursor: pointer;
     transition: color 0.3s;
 }
@@ -157,13 +157,13 @@ button:hover {
 
 input[type="text"], input[type="password"], input[type="email"] {
     width: 100%;
-    padding: 10px; /* Aumentado */
+    padding: 10px; 
     margin-bottom: 15px;
     border: 1px solid #DAA520;
     border-radius: 4px;
     background: #1a1a1a;
     color: #DAA520;
-    font-size: 1rem; /* Aumentado */
+    font-size: 1rem; 
 }
 
 input[type="submit"], .login-button {
@@ -175,7 +175,7 @@ input[type="submit"], .login-button {
     border-radius: 4px;
     cursor: pointer;
     margin-bottom: 10px;
-    font-size: 1.2rem; /* Aumentado */
+    font-size: 1.2rem; 
 }
 
 input[type="submit"]:hover, .login-button:hover {
@@ -191,7 +191,7 @@ input[type="submit"]:hover, .login-button:hover {
     border-radius: 4px;
     cursor: pointer;
     margin-top: 10px;
-    font-size: 1.2rem; /* Aumentado */
+    font-size: 1.2rem;
 }
 
 .cancel-button:hover {

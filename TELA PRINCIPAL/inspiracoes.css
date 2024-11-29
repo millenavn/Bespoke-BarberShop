@@ -1,4 +1,4 @@
-/* Estilos para html e body */
+
 html, body {
     margin: 0;
     padding: 0;
@@ -7,44 +7,44 @@ html, body {
     box-sizing: border-box;
 }
 
-/* Seção principal com o fundo */
+
 .inspiracoes {
-    background-image: url('fundo-inspiracoes.png'); /* Caminho da imagem de fundo */
-    background-size: cover; /* Faz a imagem cobrir toda a área */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita a repetição da imagem */
-    height: 100vh; /* Faz com que o fundo ocupe a altura total da viewport */
+    background-image: url('fundo-inspiracoes.png');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; /* Necessário para o posicionamento dos elementos internos */
+    position: relative; 
 }
 
-/* Estilo para o container principal */
+
 .container {
     display: flex;
     justify-content: space-between;
     width: 80%;
     max-width: 1100px;
-    margin: 0 auto; /* Centraliza o container horizontalmente */
+    margin: 0 auto;
 }
 
-/* Texto ou imagem à esquerda */
+
 .left-text {
     position: absolute;
-    top: 40px; /* Ajustado para descer mais para baixo */
+    top: 40px;
     left: 0px;
     z-index: 10;
 }
 
-/* Estilos do carrossel */
+
 .carousel {
     position: relative;
-    width: 783px; /* Largura do carrossel */
-    height: 454px; /* Altura do carrossel */
-    overflow: hidden; /* Esconde o excesso */
-    margin-left: 250px; /* Ajuste conforme necessário */
-    margin-top: -300px; /* Ajuste conforme necessário */
+    width: 783px; 
+    height: 454px;
+    overflow: hidden;
+    margin-left: 250px;
+    margin-top: -300px; 
     top: 120px;
     left: 190px;
 }
@@ -76,23 +76,23 @@ html, body {
     cursor: grabbing;  
   }
 
-/* Botão de voltar */
+
 .voltar {
     position: absolute;
-    top: 550px; /* Ajustado para descer mais para baixo */
-    left: 40px; /* Ajuste conforme necessário */
+    top: 550px;
+    left: 40px; 
 }
 
 .voltar img {
-    width: 100%; /* Garante que a imagem use toda a largura da div */
-    height: auto; /* Mantém a proporção da imagem */
+    width: 100%;
+    height: auto;
 }
 
-/* Estilos responsivos */
+
 @media (max-width: 768px) {
     .voltar {
-        width: 10%; /* Aumenta o botão de voltar em telas pequenas */
-        top: 600px; /* Ajuste de posicionamento */
+        width: 10%; 
+        top: 600px; 
     }
 }
 
